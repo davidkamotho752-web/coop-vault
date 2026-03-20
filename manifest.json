@@ -1,0 +1,18 @@
+{
+  "name": "CoopVault SACCO",
+  "short_name": "CoopVault",
+  "description": "CoopVault SACCO Testing Portal — works offline",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#0c1520",
+  "theme_color": "#0c1520",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'%3E%3Crect width='192' height='192' fill='%230c1520'/%3E%3Ctext x='96' y='115' font-family='Georgia,serif' font-size='72' fill='%23f0a830' text-anchor='middle'%3ECV%3C/text%3E%3C/svg%3E",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
