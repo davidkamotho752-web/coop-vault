@@ -221,7 +221,7 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
 .pq-done{font-size:11px;color:#004422;font-weight:700;display:none;margin-top:3px;}
 .pq-form{display:none;margin-top:10px;border-top:1px solid rgba(138,80,0,.15);padding-top:9px;}
 .pq-form.open{display:block;}
-.pq-ta{width:100%;background:#fff;border:1px solid #ccc;border-radius:7px;padding:8px 10px;color:#000;font-family:'DM Sans',sans-serif;font-size:13px;outline:none;resize:none;min-height:65px;pointer-events:auto;-webkit-user-select:text;user-select:text;touch-action:manipulation;will-change:contents;-webkit-appearance:none;}
+.pq-ta{width:100%;background:#fff;border:1px solid #ccc;border-radius:7px;padding:8px 10px;color:#000;font-family:'DM Sans',sans-serif;font-size:13px;outline:none;resize:none;min-height:65px;pointer-events:auto;-webkit-user-select:text;user-select:text;touch-action:manipulation;-webkit-appearance:none;}
 .pq-ta:focus{border-color:#8a5000;}
 .pq-ta::placeholder{color:#888;}
 .pq-row{display:flex;gap:7px;margin-top:7px;flex-wrap:wrap;}
@@ -3342,12 +3342,7 @@ function openFbPanel(){
   panel.style.pointerEvents='all';
   var banner=document.getElementById('install-banner');
   if(banner) banner.classList.remove('show');
-  setTimeout(function(){
-    var ta=document.getElementById('fp-text');
-    var nm=document.getElementById('fp-name');
-    if(ta){ta.removeAttribute('disabled');ta.style.pointerEvents='auto';ta.focus();}
-    if(nm){nm.removeAttribute('disabled');nm.style.pointerEvents='auto';}
-  },350);
+  var ta=document.getElementById('fp-text');if(ta){ta.removeAttribute('disabled');ta.style.pointerEvents='auto';'}
 }
 function closePanel(){
   document.getElementById('fb-panel').classList.remove('open');
