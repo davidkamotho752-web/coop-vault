@@ -10,13 +10,13 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="CoopVault">
   <meta name="application-name" content="CoopVault SACCO">
-  <meta name="description" content="CoopVault SACCO Testing Portal — works offline">
+  <meta name="description" content="CoopVault SACCO Testing Portal â works offline">
   <!-- Inline SVG icon as data URI for home screen -->
   <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'%3E%3Crect width='192' height='192' fill='%230c1520'/%3E%3Crect x='0' y='186' width='192' height='6' fill='%23f0a830'/%3E%3Ctext x='96' y='110' font-family='Georgia,serif' font-size='52' fill='%23f0a830' text-anchor='middle'%3ECV%3C/text%3E%3Ctext x='96' y='155' font-family='Arial,sans-serif' font-size='18' fill='rgba(255,255,255,.5)' text-anchor='middle'%3ESACCO%3C/text%3E%3C/svg%3E">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230c1520'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='16' fill='%23f0a830' text-anchor='middle'%3ECV%3C/text%3E%3C/svg%3E">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CoopVault SACCO</title>
-<style>
+<style>*{touch-action:manipulation;-webkit-tap-highlight-color:transparent;}input,textarea,select,button{touch-action:manipulation;-webkit-user-select:text;user-select:text;}
 /* Offline-first fonts: system fonts load instantly, no network needed */
 /* When online, these are overridden by Google Fonts loaded below */
 @font-face {
@@ -35,7 +35,7 @@
   font-weight: 400 500;
 }
 
-/* ── PWA INSTALL BANNER ── */
+/* ââ PWA INSTALL BANNER ââ */
 #install-banner{
   position:fixed;bottom:0;left:0;right:0;z-index:500;
   background:#0c1520;border-top:3px solid #f0a830;
@@ -49,7 +49,7 @@
 .ib-btn{background:#f0a830;color:#0c1520;border:none;border-radius:8px;padding:9px 18px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:700;cursor:pointer;touch-action:manipulation;white-space:nowrap;}
 .ib-dismiss{background:transparent;border:none;color:rgba(255,255,255,.4);font-size:20px;cursor:pointer;padding:0 4px;touch-action:manipulation;line-height:1;}
 
-/* ── OFFLINE INDICATOR ── */
+/* ââ OFFLINE INDICATOR ââ */
 #offline-bar{
   position:fixed;top:52px;left:0;right:0;z-index:99;
   background:#004422;color:#fff;
@@ -60,7 +60,7 @@
 #offline-bar.show{display:block;}
 #offline-bar.offline{background:#660000;}
 
-/* ── LOADING SPLASH ── */
+/* ââ LOADING SPLASH ââ */
 #splash{
   position:fixed;inset:0;z-index:999;
   background:#0c1520;
@@ -271,7 +271,7 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
 .toast{position:fixed;bottom:70px;right:14px;z-index:700;background:#000;border:2px solid #b06a00;padding:11px 15px;border-radius:9px;font-size:13px;display:none;max-width:290px;line-height:1.5;color:#fff;font-weight:600;}
 .toast.show{display:block;}
 
-/* ── LOAN CALCULATOR ── */
+/* ââ LOAN CALCULATOR ââ */
 .loan-calc-box{background:linear-gradient(135deg,#0c1520 0%,#1a2738 100%);border-radius:12px;padding:18px;margin:14px 0;color:#fff;}
 .loan-calc-title{font-family:'DM Serif Display',serif;font-size:18px;color:#f0a830;margin-bottom:3px;}
 .loan-calc-sub{font-size:11px;color:rgba(255,255,255,.45);margin-bottom:14px;font-weight:600;}
@@ -317,7 +317,7 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
 </div>
 
 <!-- OFFLINE INDICATOR -->
-<div id="offline-bar">&#128275; Working offline — all features available</div>
+<div id="offline-bar">&#128275; Working offline â all features available</div>
 
 <!-- INSTALL BANNER -->
 <div id="install-banner">
@@ -381,7 +381,7 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
 <div style="background:#fff8e6;border:2px solid #b06a00;border-radius:9px;padding:10px 14px;margin-bottom:14px;font-size:12.5px;color:#4a2800;font-weight:600;display:flex;align-items:flex-start;gap:8px;"><span style="font-size:16px;flex-shrink:0">&#128274;</span><span>Your feedback and questions on this page go <b>directly and only to the System Admin</b>. Nothing is editable after you submit. The System Admin will respond in your <b>My Feedback</b> tab.</span></div>
 <div class="sect-page on" id="exec-overview">
 <div class="page-title">Executive Dashboard</div>
-<div class="page-sub">Full SACCO oversight · March 2026</div>
+<div class="page-sub">Full SACCO oversight Â· March 2026</div>
 <div class="stats-row">
   <div class="stat"><div class="stat-label">Members</div><div class="stat-value">500</div></div>
   <div class="stat"><div class="stat-label">Savings Pool</div><div class="stat-value gold">KSh 24.8M</div></div>
@@ -392,14 +392,14 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
 </div>
 <div class="pq" id="pqw-exec-overview">
   <div class="pq-head">
-    <div class="pq-ico">📊</div>
+    <div class="pq-ico">ð</div>
     <div class="pq-body">
       <button class="pq-btn" onclick="pqOpen('exec-overview')">Give Your Input</button>
-      <div class="pq-done" id="pqd-exec-overview">&#10003; Submitted — Admin will respond in your My Feedback tab</div>
+      <div class="pq-done" id="pqd-exec-overview">&#10003; Submitted â Admin will respond in your My Feedback tab</div>
     </div>
   </div>
   <div class="pq-form" id="pqf-exec-overview">
-    <textarea class="pq-ta" id="pqta-exec-overview" placeholder="Be specific — the admin can only respond to what you write here&#8230;"></textarea>
+    <textarea class="pq-ta" id="pqta-exec-overview" placeholder="Be specific â the admin can only respond to what you write here&#8230;"></textarea>
     <div class="pq-row">
       <button class="pq-submit" onclick="pqSubmit('exec-overview','Executive Overview')">Submit &#8594;</button>
       <button class="pq-cancel" onclick="pqClose('exec-overview')">Cancel</button>
@@ -412,13 +412,13 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
   </div>
 </div>
 <div class="card" style="margin-top:10px"><div class="card-title">Pending Executive Actions</div>
-  <div class="ai-item"><div class="ai-dot" style="background:#7a4400"></div><div><div class="ai-txt"><b>4 loans</b> awaiting Executive sign-off — CC refs confirmed</div><div class="ai-time">LA-2026-041 · LA-2026-038 · LA-2026-036 · LA-2026-033</div></div></div>
-  <div class="ai-item"><div class="ai-dot" style="background:#880000"></div><div><div class="ai-txt"><b>David Kariuki SC-0077</b> — 30+ days overdue · KSh 95,000 · Legal threshold</div><div class="ai-time">Guarantors notified</div></div></div>
-  <div class="ai-item"><div class="ai-dot" style="background:#001a60"></div><div><div class="ai-txt"><b>Board Session #47</b> — 7 of 9 approved · Awaiting G. Mutua, S. Njeru</div><div class="ai-time">Reply APPROVE 47 to 21000</div></div></div>
-  <div class="ai-item"><div class="ai-dot" style="background:#300080"></div><div><div class="ai-txt"><b>Purchase PC-2026-012</b> — KSh 45,000 · Purchasing Cmte 3/3 ✅ · Needs Exec sign-off</div><div class="ai-time">TechMart Kenya</div></div></div>
+  <div class="ai-item"><div class="ai-dot" style="background:#7a4400"></div><div><div class="ai-txt"><b>4 loans</b> awaiting Executive sign-off â CC refs confirmed</div><div class="ai-time">LA-2026-041 Â· LA-2026-038 Â· LA-2026-036 Â· LA-2026-033</div></div></div>
+  <div class="ai-item"><div class="ai-dot" style="background:#880000"></div><div><div class="ai-txt"><b>David Kariuki SC-0077</b> â 30+ days overdue Â· KSh 95,000 Â· Legal threshold</div><div class="ai-time">Guarantors notified</div></div></div>
+  <div class="ai-item"><div class="ai-dot" style="background:#001a60"></div><div><div class="ai-txt"><b>Board Session #47</b> â 7 of 9 approved Â· Awaiting G. Mutua, S. Njeru</div><div class="ai-time">Reply APPROVE 47 to 21000</div></div></div>
+  <div class="ai-item"><div class="ai-dot" style="background:#300080"></div><div><div class="ai-txt"><b>Purchase PC-2026-012</b> â KSh 45,000 Â· Purchasing Cmte 3/3 â Â· Needs Exec sign-off</div><div class="ai-time">TechMart Kenya</div></div></div>
 </div></div><div class="sect-page" id="exec-bank">
 <div class="page-title">Bank Dashboard</div>
-<div class="page-sub">Withdrawals require CC-approved payee match · Every debit alerts Supervisory (3) instantly</div>
+<div class="page-sub">Withdrawals require CC-approved payee match Â· Every debit alerts Supervisory (3) instantly</div>
 <div class="stats-row">
   <div class="stat"><div class="stat-label">Bank Balance</div><div class="stat-value gold">KSh 8,420,300</div></div>
   <div class="stat"><div class="stat-label">Today Credits</div><div class="stat-value green">+KSh 380,000</div></div>
@@ -427,16 +427,16 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
 </div>
 <div class="pq" id="pqw-exec-bank-balance">
   <div class="pq-head">
-    <div class="pq-ico">🏦</div>
+    <div class="pq-ico">ð¦</div>
     <div class="pq-body">
       <div class="pq-q">Does this bank balance look correct your bank statement?</div>
-      <div class="pq-hint">If the balance differs from your physical bank records, share your input here immediately — do not execute any withdrawals until resolved.</div>
+      <div class="pq-hint">If the balance differs from your physical bank records, share your input here immediately â do not execute any withdrawals until resolved.</div>
       <button class="pq-btn" onclick="pqOpen('exec-bank-balance')">Give Your Input</button>
-      <div class="pq-done" id="pqd-exec-bank-balance">&#10003; Submitted — Admin will respond in your My Feedback tab</div>
+      <div class="pq-done" id="pqd-exec-bank-balance">&#10003; Submitted â Admin will respond in your My Feedback tab</div>
     </div>
   </div>
   <div class="pq-form" id="pqf-exec-bank-balance">
-    <textarea class="pq-ta" id="pqta-exec-bank-balance" placeholder="Be specific — the admin can only respond to what you write here&#8230;"></textarea>
+    <textarea class="pq-ta" id="pqta-exec-bank-balance" placeholder="Be specific â the admin can only respond to what you write here&#8230;"></textarea>
     <div class="pq-row">
       <button class="pq-submit" onclick="pqSubmit('exec-bank-balance','Executive Bank')">Submit &#8594;</button>
       <button class="pq-cancel" onclick="pqClose('exec-bank-balance')">Cancel</button>
@@ -453,7 +453,7 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
   <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:12px;">
     <div onclick="showBankForm('wd')" style="background:#fde0e0;border:2px solid #cc0000;border-radius:10px;padding:12px 14px;cursor:pointer;">
       <div style="font-weight:700;color:#880000;font-size:13px;margin-bottom:2px;">&#11015; Withdrawal / Payment</div>
-      <div style="font-size:12px;color:#555">CC-approved payee required · Exec ref · Supervisory alerted automatically</div>
+      <div style="font-size:12px;color:#555">CC-approved payee required Â· Exec ref Â· Supervisory alerted automatically</div>
     </div>
     <div onclick="showBankForm('dep')" style="background:#d4f0e4;border:2px solid #006e3a;border-radius:10px;padding:12px 14px;cursor:pointer;">
       <div style="font-weight:700;color:#004422;font-size:13px;margin-bottom:2px;">&#11014; Deposit / Receipt</div>
@@ -476,22 +476,22 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
       <div style="border-bottom:1px solid #ddd;padding:4px 0;display:flex;justify-content:space-between"><span>James Mwangi SC-0041</span><span class="bdg bg-green">LA-2026-041</span></div>
       <div style="border-bottom:1px solid #ddd;padding:4px 0;display:flex;justify-content:space-between"><span>Ruth Owino SC-0056</span><span class="bdg bg-green">LA-2026-038</span></div>
       <div style="border-bottom:1px solid #ddd;padding:4px 0;display:flex;justify-content:space-between"><span>SupplyMart Ltd</span><span class="bdg bg-blue">PC-2026-011</span></div>
-      <div style="padding:4px 0;display:flex;justify-content:space-between"><span>Staff Salaries — Batch</span><span class="bdg bg-purple">STAND-2026-H1</span></div>
+      <div style="padding:4px 0;display:flex;justify-content:space-between"><span>Staff Salaries â Batch</span><span class="bdg bg-purple">STAND-2026-H1</span></div>
     </div>
     <div class="pq" id="pqw-exec-wd-payee">
   <div class="pq-head">
     <div class="pq-ico">&#10067;</div>
     <div class="pq-body">
       <div class="pq-q">Payee not on the approved list?</div>
-      <div class="pq-hint">If the payee you need is missing, share your input here — admin will add them after the relevant committee approves.</div>
+      <div class="pq-hint">If the payee you need is missing, share your input here â admin will add them after the relevant committee approves.</div>
       <button class="pq-btn" onclick="pqOpen('exec-wd-payee')">Give Your Input</button>
-      <div class="pq-done" id="pqd-exec-wd-payee">&#10003; Submitted — Admin will respond in your My Feedback tab</div>
+      <div class="pq-done" id="pqd-exec-wd-payee">&#10003; Submitted â Admin will respond in your My Feedback tab</div>
     </div>
   </div>
   <div class="pq-form" id="pqf-exec-wd-payee">
-    <textarea class="pq-ta" id="pqta-exec-wd-payee" placeholder="Be specific — the admin can only respond to what you write here&#8230;"></textarea>
+    <textarea class="pq-ta" id="pqta-exec-wd-payee" placeholder="Be specific â the admin can only respond to what you write here&#8230;"></textarea>
     <div class="pq-row">
-      <button class="pq-submit" onclick="pqSubmit('exec-wd-payee','Executive Bank — Payee Request')">Submit &#8594;</button>
+      <button class="pq-submit" onclick="pqSubmit('exec-wd-payee','Executive Bank â Payee Request')">Submit &#8594;</button>
       <button class="pq-cancel" onclick="pqClose('exec-wd-payee')">Cancel</button>
     </div>
   </div>
@@ -521,9 +521,9 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
 <div class="card"><div class="card-title">Recent Bank Transactions</div>
   <div class="tw"><table>
     <tr><th>Date</th><th>Narration</th><th>Credit</th><th>Debit</th><th>Balance</th><th>Ref</th><th>Supervisory</th></tr>
-    <tr><td>19 Mar</td><td>Savings batch</td><td style="color:#004422;font-weight:700">+KSh 320,000</td><td>—</td><td>KSh 8,420,300</td><td style="font-family:'DM Mono',monospace;font-size:10px">STAND-2026-H1</td><td><span class="bdg bg-green">&#10003; 3/3</span></td></tr>
-    <tr><td>19 Mar</td><td>Loan — Aisha Kamau</td><td>—</td><td style="color:#880000;font-weight:700">-KSh 80,000</td><td>KSh 8,100,300</td><td style="font-family:'DM Mono',monospace;font-size:10px">CC-2026-0020</td><td><span class="bdg bg-green">&#10003; 3/3</span></td></tr>
-    <tr><td>18 Mar</td><td>Purchase SupplyMart</td><td>—</td><td style="color:#880000;font-weight:700">-KSh 28,500</td><td>KSh 8,128,800</td><td style="font-family:'DM Mono',monospace;font-size:10px">PC-2026-0011</td><td><span class="bdg bg-green">&#10003; 3/3</span></td></tr>
+    <tr><td>19 Mar</td><td>Savings batch</td><td style="color:#004422;font-weight:700">+KSh 320,000</td><td>â</td><td>KSh 8,420,300</td><td style="font-family:'DM Mono',monospace;font-size:10px">STAND-2026-H1</td><td><span class="bdg bg-green">&#10003; 3/3</span></td></tr>
+    <tr><td>19 Mar</td><td>Loan â Aisha Kamau</td><td>â</td><td style="color:#880000;font-weight:700">-KSh 80,000</td><td>KSh 8,100,300</td><td style="font-family:'DM Mono',monospace;font-size:10px">CC-2026-0020</td><td><span class="bdg bg-green">&#10003; 3/3</span></td></tr>
+    <tr><td>18 Mar</td><td>Purchase SupplyMart</td><td>â</td><td style="color:#880000;font-weight:700">-KSh 28,500</td><td>KSh 8,128,800</td><td style="font-family:'DM Mono',monospace;font-size:10px">PC-2026-0011</td><td><span class="bdg bg-green">&#10003; 3/3</span></td></tr>
   </table></div>
 </div>
 <div class="card"><div class="card-title">9-of-9 Board Session #47</div>
@@ -544,15 +544,15 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
     <div class="pq-ico">&#128272;</div>
     <div class="pq-body">
       <div class="pq-q">Board member not receiving the session SMS?</div>
-      <div class="pq-hint">If a board member did not get the consent SMS, or a session is stuck, share your input here — admin can resend.</div>
+      <div class="pq-hint">If a board member did not get the consent SMS, or a session is stuck, share your input here â admin can resend.</div>
       <button class="pq-btn" onclick="pqOpen('exec-9of9')">Give Your Input</button>
-      <div class="pq-done" id="pqd-exec-9of9">&#10003; Submitted — Admin will respond in your My Feedback tab</div>
+      <div class="pq-done" id="pqd-exec-9of9">&#10003; Submitted â Admin will respond in your My Feedback tab</div>
     </div>
   </div>
   <div class="pq-form" id="pqf-exec-9of9">
-    <textarea class="pq-ta" id="pqta-exec-9of9" placeholder="Be specific — the admin can only respond to what you write here&#8230;"></textarea>
+    <textarea class="pq-ta" id="pqta-exec-9of9" placeholder="Be specific â the admin can only respond to what you write here&#8230;"></textarea>
     <div class="pq-row">
-      <button class="pq-submit" onclick="pqSubmit('exec-9of9','Executive Bank — 9-of-9 Session')">Submit &#8594;</button>
+      <button class="pq-submit" onclick="pqSubmit('exec-9of9','Executive Bank â 9-of-9 Session')">Submit &#8594;</button>
       <button class="pq-cancel" onclick="pqClose('exec-9of9')">Cancel</button>
     </div>
   </div>
@@ -564,7 +564,7 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
 </div>
 </div></div><div class="sect-page" id="exec-allowances">
 <div class="page-title">Allowances</div>
-<div class="page-sub">Committee-approved allowances vs payments · Any variance is flagged</div>
+<div class="page-sub">Committee-approved allowances vs payments Â· Any variance is flagged</div>
 <div class="stats-row">
   <div class="stat"><div class="stat-label">Approved YTD</div><div class="stat-value gold">KSh 284,000</div></div>
   <div class="stat"><div class="stat-label">Paid</div><div class="stat-value green">KSh 271,500</div></div>
@@ -578,11 +578,11 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
       <div class="pq-q">Is an allowance missing, incorrect, or not yet paid?</div>
       <div class="pq-hint">If you see a committee allowance that was approved but not paid, or an amount that differs from the board resolution, share your input here.</div>
       <button class="pq-btn" onclick="pqOpen('exec-allowances')">Give Your Input</button>
-      <div class="pq-done" id="pqd-exec-allowances">&#10003; Submitted — Admin will respond in your My Feedback tab</div>
+      <div class="pq-done" id="pqd-exec-allowances">&#10003; Submitted â Admin will respond in your My Feedback tab</div>
     </div>
   </div>
   <div class="pq-form" id="pqf-exec-allowances">
-    <textarea class="pq-ta" id="pqta-exec-allowances" placeholder="Be specific — the admin can only respond to what you write here&#8230;"></textarea>
+    <textarea class="pq-ta" id="pqta-exec-allowances" placeholder="Be specific â the admin can only respond to what you write here&#8230;"></textarea>
     <div class="pq-row">
       <button class="pq-submit" onclick="pqSubmit('exec-allowances','Executive Allowances')">Submit &#8594;</button>
       <button class="pq-cancel" onclick="pqClose('exec-allowances')">Cancel</button>
@@ -594,14 +594,14 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
     <div class="pq-resp-meta" id="pqrm-exec-allowances"></div>
   </div>
 </div>
-<div class="card" style="margin-top:10px"><div class="card-title">Allowance Register — YTD 2026</div>
+<div class="card" style="margin-top:10px"><div class="card-title">Allowance Register â YTD 2026</div>
   <div class="tw"><table>
     <tr><th>Ref</th><th>Recipient</th><th>Category</th><th>Approved By</th><th>Approved</th><th>Paid</th><th>Status</th></tr>
     <tr><td style="font-family:'DM Mono',monospace;font-size:10px">ALW-001</td><td>Admin Officer</td><td>Transport</td><td>Board Resolution</td><td>KSh 12,000</td><td>KSh 12,000</td><td><span class="bdg bg-green">Paid &#10003;</span></td></tr>
-    <tr><td style="font-family:'DM Mono',monospace;font-size:10px">ALW-002</td><td>Credit Cmte ×3</td><td>Sitting</td><td>Board Resolution</td><td>KSh 15,000</td><td>KSh 15,000</td><td><span class="bdg bg-green">Paid &#10003;</span></td></tr>
-    <tr><td style="font-family:'DM Mono',monospace;font-size:10px">ALW-003</td><td>Supervisory ×3</td><td>Sitting</td><td>Board Resolution</td><td>KSh 9,000</td><td>KSh 9,000</td><td><span class="bdg bg-green">Paid &#10003;</span></td></tr>
-    <tr><td style="font-family:'DM Mono',monospace;font-size:10px">ALW-004</td><td>Board ×9</td><td>Quarterly</td><td>AGM Resolution</td><td>KSh 90,000</td><td>KSh 90,000</td><td><span class="bdg bg-green">Paid &#10003;</span></td></tr>
-    <tr><td style="font-family:'DM Mono',monospace;font-size:10px">ALW-005</td><td>Education Cmte ×3</td><td>Sitting</td><td>Pending</td><td>KSh 9,000</td><td>—</td><td><span class="bdg bg-gold">Pending</span></td></tr>
+    <tr><td style="font-family:'DM Mono',monospace;font-size:10px">ALW-002</td><td>Credit Cmte Ã3</td><td>Sitting</td><td>Board Resolution</td><td>KSh 15,000</td><td>KSh 15,000</td><td><span class="bdg bg-green">Paid &#10003;</span></td></tr>
+    <tr><td style="font-family:'DM Mono',monospace;font-size:10px">ALW-003</td><td>Supervisory Ã3</td><td>Sitting</td><td>Board Resolution</td><td>KSh 9,000</td><td>KSh 9,000</td><td><span class="bdg bg-green">Paid &#10003;</span></td></tr>
+    <tr><td style="font-family:'DM Mono',monospace;font-size:10px">ALW-004</td><td>Board Ã9</td><td>Quarterly</td><td>AGM Resolution</td><td>KSh 90,000</td><td>KSh 90,000</td><td><span class="bdg bg-green">Paid &#10003;</span></td></tr>
+    <tr><td style="font-family:'DM Mono',monospace;font-size:10px">ALW-005</td><td>Education Cmte Ã3</td><td>Sitting</td><td>Pending</td><td>KSh 9,000</td><td>â</td><td><span class="bdg bg-gold">Pending</span></td></tr>
   </table></div>
 </div>
 <div class="alert-info">All allowances require a Board or AGM resolution reference before payment can be processed at the bank level.</div></div><div class="sect-page" id="exec-expenses">
@@ -620,11 +620,11 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
       <div class="pq-q">Do these budget lines look correct to you?</div>
       <div class="pq-hint">If a budget line amount is wrong, a line is missing, or you believe overspend is imminent, share your input here.</div>
       <button class="pq-btn" onclick="pqOpen('exec-expenses')">Give Your Input</button>
-      <div class="pq-done" id="pqd-exec-expenses">&#10003; Submitted — Admin will respond in your My Feedback tab</div>
+      <div class="pq-done" id="pqd-exec-expenses">&#10003; Submitted â Admin will respond in your My Feedback tab</div>
     </div>
   </div>
   <div class="pq-form" id="pqf-exec-expenses">
-    <textarea class="pq-ta" id="pqta-exec-expenses" placeholder="Be specific — the admin can only respond to what you write here&#8230;"></textarea>
+    <textarea class="pq-ta" id="pqta-exec-expenses" placeholder="Be specific â the admin can only respond to what you write here&#8230;"></textarea>
     <div class="pq-row">
       <button class="pq-submit" onclick="pqSubmit('exec-expenses','Executive Expenses vs Budget')">Submit &#8594;</button>
       <button class="pq-cancel" onclick="pqClose('exec-expenses')">Cancel</button>
@@ -636,7 +636,7 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
     <div class="pq-resp-meta" id="pqrm-exec-expenses"></div>
   </div>
 </div>
-<div class="card" style="margin-top:10px"><div class="card-title">Budget vs Actuals — YTD March 2026</div>
+<div class="card" style="margin-top:10px"><div class="card-title">Budget vs Actuals â YTD March 2026</div>
   <div class="tw"><table>
     <tr><th>Budget Line</th><th>Annual</th><th>YTD Budget</th><th>YTD Actual</th><th>Variance</th><th>Status</th></tr>
     <tr><td>Staff Costs</td><td>KSh 720,000</td><td>KSh 180,000</td><td><b>KSh 180,000</b></td><td style="color:#004422">&#177;0</td><td><span class="bdg bg-green">On Budget</span></td></tr>
@@ -648,7 +648,7 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
   </table></div>
 </div></div><div class="sect-page" id="exec-purchases">
 <div class="page-title">Purchase Committee</div>
-<div class="page-sub">All purchase requests — committee approvals, Exec sign-off, payment status</div>
+<div class="page-sub">All purchase requests â committee approvals, Exec sign-off, payment status</div>
 <div class="stats-row">
   <div class="stat"><div class="stat-label">Approved This Month</div><div class="stat-value green">4</div></div>
   <div class="stat"><div class="stat-label">Pending Exec</div><div class="stat-value gold">1</div></div>
@@ -662,11 +662,11 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
       <div class="pq-q">Do the purchase records and votes look correct to you?</div>
       <div class="pq-hint">If a purchase you approved is not showing, a supplier name is incorrect, or a vote count is wrong, share your input here.</div>
       <button class="pq-btn" onclick="pqOpen('exec-purchases')">Give Your Input</button>
-      <div class="pq-done" id="pqd-exec-purchases">&#10003; Submitted — Admin will respond in your My Feedback tab</div>
+      <div class="pq-done" id="pqd-exec-purchases">&#10003; Submitted â Admin will respond in your My Feedback tab</div>
     </div>
   </div>
   <div class="pq-form" id="pqf-exec-purchases">
-    <textarea class="pq-ta" id="pqta-exec-purchases" placeholder="Be specific — the admin can only respond to what you write here&#8230;"></textarea>
+    <textarea class="pq-ta" id="pqta-exec-purchases" placeholder="Be specific â the admin can only respond to what you write here&#8230;"></textarea>
     <div class="pq-row">
       <button class="pq-submit" onclick="pqSubmit('exec-purchases','Executive Purchases')">Submit &#8594;</button>
       <button class="pq-cancel" onclick="pqClose('exec-purchases')">Cancel</button>
@@ -682,8 +682,8 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
   <div class="tw"><table>
     <tr><th>Ref</th><th>Item</th><th>Supplier</th><th>Amount</th><th>Cmte Votes</th><th>Exec</th><th>Paid</th></tr>
     <tr><td style="font-family:'DM Mono',monospace;font-size:10px">PC-2026-011</td><td>Office supplies Q1</td><td>SupplyMart Ltd</td><td>KSh 28,500</td><td><span class="bdg bg-green">3/3 &#10003;</span></td><td><span class="bdg bg-green">EX-2026-006 &#10003;</span></td><td><span class="bdg bg-green">Paid &#10003;</span></td></tr>
-    <tr><td style="font-family:'DM Mono',monospace;font-size:10px">PC-2026-012</td><td>Printer &amp; cartridges</td><td>TechMart Kenya</td><td>KSh 45,000</td><td><span class="bdg bg-green">3/3 &#10003;</span></td><td><span class="bdg bg-gold">Awaiting Exec</span></td><td>—</td></tr>
-    <tr><td style="font-family:'DM Mono',monospace;font-size:10px">PC-2026-010</td><td>Filing cabinets</td><td>OfficePlus</td><td>KSh 85,000</td><td><span class="bdg bg-red">1/3 Declined</span></td><td>—</td><td>—</td></tr>
+    <tr><td style="font-family:'DM Mono',monospace;font-size:10px">PC-2026-012</td><td>Printer &amp; cartridges</td><td>TechMart Kenya</td><td>KSh 45,000</td><td><span class="bdg bg-green">3/3 &#10003;</span></td><td><span class="bdg bg-gold">Awaiting Exec</span></td><td>â</td></tr>
+    <tr><td style="font-family:'DM Mono',monospace;font-size:10px">PC-2026-010</td><td>Filing cabinets</td><td>OfficePlus</td><td>KSh 85,000</td><td><span class="bdg bg-red">1/3 Declined</span></td><td>â</td><td>â</td></tr>
   </table></div>
 </div>
 <div class="card"><div class="card-title">Purchase Committee Members</div>
@@ -707,13 +707,13 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
       <div class="pq-q">Question about a loan in the sign-off queue?</div>
       <div class="pq-hint">If a loan has the wrong amount, wrong member, or you need more information before signing off, share your input here.</div>
       <button class="pq-btn" onclick="pqOpen('exec-loans-queue')">Give Your Input</button>
-      <div class="pq-done" id="pqd-exec-loans-queue">&#10003; Submitted — Admin will respond in your My Feedback tab</div>
+      <div class="pq-done" id="pqd-exec-loans-queue">&#10003; Submitted â Admin will respond in your My Feedback tab</div>
     </div>
   </div>
   <div class="pq-form" id="pqf-exec-loans-queue">
-    <textarea class="pq-ta" id="pqta-exec-loans-queue" placeholder="Be specific — the admin can only respond to what you write here&#8230;"></textarea>
+    <textarea class="pq-ta" id="pqta-exec-loans-queue" placeholder="Be specific â the admin can only respond to what you write here&#8230;"></textarea>
     <div class="pq-row">
-      <button class="pq-submit" onclick="pqSubmit('exec-loans-queue','Executive Loans — Sign-off Queue')">Submit &#8594;</button>
+      <button class="pq-submit" onclick="pqSubmit('exec-loans-queue','Executive Loans â Sign-off Queue')">Submit &#8594;</button>
       <button class="pq-cancel" onclick="pqClose('exec-loans-queue')">Cancel</button>
     </div>
   </div>
@@ -741,7 +741,7 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
   </table></div>
 </div></div><div class="sect-page" id="exec-members">
 <div class="page-title">Member Directory</div>
-<div class="page-sub">All 500 members — full executive view</div>
+<div class="page-sub">All 500 members â full executive view</div>
 <div class="stats-row">
   <div class="stat"><div class="stat-label">Total</div><div class="stat-value">500</div></div>
   <div class="stat"><div class="stat-label">Active</div><div class="stat-value green">487</div></div>
@@ -753,13 +753,13 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
     <div class="pq-ico">&#128101;</div>
     <div class="pq-body">
       <div class="pq-q">Is a member record incorrect or missing?</div>
-      <div class="pq-hint">Wrong department, incorrect salary, wrong savings balance, or a member that should not be active — share your input here.</div>
+      <div class="pq-hint">Wrong department, incorrect salary, wrong savings balance, or a member that should not be active â share your input here.</div>
       <button class="pq-btn" onclick="pqOpen('exec-members')">Give Your Input</button>
-      <div class="pq-done" id="pqd-exec-members">&#10003; Submitted — Admin will respond in your My Feedback tab</div>
+      <div class="pq-done" id="pqd-exec-members">&#10003; Submitted â Admin will respond in your My Feedback tab</div>
     </div>
   </div>
   <div class="pq-form" id="pqf-exec-members">
-    <textarea class="pq-ta" id="pqta-exec-members" placeholder="Be specific — the admin can only respond to what you write here&#8230;"></textarea>
+    <textarea class="pq-ta" id="pqta-exec-members" placeholder="Be specific â the admin can only respond to what you write here&#8230;"></textarea>
     <div class="pq-row">
       <button class="pq-submit" onclick="pqSubmit('exec-members','Executive Members')">Submit &#8594;</button>
       <button class="pq-cancel" onclick="pqClose('exec-members')">Cancel</button>
@@ -774,7 +774,7 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
 <div class="tw" style="margin-top:10px"><table>
   <tr><th>ID</th><th>Name</th><th>Dept</th><th>Savings</th><th>Loan</th><th>Status</th></tr>
   <tr><td style="font-family:'DM Mono',monospace;font-size:10px">SC-2024-0041</td><td>James Mwangi</td><td>Finance</td><td style="color:#004422;font-weight:700">KSh 42,500</td><td style="color:#880000;font-weight:700">KSh 132,000</td><td><span class="bdg bg-green">Active</span></td></tr>
-  <tr><td style="font-family:'DM Mono',monospace;font-size:10px">SC-2024-0089</td><td>Aisha Kamau</td><td>HR</td><td style="color:#004422;font-weight:700">KSh 36,000</td><td>—</td><td><span class="bdg bg-green">Active</span></td></tr>
+  <tr><td style="font-family:'DM Mono',monospace;font-size:10px">SC-2024-0089</td><td>Aisha Kamau</td><td>HR</td><td style="color:#004422;font-weight:700">KSh 36,000</td><td>â</td><td><span class="bdg bg-green">Active</span></td></tr>
   <tr><td style="font-family:'DM Mono',monospace;font-size:10px">SC-2024-0077</td><td>David Kariuki</td><td>Sales</td><td style="color:#004422;font-weight:700">KSh 15,600</td><td style="color:#880000;font-weight:700">KSh 95,000</td><td><span class="bdg bg-red">Overdue 30d</span></td></tr>
   <tr><td colspan="6" style="text-align:center;color:#555;font-size:12px;padding:12px">... 497 more members</td></tr>
 </table></div></div><div class="sect-page" id="exec-financials">
@@ -787,11 +787,11 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
       <div class="pq-q">Does a financial figure need clarification or correction?</div>
       <div class="pq-hint">Challenge a balance, query a line item, or request a breakdown of a specific figure.</div>
       <button class="pq-btn" onclick="pqOpen('exec-financials')">Give Your Input</button>
-      <div class="pq-done" id="pqd-exec-financials">&#10003; Submitted — Admin will respond in your My Feedback tab</div>
+      <div class="pq-done" id="pqd-exec-financials">&#10003; Submitted â Admin will respond in your My Feedback tab</div>
     </div>
   </div>
   <div class="pq-form" id="pqf-exec-financials">
-    <textarea class="pq-ta" id="pqta-exec-financials" placeholder="Be specific — the admin can only respond to what you write here&#8230;"></textarea>
+    <textarea class="pq-ta" id="pqta-exec-financials" placeholder="Be specific â the admin can only respond to what you write here&#8230;"></textarea>
     <div class="pq-row">
       <button class="pq-submit" onclick="pqSubmit('exec-financials','Executive Financials')">Submit &#8594;</button>
       <button class="pq-cancel" onclick="pqClose('exec-financials')">Cancel</button>
@@ -804,7 +804,7 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
   </div>
 </div>
 <div class="g2" style="margin-top:10px">
-  <div class="card"><div class="card-title">Balance Sheet — 31 Dec 2025</div>
+  <div class="card"><div class="card-title">Balance Sheet â 31 Dec 2025</div>
     <div class="info-row"><div class="ir-key">Cash at Bank</div><div class="ir-val" style="color:#004422">KSh 8,420,300</div></div>
     <div class="info-row"><div class="ir-key">Loans to Members</div><div class="ir-val" style="color:#004422">KSh 58,400,000</div></div>
     <div class="info-row"><div class="ir-key">Fixed Assets</div><div class="ir-val" style="color:#004422">KSh 420,000</div></div>
@@ -814,7 +814,7 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
     <div class="info-row"><div class="ir-key">Share Capital</div><div class="ir-val" style="color:#880000">KSh 2,500,000</div></div>
     <div class="info-row" style="background:#fde0e0;padding:7px 4px;border-radius:5px"><div class="ir-key"><b>Total L &amp; E</b></div><div class="ir-val" style="color:#880000"><b>KSh 67,240,300</b></div></div>
   </div>
-  <div class="card"><div class="card-title">I &amp; E — YTD March 2026</div>
+  <div class="card"><div class="card-title">I &amp; E â YTD March 2026</div>
     <div class="info-row"><div class="ir-key">Interest Income</div><div class="ir-val" style="color:#004422">KSh 186,000</div></div>
     <div class="info-row"><div class="ir-key">Registration Fees</div><div class="ir-val" style="color:#004422">KSh 23,000</div></div>
     <div class="info-row"><div class="ir-key">Application Fees</div><div class="ir-val" style="color:#004422">KSh 1,100</div></div>
@@ -828,7 +828,7 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
   </div>
 </div></div><div class="sect-page" id="exec-committees">
 <div class="page-title">All Committee Activity</div>
-<div class="page-sub">View all committee decisions — approvals, declines, votes. Read-only executive view.</div>
+<div class="page-sub">View all committee decisions â approvals, declines, votes. Read-only executive view.</div>
 <div style="display:flex;gap:7px;margin-bottom:12px;flex-wrap:wrap;">
   <button type="button" class="sect-tab on" id="ct-cc" onclick="showCmte('cc',this)">Credit Cmte</button>
   <button type="button" class="sect-tab" id="ct-pc" onclick="showCmte('pc',this)">Purchasing Cmte</button>
@@ -841,11 +841,11 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
       <div class="pq-q">Do the committee decisions look correct to you?</div>
       <div class="pq-hint">If an approval or decline is not showing, or the vote count is wrong, share your input here.</div>
       <button class="pq-btn" onclick="pqOpen('exec-committees')">Give Your Input</button>
-      <div class="pq-done" id="pqd-exec-committees">&#10003; Submitted — Admin will respond in your My Feedback tab</div>
+      <div class="pq-done" id="pqd-exec-committees">&#10003; Submitted â Admin will respond in your My Feedback tab</div>
     </div>
   </div>
   <div class="pq-form" id="pqf-exec-committees">
-    <textarea class="pq-ta" id="pqta-exec-committees" placeholder="Be specific — the admin can only respond to what you write here&#8230;"></textarea>
+    <textarea class="pq-ta" id="pqta-exec-committees" placeholder="Be specific â the admin can only respond to what you write here&#8230;"></textarea>
     <div class="pq-row">
       <button class="pq-submit" onclick="pqSubmit('exec-committees','Executive Committees View')">Submit &#8594;</button>
       <button class="pq-cancel" onclick="pqClose('exec-committees')">Cancel</button>
@@ -858,17 +858,17 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
   </div>
 </div>
 <div id="cmte-cc">
-  <div class="card" style="margin-top:10px"><div class="card-title">Credit Committee — Decisions Log</div>
+  <div class="card" style="margin-top:10px"><div class="card-title">Credit Committee â Decisions Log</div>
     <div class="tw"><table>
       <tr><th>Date</th><th>App Ref</th><th>Member</th><th>Amount</th><th>Decision</th><th>Votes</th><th>CC Ref</th></tr>
       <tr><td>19 Mar</td><td style="font-family:'DM Mono',monospace;font-size:10px">LA-2026-041</td><td>James Mwangi</td><td>KSh 150,000</td><td><span class="bdg bg-green">Approved</span></td><td>3/3</td><td style="font-family:'DM Mono',monospace;font-size:10px">CC-2026-0021</td></tr>
       <tr><td>18 Mar</td><td style="font-family:'DM Mono',monospace;font-size:10px">LA-2026-038</td><td>Ruth Owino</td><td>KSh 60,000</td><td><span class="bdg bg-green">Approved</span></td><td>3/3</td><td style="font-family:'DM Mono',monospace;font-size:10px">CC-2026-0019</td></tr>
-      <tr><td>17 Mar</td><td style="font-family:'DM Mono',monospace;font-size:10px">LA-2026-035</td><td>Samuel Ndura</td><td>KSh 250,000</td><td><span class="bdg bg-red">Declined</span></td><td>2/3</td><td>—</td></tr>
+      <tr><td>17 Mar</td><td style="font-family:'DM Mono',monospace;font-size:10px">LA-2026-035</td><td>Samuel Ndura</td><td>KSh 250,000</td><td><span class="bdg bg-red">Declined</span></td><td>2/3</td><td>â</td></tr>
     </table></div>
   </div>
 </div>
 <div id="cmte-pc" style="display:none">
-  <div class="card" style="margin-top:10px"><div class="card-title">Purchasing Committee — Decisions Log</div>
+  <div class="card" style="margin-top:10px"><div class="card-title">Purchasing Committee â Decisions Log</div>
     <div class="tw"><table>
       <tr><th>Date</th><th>Ref</th><th>Item</th><th>Supplier</th><th>Amount</th><th>Decision</th><th>Votes</th></tr>
       <tr><td>18 Mar</td><td style="font-family:'DM Mono',monospace;font-size:10px">PC-2026-012</td><td>Printer</td><td>TechMart</td><td>KSh 45,000</td><td><span class="bdg bg-green">Approved</span></td><td>3/3</td></tr>
@@ -885,7 +885,7 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
   </div>
 </div></div><div class="sect-page" id="exec-reports">
 <div class="page-title">Reports</div>
-<div class="page-sub">All reports — PDF export, opens offline on any device</div>
+<div class="page-sub">All reports â PDF export, opens offline on any device</div>
 <div class="pq" id="pqw-exec-reports">
   <div class="pq-head">
     <div class="pq-ico">&#128196;</div>
@@ -893,11 +893,11 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
       <div class="pq-q">Is a report missing or showing incorrect data?</div>
       <div class="pq-hint">If you need a report type that is not listed, or an existing report has wrong figures, share your input here.</div>
       <button class="pq-btn" onclick="pqOpen('exec-reports')">Give Your Input</button>
-      <div class="pq-done" id="pqd-exec-reports">&#10003; Submitted — Admin will respond in your My Feedback tab</div>
+      <div class="pq-done" id="pqd-exec-reports">&#10003; Submitted â Admin will respond in your My Feedback tab</div>
     </div>
   </div>
   <div class="pq-form" id="pqf-exec-reports">
-    <textarea class="pq-ta" id="pqta-exec-reports" placeholder="Be specific — the admin can only respond to what you write here&#8230;"></textarea>
+    <textarea class="pq-ta" id="pqta-exec-reports" placeholder="Be specific â the admin can only respond to what you write here&#8230;"></textarea>
     <div class="pq-row">
       <button class="pq-submit" onclick="pqSubmit('exec-reports','Executive Reports')">Submit &#8594;</button>
       <button class="pq-cancel" onclick="pqClose('exec-reports')">Cancel</button>
@@ -935,7 +935,7 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
 <div style="background:#fff8e6;border:2px solid #b06a00;border-radius:9px;padding:10px 14px;margin-bottom:14px;font-size:12.5px;color:#4a2800;font-weight:600;display:flex;align-items:flex-start;gap:8px;"><span style="font-size:16px;flex-shrink:0">&#128274;</span><span>Your feedback and questions on this page go <b>directly and only to the System Admin</b>. Nothing is editable after you submit. The System Admin will respond in your <b>My Feedback</b> tab.</span></div>
 <div class="sect-page on" id="admin-overview">
 <div class="page-title">Admin Dashboard</div>
-<div class="page-sub">Day-to-day operations · March 2026</div>
+<div class="page-sub">Day-to-day operations Â· March 2026</div>
 <div class="stats-row">
   <div class="stat"><div class="stat-label">Members</div><div class="stat-value">500</div></div>
   <div class="stat"><div class="stat-label">Savings</div><div class="stat-value gold">KSh 24.8M</div></div>
@@ -949,13 +949,13 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
     <div class="pq-ico">&#128197;</div>
     <div class="pq-body">
       <div class="pq-q">Is anything on this dashboard wrong or stale?</div>
-      <div class="pq-hint">Share your input about any figure that looks incorrect — wrong count, wrong balance, or data that has not refreshed.</div>
+      <div class="pq-hint">Share your input about any figure that looks incorrect â wrong count, wrong balance, or data that has not refreshed.</div>
       <button class="pq-btn" onclick="pqOpen('admin-overview')">Give Your Input</button>
-      <div class="pq-done" id="pqd-admin-overview">&#10003; Submitted — Admin will respond in your My Feedback tab</div>
+      <div class="pq-done" id="pqd-admin-overview">&#10003; Submitted â Admin will respond in your My Feedback tab</div>
     </div>
   </div>
   <div class="pq-form" id="pqf-admin-overview">
-    <textarea class="pq-ta" id="pqta-admin-overview" placeholder="Be specific — the admin can only respond to what you write here&#8230;"></textarea>
+    <textarea class="pq-ta" id="pqta-admin-overview" placeholder="Be specific â the admin can only respond to what you write here&#8230;"></textarea>
     <div class="pq-row">
       <button class="pq-submit" onclick="pqSubmit('admin-overview','Admin Dashboard')">Submit &#8594;</button>
       <button class="pq-cancel" onclick="pqClose('admin-overview')">Cancel</button>
@@ -968,10 +968,10 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
   </div>
 </div>
 <div class="card" style="margin-top:10px"><div class="card-title">Pending Actions</div>
-  <div class="ai-item"><div class="ai-dot" style="background:#7a4400"></div><div><div class="ai-txt"><b>4 disbursements ready</b> — CC + Exec approved. Execute to member M-Pesa.</div><div class="ai-time">LA-2026-041 · LA-2026-038 · LA-2026-036 · LA-2026-033</div></div></div>
-  <div class="ai-item"><div class="ai-dot" style="background:#001a60"></div><div><div class="ai-txt"><b>2 new members</b> pending document verification — ID and payslip outstanding</div><div class="ai-time">SC-2025-0499 Grace Auma · SC-2025-0500 John Kamau</div></div></div>
-  <div class="ai-item"><div class="ai-dot" style="background:#300080"></div><div><div class="ai-txt"><b>March payroll</b> — 500 members · KSh 42.6M · Scheduled 28 Mar 2026</div><div class="ai-time">Standing approval STAND-2026-H1 active</div></div></div>
-  <div class="ai-item"><div class="ai-dot" style="background:#880000"></div><div><div class="ai-txt"><b>3 payslip requests</b> to employers — no response after 48 hours</div><div class="ai-time">Peter Njoroge · Grace Mutua · Samuel Njeru</div></div></div>
+  <div class="ai-item"><div class="ai-dot" style="background:#7a4400"></div><div><div class="ai-txt"><b>4 disbursements ready</b> â CC + Exec approved. Execute to member M-Pesa.</div><div class="ai-time">LA-2026-041 Â· LA-2026-038 Â· LA-2026-036 Â· LA-2026-033</div></div></div>
+  <div class="ai-item"><div class="ai-dot" style="background:#001a60"></div><div><div class="ai-txt"><b>2 new members</b> pending document verification â ID and payslip outstanding</div><div class="ai-time">SC-2025-0499 Grace Auma Â· SC-2025-0500 John Kamau</div></div></div>
+  <div class="ai-item"><div class="ai-dot" style="background:#300080"></div><div><div class="ai-txt"><b>March payroll</b> â 500 members Â· KSh 42.6M Â· Scheduled 28 Mar 2026</div><div class="ai-time">Standing approval STAND-2026-H1 active</div></div></div>
+  <div class="ai-item"><div class="ai-dot" style="background:#880000"></div><div><div class="ai-txt"><b>3 payslip requests</b> to employers â no response after 48 hours</div><div class="ai-time">Peter Njoroge Â· Grace Mutua Â· Samuel Njeru</div></div></div>
 </div></div><div class="sect-page" id="admin-members">
 <div class="page-title">Member Management</div>
 <div class="page-sub">Register members, manage documents, view directory</div>
@@ -980,13 +980,13 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
     <div class="pq-ico">&#128101;</div>
     <div class="pq-body">
       <div class="pq-q">Do the member records look correct to you?</div>
-      <div class="pq-hint">Wrong employer, incorrect salary, missing payslip, or a member that should not be active — share your input before making changes.</div>
+      <div class="pq-hint">Wrong employer, incorrect salary, missing payslip, or a member that should not be active â share your input before making changes.</div>
       <button class="pq-btn" onclick="pqOpen('admin-members')">Give Your Input</button>
-      <div class="pq-done" id="pqd-admin-members">&#10003; Submitted — Admin will respond in your My Feedback tab</div>
+      <div class="pq-done" id="pqd-admin-members">&#10003; Submitted â Admin will respond in your My Feedback tab</div>
     </div>
   </div>
   <div class="pq-form" id="pqf-admin-members">
-    <textarea class="pq-ta" id="pqta-admin-members" placeholder="Be specific — the admin can only respond to what you write here&#8230;"></textarea>
+    <textarea class="pq-ta" id="pqta-admin-members" placeholder="Be specific â the admin can only respond to what you write here&#8230;"></textarea>
     <div class="pq-row">
       <button class="pq-submit" onclick="pqSubmit('admin-members','Admin Members')">Submit &#8594;</button>
       <button class="pq-cancel" onclick="pqClose('admin-members')">Cancel</button>
@@ -1027,11 +1027,11 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
       <div class="pq-q">Question about the registration form or a document requirement?</div>
       <div class="pq-hint">If a field is unclear, you are unsure what to enter, or a document type is missing from the upload options, ask here first.</div>
       <button class="pq-btn" onclick="pqOpen('admin-reg-query')">Give Your Input</button>
-      <div class="pq-done" id="pqd-admin-reg-query">&#10003; Submitted — Admin will respond in your My Feedback tab</div>
+      <div class="pq-done" id="pqd-admin-reg-query">&#10003; Submitted â Admin will respond in your My Feedback tab</div>
     </div>
   </div>
   <div class="pq-form" id="pqf-admin-reg-query">
-    <textarea class="pq-ta" id="pqta-admin-reg-query" placeholder="Be specific — the admin can only respond to what you write here&#8230;"></textarea>
+    <textarea class="pq-ta" id="pqta-admin-reg-query" placeholder="Be specific â the admin can only respond to what you write here&#8230;"></textarea>
     <div class="pq-row">
       <button class="pq-submit" onclick="pqSubmit('admin-reg-query','Admin Member Registration')">Submit &#8594;</button>
       <button class="pq-cancel" onclick="pqClose('admin-reg-query')">Cancel</button>
@@ -1052,18 +1052,18 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
   <div class="tw"><table>
     <tr><th>ID</th><th>Name</th><th>Savings</th><th>Loan</th><th>Documents</th><th>Status</th></tr>
     <tr><td style="font-family:'DM Mono',monospace;font-size:10px">SC-2024-0041</td><td>James Mwangi</td><td style="color:#004422;font-weight:700">KSh 42,500</td><td style="color:#880000;font-weight:700">KSh 132,000</td><td><span class="bdg bg-green">Complete &#10003;</span></td><td><span class="bdg bg-green">Active</span></td></tr>
-    <tr><td style="font-family:'DM Mono',monospace;font-size:10px">SC-2025-0499</td><td>Grace Auma</td><td style="color:#004422;font-weight:700">KSh 5,200</td><td>—</td><td><span class="bdg bg-red">Payslip missing</span></td><td><span class="bdg bg-gold">Pending Docs</span></td></tr>
+    <tr><td style="font-family:'DM Mono',monospace;font-size:10px">SC-2025-0499</td><td>Grace Auma</td><td style="color:#004422;font-weight:700">KSh 5,200</td><td>â</td><td><span class="bdg bg-red">Payslip missing</span></td><td><span class="bdg bg-gold">Pending Docs</span></td></tr>
     <tr><td style="font-family:'DM Mono',monospace;font-size:10px">SC-2024-0077</td><td>David Kariuki</td><td style="color:#004422;font-weight:700">KSh 15,600</td><td style="color:#880000;font-weight:700">KSh 95,000</td><td><span class="bdg bg-green">Complete &#10003;</span></td><td><span class="bdg bg-red">Overdue 30d</span></td></tr>
   </table></div>
 </div></div><div class="sect-page" id="admin-loans">
 
 <div class="page-title">Loan Application Process</div>
-<div class="page-sub">All 4 phases · Guarantor list · Approve / Decline procedure</div>
+<div class="page-sub">All 4 phases Â· Guarantor list Â· Approve / Decline procedure</div>
 
 <div class="alert-info">This is the complete loan lifecycle. Credit Committee approves at Phase 3 after payslip verification. Admin disburses at Phase 4 only when both CC ref and Exec ref are confirmed. Every decision is logged permanently.</div>
 
 
-<!-- ══ LOAN DISBURSEMENT CALCULATOR ══ -->
+<!-- ââ LOAN DISBURSEMENT CALCULATOR ââ -->
 <div class="loan-calc-box" id="loan-calc-main">
   <div class="loan-calc-title">&#127981; Approximate Loan Disbursement Calculator</div>
   <div class="loan-calc-sub">Based on SACCO policy: lower of 3&times; savings balance or 1&frasl;3 net monthly salary &middot; Results are indicative only</div>
@@ -1130,7 +1130,7 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
   </div>
 </div>
 
-<!-- ══ QUICK LOOKUP: EXISTING APPLICANTS ══ -->
+<!-- ââ QUICK LOOKUP: EXISTING APPLICANTS ââ -->
 <div class="card" style="margin-top:14px">
   <div class="card-title">Quick Lookup &#8212; Current Applicants</div>
   <div style="font-size:12px;color:#555;margin-bottom:10px">Click a member to load their figures into the calculator above.</div>
@@ -1196,7 +1196,7 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
   </div>
 </div>
 
-<!-- APPLICATION: LA-2026-041 — IN PROGRESS -->
+<!-- APPLICATION: LA-2026-041 â IN PROGRESS -->
 <div style="border:2px solid #b06a00;border-radius:12px;margin-bottom:14px;overflow:hidden;">
   <div style="background:#fdf0d0;padding:12px 15px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;">
     <div>
@@ -1255,7 +1255,7 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
   <div style="border-top:1px solid #e8c97a;padding:12px 15px;background:#fff;">
     <div style="display:flex;align-items:center;gap:9px;margin-bottom:10px;">
       <div style="width:22px;height:22px;border-radius:50%;background:#fdf0d0;border:2px solid #b06a00;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#5a3200;flex-shrink:0">3</div>
-      <div style="font-size:13px;font-weight:700;color:#000">Credit Committee — Payslip Verification &amp; Decision <span class="bdg bg-muted" style="margin-left:8px">Admin View</span></div>
+      <div style="font-size:13px;font-weight:700;color:#000">Credit Committee â Payslip Verification &amp; Decision <span class="bdg bg-muted" style="margin-left:8px">Admin View</span></div>
       <span class="bdg bg-gold" style="margin-left:auto">&#9679; In Progress</span>
     </div>
     <div class="info-row"><div class="ir-key">Payslip Uploaded</div><div class="ir-val"><span class="bdg bg-green">&#10003; Uploaded 17 Mar</span></div></div>
@@ -1285,9 +1285,9 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
       <div style="font-size:10px;letter-spacing:1px;text-transform:uppercase;color:#555;font-weight:700;margin-bottom:7px">CC Votes</div>
       <div class="tw"><table>
         <tr><th>CC Member</th><th>Vote</th><th>Date</th><th>Notes</th></tr>
-        <tr><td>Member 1</td><td><span class="bdg bg-muted">&#9711; Pending</span></td><td>—</td><td>—</td></tr>
-        <tr><td>Member 2</td><td><span class="bdg bg-muted">&#9711; Pending</span></td><td>—</td><td>—</td></tr>
-        <tr><td>Member 3</td><td><span class="bdg bg-muted">&#9711; Pending</span></td><td>—</td><td>—</td></tr>
+        <tr><td>Member 1</td><td><span class="bdg bg-muted">&#9711; Pending</span></td><td>â</td><td>â</td></tr>
+        <tr><td>Member 2</td><td><span class="bdg bg-muted">&#9711; Pending</span></td><td>â</td><td>â</td></tr>
+        <tr><td>Member 3</td><td><span class="bdg bg-muted">&#9711; Pending</span></td><td>â</td><td>â</td></tr>
       </table></div>
     </div>
     <div style="background:#f0f0f0;border-radius:9px;padding:12px;margin-top:12px;">
@@ -1312,7 +1312,7 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
   </div>
 </div>
 
-<!-- APPLICATION: LA-2026-038 — APPROVED AND DISBURSED -->
+<!-- APPLICATION: LA-2026-038 â APPROVED AND DISBURSED -->
 <div style="border:2px solid #006e3a;border-radius:12px;margin-bottom:14px;overflow:hidden;">
   <div style="background:#d4f0e4;padding:12px 15px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;">
     <div>
@@ -1322,16 +1322,16 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
     <span class="bdg bg-green" style="font-size:11px">&#10003; Approved &amp; Disbursed</span>
   </div>
   <div style="padding:12px 15px;background:#fff;">
-    <div class="info-row"><div class="ir-key">Phase 1 — Fee</div><div class="ir-val"><span class="bdg bg-green">&#10003; KSh 50 received 16 Mar &middot; Code: LK9X3WQP</span></div></div>
-    <div class="info-row"><div class="ir-key">Phase 2 — Guarantors</div><div class="ir-val"><span class="bdg bg-green">&#10003; 2/2 accepted &middot; Brian Ochieng &amp; James Mwangi</span></div></div>
-    <div class="info-row"><div class="ir-key">Phase 3 — CC Decision</div><div class="ir-val"><span class="bdg bg-green">&#10003; Approved 3/3 &middot; CC-2026-0019 &middot; 18 Mar</span></div></div>
-    <div class="info-row"><div class="ir-key">Phase 4 — Exec Sign-off</div><div class="ir-val"><span class="bdg bg-purple">&#10003; EX-2026-008 &middot; 18 Mar 15:30</span></div></div>
+    <div class="info-row"><div class="ir-key">Phase 1 â Fee</div><div class="ir-val"><span class="bdg bg-green">&#10003; KSh 50 received 16 Mar &middot; Code: LK9X3WQP</span></div></div>
+    <div class="info-row"><div class="ir-key">Phase 2 â Guarantors</div><div class="ir-val"><span class="bdg bg-green">&#10003; 2/2 accepted &middot; Brian Ochieng &amp; James Mwangi</span></div></div>
+    <div class="info-row"><div class="ir-key">Phase 3 â CC Decision</div><div class="ir-val"><span class="bdg bg-green">&#10003; Approved 3/3 &middot; CC-2026-0019 &middot; 18 Mar</span></div></div>
+    <div class="info-row"><div class="ir-key">Phase 4 â Exec Sign-off</div><div class="ir-val"><span class="bdg bg-purple">&#10003; EX-2026-008 &middot; 18 Mar 15:30</span></div></div>
     <div class="info-row"><div class="ir-key">Disbursement</div><div class="ir-val"><span class="bdg bg-green">&#10003; KSh 60,000 to M-Pesa 0722 XXX XXX &middot; 19 Mar 09:55 &middot; TXN-8820</span></div></div>
     <div class="info-row"><div class="ir-key">Eligibility</div><div class="ir-val">1/3 salary &#10003; &middot; 3&times; savings &#10003; &middot; No exception needed</div></div>
   </div>
 </div>
 
-<!-- APPLICATION: LA-2026-035 — DECLINED -->
+<!-- APPLICATION: LA-2026-035 â DECLINED -->
 <div style="border:2px solid #cc0000;border-radius:12px;margin-bottom:14px;overflow:hidden;">
   <div style="background:#fde0e0;padding:12px 15px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;">
     <div>
@@ -1341,9 +1341,9 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
     <span class="bdg bg-red" style="font-size:11px">&#10007; Declined</span>
   </div>
   <div style="padding:12px 15px;background:#fff;">
-    <div class="info-row"><div class="ir-key">Phase 1 — Fee</div><div class="ir-val"><span class="bdg bg-green">&#10003; KSh 50 received &middot; Non-refundable</span></div></div>
-    <div class="info-row"><div class="ir-key">Phase 2 — Guarantors</div><div class="ir-val"><span class="bdg bg-green">&#10003; 2/2 accepted</span></div></div>
-    <div class="info-row"><div class="ir-key">Phase 3 — CC Decision</div><div class="ir-val"><span class="bdg bg-red">&#10007; Declined 2/3 votes &middot; 17 Mar</span></div></div>
+    <div class="info-row"><div class="ir-key">Phase 1 â Fee</div><div class="ir-val"><span class="bdg bg-green">&#10003; KSh 50 received &middot; Non-refundable</span></div></div>
+    <div class="info-row"><div class="ir-key">Phase 2 â Guarantors</div><div class="ir-val"><span class="bdg bg-green">&#10003; 2/2 accepted</span></div></div>
+    <div class="info-row"><div class="ir-key">Phase 3 â CC Decision</div><div class="ir-val"><span class="bdg bg-red">&#10007; Declined 2/3 votes &middot; 17 Mar</span></div></div>
     <div class="info-row"><div class="ir-key">Decline Reason</div><div class="ir-val" style="color:#880000">Payslip stamp missing &middot; Employer unverified &middot; Salary claim not confirmed</div></div>
     <div class="info-row"><div class="ir-key">Member Notified</div><div class="ir-val"><span class="bdg bg-green">&#10003; SMS sent 17 Mar 11:45</span></div></div>
     <div class="info-row"><div class="ir-key">KSh 50 Fee</div><div class="ir-val" style="color:#880000">Non-refundable &middot; Not returned</div></div>
@@ -1358,11 +1358,11 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
       <div style="font-family:'DM Mono',monospace;font-size:11px;color:#555;font-weight:700">LA-2026-037</div>
       <div style="font-size:15px;font-weight:700;color:#000">Grace Mutua &mdash; KSh 30,000 Emergency Loan</div>
     </div>
-    <span class="bdg bg-muted" style="font-size:11px">&#9675; Returned — Incomplete</span>
+    <span class="bdg bg-muted" style="font-size:11px">&#9675; Returned â Incomplete</span>
   </div>
   <div style="padding:12px 15px;background:#fff;">
-    <div class="info-row"><div class="ir-key">Phase 1 — Fee</div><div class="ir-val"><span class="bdg bg-green">&#10003; KSh 50 received &middot; Non-refundable</span></div></div>
-    <div class="info-row"><div class="ir-key">Phase 2 — Guarantors</div><div class="ir-val"><span class="bdg bg-red">&#10007; 0/1 &middot; Guarantor did not respond within 48hrs</span></div></div>
+    <div class="info-row"><div class="ir-key">Phase 1 â Fee</div><div class="ir-val"><span class="bdg bg-green">&#10003; KSh 50 received &middot; Non-refundable</span></div></div>
+    <div class="info-row"><div class="ir-key">Phase 2 â Guarantors</div><div class="ir-val"><span class="bdg bg-red">&#10007; 0/1 &middot; Guarantor did not respond within 48hrs</span></div></div>
     <div class="info-row"><div class="ir-key">Payslip</div><div class="ir-val"><span class="bdg bg-red">&#10007; Not uploaded &middot; SMS reminder sent</span></div></div>
     <div class="info-row"><div class="ir-key">Status</div><div class="ir-val">Returned to member. Must complete guarantor + payslip before CC review.</div></div>
   </div>
@@ -1376,13 +1376,13 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
     <div class="pq-ico">&#128176;</div>
     <div class="pq-body">
       <div class="pq-q">Is a transaction wrong, missing, or duplicated?</div>
-      <div class="pq-hint">Share your input about any transaction that looks incorrect — wrong amount, wrong member, or should not exist — before posting new ones.</div>
+      <div class="pq-hint">Share your input about any transaction that looks incorrect â wrong amount, wrong member, or should not exist â before posting new ones.</div>
       <button class="pq-btn" onclick="pqOpen('admin-txn-record')">Give Your Input</button>
-      <div class="pq-done" id="pqd-admin-txn-record">&#10003; Submitted — Admin will respond in your My Feedback tab</div>
+      <div class="pq-done" id="pqd-admin-txn-record">&#10003; Submitted â Admin will respond in your My Feedback tab</div>
     </div>
   </div>
   <div class="pq-form" id="pqf-admin-txn-record">
-    <textarea class="pq-ta" id="pqta-admin-txn-record" placeholder="Be specific — the admin can only respond to what you write here&#8230;"></textarea>
+    <textarea class="pq-ta" id="pqta-admin-txn-record" placeholder="Be specific â the admin can only respond to what you write here&#8230;"></textarea>
     <div class="pq-row">
       <button class="pq-submit" onclick="pqSubmit('admin-txn-record','Admin Transactions')">Submit &#8594;</button>
       <button class="pq-cancel" onclick="pqClose('admin-txn-record')">Cancel</button>
@@ -1408,11 +1408,11 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
       <div class="pq-q">Not sure about the correct type or reference format?</div>
       <div class="pq-hint">If you are unsure which transaction type to select, what CC/Exec ref to use, or how to handle a specific case, ask here.</div>
       <button class="pq-btn" onclick="pqOpen('admin-txn-post')">Give Your Input</button>
-      <div class="pq-done" id="pqd-admin-txn-post">&#10003; Submitted — Admin will respond in your My Feedback tab</div>
+      <div class="pq-done" id="pqd-admin-txn-post">&#10003; Submitted â Admin will respond in your My Feedback tab</div>
     </div>
   </div>
   <div class="pq-form" id="pqf-admin-txn-post">
-    <textarea class="pq-ta" id="pqta-admin-txn-post" placeholder="Be specific — the admin can only respond to what you write here&#8230;"></textarea>
+    <textarea class="pq-ta" id="pqta-admin-txn-post" placeholder="Be specific â the admin can only respond to what you write here&#8230;"></textarea>
     <div class="pq-row">
       <button class="pq-submit" onclick="pqSubmit('admin-txn-post','Admin Post Transaction Query')">Submit &#8594;</button>
       <button class="pq-cancel" onclick="pqClose('admin-txn-post')">Cancel</button>
@@ -1447,13 +1447,13 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
     <div class="pq-ico">&#128188;</div>
     <div class="pq-body">
       <div class="pq-q">Is a payroll figure wrong or a member deduction missing?</div>
-      <div class="pq-hint">Wrong salary, a member not included, or a deduction that does not match what was agreed — share your input before running the payroll.</div>
+      <div class="pq-hint">Wrong salary, a member not included, or a deduction that does not match what was agreed â share your input before running the payroll.</div>
       <button class="pq-btn" onclick="pqOpen('admin-payroll')">Give Your Input</button>
-      <div class="pq-done" id="pqd-admin-payroll">&#10003; Submitted — Admin will respond in your My Feedback tab</div>
+      <div class="pq-done" id="pqd-admin-payroll">&#10003; Submitted â Admin will respond in your My Feedback tab</div>
     </div>
   </div>
   <div class="pq-form" id="pqf-admin-payroll">
-    <textarea class="pq-ta" id="pqta-admin-payroll" placeholder="Be specific — the admin can only respond to what you write here&#8230;"></textarea>
+    <textarea class="pq-ta" id="pqta-admin-payroll" placeholder="Be specific â the admin can only respond to what you write here&#8230;"></textarea>
     <div class="pq-row">
       <button class="pq-submit" onclick="pqSubmit('admin-payroll','Admin Payroll')">Submit &#8594;</button>
       <button class="pq-cancel" onclick="pqClose('admin-payroll')">Cancel</button>
@@ -1466,7 +1466,7 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
   </div>
 </div>
 <div class="card" style="margin-top:10px"><div class="card-title">Upload &amp; Run</div>
-  <div class="upload-zone" onclick="toast('Payroll CSV upload opened. Template: Member ID, Gross, NHIF, NSSF, PAYE, Loan Deduction, Savings Deduction, Net.')"><div style="font-size:28px;margin-bottom:6px">&#128202;</div><div style="font-size:13px;font-weight:700">Upload Payroll CSV</div><div style="font-size:11px;color:#555;margin-top:2px">Download template · Fill · Upload</div></div>
+  <div class="upload-zone" onclick="toast('Payroll CSV upload opened. Template: Member ID, Gross, NHIF, NSSF, PAYE, Loan Deduction, Savings Deduction, Net.')"><div style="font-size:28px;margin-bottom:6px">&#128202;</div><div style="font-size:13px;font-weight:700">Upload Payroll CSV</div><div style="font-size:11px;color:#555;margin-top:2px">Download template Â· Fill Â· Upload</div></div>
   <div class="btn-row" style="margin-top:10px">
     <button class="btn btn-outline" type="button" onclick="toast('Template downloaded.')">&#11015; Template</button>
     <button class="btn btn-blue" type="button" onclick="toast('Validating 500 members... Checking for anomalies.')">&#10003; Validate</button>
@@ -1490,11 +1490,11 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
       <div class="pq-q">Is a document missing, misfiled, or incorrectly tagged?</div>
       <div class="pq-hint">If a document you uploaded is not showing, or you cannot locate a specific record, share your input here.</div>
       <button class="pq-btn" onclick="pqOpen('admin-docs')">Give Your Input</button>
-      <div class="pq-done" id="pqd-admin-docs">&#10003; Submitted — Admin will respond in your My Feedback tab</div>
+      <div class="pq-done" id="pqd-admin-docs">&#10003; Submitted â Admin will respond in your My Feedback tab</div>
     </div>
   </div>
   <div class="pq-form" id="pqf-admin-docs">
-    <textarea class="pq-ta" id="pqta-admin-docs" placeholder="Be specific — the admin can only respond to what you write here&#8230;"></textarea>
+    <textarea class="pq-ta" id="pqta-admin-docs" placeholder="Be specific â the admin can only respond to what you write here&#8230;"></textarea>
     <div class="pq-row">
       <button class="pq-submit" onclick="pqSubmit('admin-docs','Admin Document Management')">Submit &#8594;</button>
       <button class="pq-cancel" onclick="pqClose('admin-docs')">Cancel</button>
@@ -1522,7 +1522,7 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
   <div class="upload-zone" style="margin-top:11px" onclick="toast('Camera / file picker opened. Scan or select document.')">
     <div style="font-size:30px;margin-bottom:7px">&#128248;</div>
     <div style="font-size:13px;font-weight:700;color:#000;margin-bottom:3px">Tap to Scan or Upload</div>
-    <div style="font-size:11px;color:#555">Camera scan · PDF · JPG · PNG · Max 10MB</div>
+    <div style="font-size:11px;color:#555">Camera scan Â· PDF Â· JPG Â· PNG Â· Max 10MB</div>
   </div>
   <button class="btn btn-gold" type="button" style="margin-top:11px" onclick="toast('Document uploaded and indexed. Logged in audit trail.')">Upload Document</button>
 </div>
@@ -1536,7 +1536,7 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
   </table></div>
 </div></div><div class="sect-page" id="admin-ledger">
 <div class="page-title">Immutable Ledger</div>
-<div class="page-sub">8,821 hash-chained entries — no one can edit or delete any block</div>
+<div class="page-sub">8,821 hash-chained entries â no one can edit or delete any block</div>
 <div class="alert-warn">&#128274; Every entry is cryptographically sealed. Any attempt to alter a record breaks the chain.</div>
 <div class="pq" id="pqw-admin-ledger">
   <div class="pq-head">
@@ -1545,11 +1545,11 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
       <div class="pq-q">Do you see anything unexpected or missing in the ledger?</div>
       <div class="pq-hint">If a transaction you posted is not showing, or a block looks incorrect, share your input here immediately.</div>
       <button class="pq-btn" onclick="pqOpen('admin-ledger')">Give Your Input</button>
-      <div class="pq-done" id="pqd-admin-ledger">&#10003; Submitted — Admin will respond in your My Feedback tab</div>
+      <div class="pq-done" id="pqd-admin-ledger">&#10003; Submitted â Admin will respond in your My Feedback tab</div>
     </div>
   </div>
   <div class="pq-form" id="pqf-admin-ledger">
-    <textarea class="pq-ta" id="pqta-admin-ledger" placeholder="Be specific — the admin can only respond to what you write here&#8230;"></textarea>
+    <textarea class="pq-ta" id="pqta-admin-ledger" placeholder="Be specific â the admin can only respond to what you write here&#8230;"></textarea>
     <div class="pq-row">
       <button class="pq-submit" onclick="pqSubmit('admin-ledger','Admin Immutable Ledger')">Submit &#8594;</button>
       <button class="pq-cancel" onclick="pqClose('admin-ledger')">Cancel</button>
@@ -1562,13 +1562,13 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
   </div>
 </div>
 <div style="margin-top:10px">
-  <div class="le le-c"><div class="le-hash">HASH: a3f9c2d8e1b4&#8230; · Block #8821 &#128274;</div><div class="le-desc">CREDIT +KSh 4,250 — SC-2024-0041 James Mwangi · Savings contribution</div><div class="le-meta">19 Mar 2026 10:12:33 · TXN-8821 · <span class="audit-tag">AUDIT #4421</span></div></div>
-  <div class="le le-d"><div class="le-hash">HASH: d7e2b5a1c9f3&#8230; · Block #8820 &#128274;</div><div class="le-desc">DEBIT -KSh 80,000 — SC-2024-0089 Aisha Kamau · Loan disbursement</div><div class="le-meta">19 Mar 2026 09:55:14 · Admin AD-001 · CC-2026-0020 · EX-2026-007 · TXN-8820 · <span class="audit-tag">AUDIT #4420</span></div></div>
-  <div class="le le-s"><div class="le-hash">HASH: 9c1f4e7a2b8d&#8230; · Block #8819 &#128274;</div><div class="le-desc">SYSTEM — Payroll batch 498 members · KSh 7.7M total</div><div class="le-meta">18 Mar 2026 16:30:00 · STAND-2026-H1 · TXN-8819 · <span class="audit-tag">AUDIT #4419</span></div></div>
-  <div class="le le-d"><div class="le-hash">HASH: 2e8b3f6c9a5d&#8230; · Block #8818 &#128274;</div><div class="le-desc">DEBIT -KSh 28,500 — Purchase SupplyMart Ltd · PC-2026-0011</div><div class="le-meta">18 Mar 2026 14:15:22 · EX-2026-006 · TXN-8818 · <span class="audit-tag">AUDIT #4418</span></div></div>
+  <div class="le le-c"><div class="le-hash">HASH: a3f9c2d8e1b4&#8230; Â· Block #8821 &#128274;</div><div class="le-desc">CREDIT +KSh 4,250 â SC-2024-0041 James Mwangi Â· Savings contribution</div><div class="le-meta">19 Mar 2026 10:12:33 Â· TXN-8821 Â· <span class="audit-tag">AUDIT #4421</span></div></div>
+  <div class="le le-d"><div class="le-hash">HASH: d7e2b5a1c9f3&#8230; Â· Block #8820 &#128274;</div><div class="le-desc">DEBIT -KSh 80,000 â SC-2024-0089 Aisha Kamau Â· Loan disbursement</div><div class="le-meta">19 Mar 2026 09:55:14 Â· Admin AD-001 Â· CC-2026-0020 Â· EX-2026-007 Â· TXN-8820 Â· <span class="audit-tag">AUDIT #4420</span></div></div>
+  <div class="le le-s"><div class="le-hash">HASH: 9c1f4e7a2b8d&#8230; Â· Block #8819 &#128274;</div><div class="le-desc">SYSTEM â Payroll batch 498 members Â· KSh 7.7M total</div><div class="le-meta">18 Mar 2026 16:30:00 Â· STAND-2026-H1 Â· TXN-8819 Â· <span class="audit-tag">AUDIT #4419</span></div></div>
+  <div class="le le-d"><div class="le-hash">HASH: 2e8b3f6c9a5d&#8230; Â· Block #8818 &#128274;</div><div class="le-desc">DEBIT -KSh 28,500 â Purchase SupplyMart Ltd Â· PC-2026-0011</div><div class="le-meta">18 Mar 2026 14:15:22 Â· EX-2026-006 Â· TXN-8818 Â· <span class="audit-tag">AUDIT #4418</span></div></div>
 </div></div><div class="sect-page" id="admin-financials">
 <div class="page-title">Financial Statements</div>
-<div class="page-sub">Balance sheet, trial balance, income &amp; expenditure — all exportable</div>
+<div class="page-sub">Balance sheet, trial balance, income &amp; expenditure â all exportable</div>
 <div class="pq" id="pqw-admin-financials">
   <div class="pq-head">
     <div class="pq-ico">&#128200;</div>
@@ -1576,11 +1576,11 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
       <div class="pq-q">Does a financial figure need clarification or correction?</div>
       <div class="pq-hint">Query a balance, challenge a line item, or request a breakdown before finalising any report.</div>
       <button class="pq-btn" onclick="pqOpen('admin-financials')">Give Your Input</button>
-      <div class="pq-done" id="pqd-admin-financials">&#10003; Submitted — Admin will respond in your My Feedback tab</div>
+      <div class="pq-done" id="pqd-admin-financials">&#10003; Submitted â Admin will respond in your My Feedback tab</div>
     </div>
   </div>
   <div class="pq-form" id="pqf-admin-financials">
-    <textarea class="pq-ta" id="pqta-admin-financials" placeholder="Be specific — the admin can only respond to what you write here&#8230;"></textarea>
+    <textarea class="pq-ta" id="pqta-admin-financials" placeholder="Be specific â the admin can only respond to what you write here&#8230;"></textarea>
     <div class="pq-row">
       <button class="pq-submit" onclick="pqSubmit('admin-financials','Admin Financials')">Submit &#8594;</button>
       <button class="pq-cancel" onclick="pqClose('admin-financials')">Cancel</button>
@@ -1593,7 +1593,7 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
   </div>
 </div>
 <div class="g2" style="margin-top:10px">
-  <div class="card"><div class="card-title">Balance Sheet — 31 Dec 2025</div>
+  <div class="card"><div class="card-title">Balance Sheet â 31 Dec 2025</div>
     <div class="info-row"><div class="ir-key">Cash at Bank</div><div class="ir-val" style="color:#004422">KSh 8,420,300</div></div>
     <div class="info-row"><div class="ir-key">Loans to Members</div><div class="ir-val" style="color:#004422">KSh 58,400,000</div></div>
     <div class="info-row"><div class="ir-key">Fixed Assets</div><div class="ir-val" style="color:#004422">KSh 420,000</div></div>
@@ -1603,14 +1603,14 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
     <div class="info-row"><div class="ir-key">Share Capital</div><div class="ir-val" style="color:#880000">KSh 2,500,000</div></div>
     <div class="info-row" style="background:#fde0e0;padding:7px 4px;border-radius:5px"><div class="ir-key"><b>Total L &amp; E</b></div><div class="ir-val" style="color:#880000"><b>KSh 67,240,300</b></div></div>
   </div>
-  <div class="card"><div class="card-title">I &amp; E — YTD March 2026</div>
+  <div class="card"><div class="card-title">I &amp; E â YTD March 2026</div>
     <div class="info-row"><div class="ir-key">Total Income</div><div class="ir-val" style="color:#004422">KSh 222,600</div></div>
     <div class="info-row"><div class="ir-key">Total Expenditure</div><div class="ir-val" style="color:#880000">KSh 245,400</div></div>
     <div style="padding:9px;background:#fde0e0;border-radius:7px;margin-top:7px;display:flex;justify-content:space-between;border:1px solid #cc0000"><span style="font-weight:700;color:#660000">Net Deficit YTD</span><span style="color:#880000;font-weight:700">(KSh 22,800)</span></div>
   </div>
 </div></div><div class="sect-page" id="admin-reports">
 <div class="page-title">Reports</div>
-<div class="page-sub">All reports — PDF export, opens offline</div>
+<div class="page-sub">All reports â PDF export, opens offline</div>
 <div class="pq" id="pqw-admin-reports">
   <div class="pq-head">
     <div class="pq-ico">&#128196;</div>
@@ -1618,11 +1618,11 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
       <div class="pq-q">Do the reports available here cover what you need?</div>
       <div class="pq-hint">Share your input about any report issue or request a report type not currently available.</div>
       <button class="pq-btn" onclick="pqOpen('admin-reports')">Give Your Input</button>
-      <div class="pq-done" id="pqd-admin-reports">&#10003; Submitted — Admin will respond in your My Feedback tab</div>
+      <div class="pq-done" id="pqd-admin-reports">&#10003; Submitted â Admin will respond in your My Feedback tab</div>
     </div>
   </div>
   <div class="pq-form" id="pqf-admin-reports">
-    <textarea class="pq-ta" id="pqta-admin-reports" placeholder="Be specific — the admin can only respond to what you write here&#8230;"></textarea>
+    <textarea class="pq-ta" id="pqta-admin-reports" placeholder="Be specific â the admin can only respond to what you write here&#8230;"></textarea>
     <div class="pq-row">
       <button class="pq-submit" onclick="pqSubmit('admin-reports','Admin Reports')">Submit &#8594;</button>
       <button class="pq-cancel" onclick="pqClose('admin-reports')">Cancel</button>
@@ -1659,11 +1659,11 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
       <div class="pq-q">Does the SMS and alert setup look correct to you?</div>
       <div class="pq-hint">If SMS alerts are failing for a specific member, a batch was not sent, or USSD is giving errors, share your input here.</div>
       <button class="pq-btn" onclick="pqOpen('admin-sms')">Give Your Input</button>
-      <div class="pq-done" id="pqd-admin-sms">&#10003; Submitted — Admin will respond in your My Feedback tab</div>
+      <div class="pq-done" id="pqd-admin-sms">&#10003; Submitted â Admin will respond in your My Feedback tab</div>
     </div>
   </div>
   <div class="pq-form" id="pqf-admin-sms">
-    <textarea class="pq-ta" id="pqta-admin-sms" placeholder="Be specific — the admin can only respond to what you write here&#8230;"></textarea>
+    <textarea class="pq-ta" id="pqta-admin-sms" placeholder="Be specific â the admin can only respond to what you write here&#8230;"></textarea>
     <div class="pq-row">
       <button class="pq-submit" onclick="pqSubmit('admin-sms','Admin SMS')">Submit &#8594;</button>
       <button class="pq-cancel" onclick="pqClose('admin-sms')">Cancel</button>
@@ -1690,7 +1690,7 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
   <div class="info-row"><div class="ir-key">Policy change</div><div class="ir-val"><span class="bdg bg-red">&#8594; Supervisory (3) instant</span></div></div>
   <div class="info-row"><div class="ir-key">Overdue Day 1, 7, 14</div><div class="ir-val"><span class="bdg bg-green">&#8594; Member + Guarantors</span></div></div>
   <div class="info-row"><div class="ir-key">OTP login</div><div class="ir-val"><span class="bdg bg-green">&#8594; Member only</span></div></div>
-  <div class="info-row"><div class="ir-key">Paybill / USSD</div><div class="ir-val" style="font-family:'DM Mono',monospace;font-weight:700">400222 · *483#</div></div>
+  <div class="info-row"><div class="ir-key">Paybill / USSD</div><div class="ir-val" style="font-family:'DM Mono',monospace;font-weight:700">400222 Â· *483#</div></div>
 </div></div><div class="sect-page" id="admin-myfeedback">
 
 <div style="background:#fff;border:1px solid #ccc;border-radius:10px;padding:14px 15px;margin-bottom:12px;">
@@ -1707,7 +1707,7 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
 <div style="background:#fff8e6;border:2px solid #b06a00;border-radius:9px;padding:10px 14px;margin-bottom:14px;font-size:12.5px;color:#4a2800;font-weight:600;display:flex;align-items:flex-start;gap:8px;"><span style="font-size:16px;flex-shrink:0">&#128274;</span><span>Your feedback and questions on this page go <b>directly and only to the System Admin</b>. Nothing is editable after you submit. The System Admin will respond in your <b>My Feedback</b> tab.</span></div>
 <div class="sect-page on" id="board-consent">
 <div class="page-title">9-of-9 Bank Activation</div>
-<div class="page-sub">All 9 board members must consent per session · Reply APPROVE/DECLINE XX to 21000</div>
+<div class="page-sub">All 9 board members must consent per session Â· Reply APPROVE/DECLINE XX to 21000</div>
 <div class="stats-row">
   <div class="stat"><div class="stat-label">Session</div><div class="stat-value">#47</div></div>
   <div class="stat"><div class="stat-label">Approved</div><div class="stat-value green">7 / 9</div></div>
@@ -1718,13 +1718,13 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
     <div class="pq-ico">&#128272;</div>
     <div class="pq-body">
       <div class="pq-q">Board member not receiving the consent SMS, or question about the APPROVE/DECLINE process?</div>
-      <div class="pq-hint">If a board member did not get the SMS, or you are unsure how to reply, share your input here — admin will resend or assist.</div>
+      <div class="pq-hint">If a board member did not get the SMS, or you are unsure how to reply, share your input here â admin will resend or assist.</div>
       <button class="pq-btn" onclick="pqOpen('board-consent')">Give Your Input</button>
-      <div class="pq-done" id="pqd-board-consent">&#10003; Submitted — Admin will respond in your My Feedback tab</div>
+      <div class="pq-done" id="pqd-board-consent">&#10003; Submitted â Admin will respond in your My Feedback tab</div>
     </div>
   </div>
   <div class="pq-form" id="pqf-board-consent">
-    <textarea class="pq-ta" id="pqta-board-consent" placeholder="Be specific — the admin can only respond to what you write here&#8230;"></textarea>
+    <textarea class="pq-ta" id="pqta-board-consent" placeholder="Be specific â the admin can only respond to what you write here&#8230;"></textarea>
     <div class="pq-row">
       <button class="pq-submit" onclick="pqSubmit('board-consent','Board 9-of-9 Consent')">Submit &#8594;</button>
       <button class="pq-cancel" onclick="pqClose('board-consent')">Cancel</button>
@@ -1736,7 +1736,7 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
     <div class="pq-resp-meta" id="pqrm-board-consent"></div>
   </div>
 </div>
-<div class="card" style="margin-top:10px"><div class="card-title">Consent Status — Session #47</div>
+<div class="card" style="margin-top:10px"><div class="card-title">Consent Status â Session #47</div>
   <div class="alert-info">2 members pending. Reply <b>APPROVE 47</b> or <b>DECLINE 47</b> to SMS 21000. No internet needed.</div>
   <div class="consent-grid">
     <div class="cm-card ok"><div class="cm-name">J. Mwangi</div><div class="cm-st" style="color:#004422">&#10003; Portal</div></div>
@@ -1750,20 +1750,20 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
     <div class="cm-card"><div class="cm-name">S. Njeru</div><div class="cm-st" style="color:#888">&#8987; SMS sent</div></div>
   </div>
 </div></div><div class="sect-page" id="board-loans">
-<div class="page-title">Loan Applications — Board View</div>
-<div class="page-sub">All 3 approval phases visible · Board can post questions on any application</div>
+<div class="page-title">Loan Applications â Board View</div>
+<div class="page-sub">All 3 approval phases visible Â· Board can post questions on any application</div>
 <div class="pq" id="pqw-board-loans">
   <div class="pq-head">
     <div class="pq-ico">&#128179;</div>
     <div class="pq-body">
       <div class="pq-q">Question about a specific loan application before the bank session?</div>
-      <div class="pq-hint">If you need more information — member salary, guarantors, payslip details — before the bank is activated, share your input here. Admin will respond.</div>
+      <div class="pq-hint">If you need more information â member salary, guarantors, payslip details â before the bank is activated, share your input here. Admin will respond.</div>
       <button class="pq-btn" onclick="pqOpen('board-loans')">Ask About a Loan</button>
-      <div class="pq-done" id="pqd-board-loans">&#10003; Submitted — Admin will respond in your My Feedback tab</div>
+      <div class="pq-done" id="pqd-board-loans">&#10003; Submitted â Admin will respond in your My Feedback tab</div>
     </div>
   </div>
   <div class="pq-form" id="pqf-board-loans">
-    <textarea class="pq-ta" id="pqta-board-loans" placeholder="Be specific — the admin can only respond to what you write here&#8230;"></textarea>
+    <textarea class="pq-ta" id="pqta-board-loans" placeholder="Be specific â the admin can only respond to what you write here&#8230;"></textarea>
     <div class="pq-row">
       <button class="pq-submit" onclick="pqSubmit('board-loans','Board Loan Application Query')">Submit &#8594;</button>
       <button class="pq-cancel" onclick="pqClose('board-loans')">Cancel</button>
@@ -1778,8 +1778,8 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
 <div class="tw" style="margin-top:10px"><table>
   <tr><th>App Ref</th><th>Member</th><th>Amount</th><th>Phase</th><th>CC</th><th>Exec</th><th>Status</th></tr>
   <tr><td style="font-family:'DM Mono',monospace;font-size:10px">LA-2026-041</td><td>James Mwangi</td><td>KSh 150,000</td><td><span class="bdg bg-green">Phase 3</span></td><td><span class="bdg bg-green">&#10003;</span></td><td><span class="bdg bg-purple">&#10003;</span></td><td><span class="bdg bg-gold">Queued</span></td></tr>
-  <tr><td style="font-family:'DM Mono',monospace;font-size:10px">LA-2026-039</td><td>Peter Njoroge</td><td>KSh 200,000</td><td><span class="bdg bg-gold">Phase 1</span></td><td><span class="bdg bg-muted">Pending</span></td><td>—</td><td><span class="bdg bg-gold">Pending CC</span></td></tr>
-  <tr><td style="font-family:'DM Mono',monospace;font-size:10px">LA-2026-037</td><td>Grace Mutua</td><td>KSh 30,000</td><td><span class="bdg bg-red">Returned</span></td><td>—</td><td>—</td><td><span class="bdg bg-red">Incomplete</span></td></tr>
+  <tr><td style="font-family:'DM Mono',monospace;font-size:10px">LA-2026-039</td><td>Peter Njoroge</td><td>KSh 200,000</td><td><span class="bdg bg-gold">Phase 1</span></td><td><span class="bdg bg-muted">Pending</span></td><td>â</td><td><span class="bdg bg-gold">Pending CC</span></td></tr>
+  <tr><td style="font-family:'DM Mono',monospace;font-size:10px">LA-2026-037</td><td>Grace Mutua</td><td>KSh 30,000</td><td><span class="bdg bg-red">Returned</span></td><td>â</td><td>â</td><td><span class="bdg bg-red">Incomplete</span></td></tr>
 </table></div></div><div class="sect-page" id="board-overview">
 
 <div class="page-title">SACCO Overview</div>
@@ -1831,7 +1831,7 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
 <div style="background:#fff8e6;border:2px solid #b06a00;border-radius:9px;padding:10px 14px;margin-bottom:14px;font-size:12.5px;color:#4a2800;font-weight:600;display:flex;align-items:flex-start;gap:8px;"><span style="font-size:16px;flex-shrink:0">&#128274;</span><span>Your feedback and questions on this page go <b>directly and only to the System Admin</b>. Nothing is editable after you submit. The System Admin will respond in your <b>My Feedback</b> tab.</span></div>
 <div class="sect-page on" id="super-alerts">
 <div class="page-title">Bank Alerts Feed</div>
-<div class="page-sub">Auto-SMS on every bank debit — mirrored here · 3 Supervisory members</div>
+<div class="page-sub">Auto-SMS on every bank debit â mirrored here Â· 3 Supervisory members</div>
 <div class="stats-row">
   <div class="stat"><div class="stat-label">Alerts Today</div><div class="stat-value blue">12</div></div>
   <div class="stat"><div class="stat-label">Debits Today</div><div class="stat-value red">KSh 108,500</div></div>
@@ -1842,15 +1842,15 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
     <div class="pq-ico">&#128680;</div>
     <div class="pq-body">
       <div class="pq-q">Does every alert in this list look correct to you?</div>
-      <div class="pq-hint">If a bank debit does not have a matching approval reference, or the amount is wrong, share your input immediately — admin will investigate.</div>
+      <div class="pq-hint">If a bank debit does not have a matching approval reference, or the amount is wrong, share your input immediately â admin will investigate.</div>
       <button class="pq-btn" onclick="pqOpen('super-alerts')">Give Your Input</button>
-      <div class="pq-done" id="pqd-super-alerts">&#10003; Submitted — Admin will respond in your My Feedback tab</div>
+      <div class="pq-done" id="pqd-super-alerts">&#10003; Submitted â Admin will respond in your My Feedback tab</div>
     </div>
   </div>
   <div class="pq-form" id="pqf-super-alerts">
-    <textarea class="pq-ta" id="pqta-super-alerts" placeholder="Be specific — the admin can only respond to what you write here&#8230;"></textarea>
+    <textarea class="pq-ta" id="pqta-super-alerts" placeholder="Be specific â the admin can only respond to what you write here&#8230;"></textarea>
     <div class="pq-row">
-      <button class="pq-submit" onclick="pqSubmit('super-alerts','Supervisory — Suspicious Bank Alert')">Submit &#8594;</button>
+      <button class="pq-submit" onclick="pqSubmit('super-alerts','Supervisory â Suspicious Bank Alert')">Submit &#8594;</button>
       <button class="pq-cancel" onclick="pqClose('super-alerts')">Cancel</button>
     </div>
   </div>
@@ -1861,9 +1861,9 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
   </div>
 </div>
 <div class="card" style="margin-top:10px"><div class="card-title">Alert Log</div>
-  <div class="ai-item"><div class="ai-dot" style="background:#880000"></div><div><div class="ai-txt"><b>DEBIT -KSh 80,000</b> — Loan disbursement Aisha Kamau SC-0089 · CC-2026-0020</div><div class="ai-time">19 Mar 09:55 · TXN-8820 · SMS received 09:55:18</div></div></div>
-  <div class="ai-item"><div class="ai-dot" style="background:#004422"></div><div><div class="ai-txt"><b>CREDIT +KSh 320,000</b> — Payroll batch 498 members · STAND-2026-H1</div><div class="ai-time">18 Mar 16:30 · TXN-8819</div></div></div>
-  <div class="ai-item"><div class="ai-dot" style="background:#880000"></div><div><div class="ai-txt"><b>DEBIT -KSh 28,500</b> — Purchase SupplyMart Ltd · PC-2026-0011 · EX-2026-006</div><div class="ai-time">18 Mar 14:15 · TXN-8818</div></div></div>
+  <div class="ai-item"><div class="ai-dot" style="background:#880000"></div><div><div class="ai-txt"><b>DEBIT -KSh 80,000</b> â Loan disbursement Aisha Kamau SC-0089 Â· CC-2026-0020</div><div class="ai-time">19 Mar 09:55 Â· TXN-8820 Â· SMS received 09:55:18</div></div></div>
+  <div class="ai-item"><div class="ai-dot" style="background:#004422"></div><div><div class="ai-txt"><b>CREDIT +KSh 320,000</b> â Payroll batch 498 members Â· STAND-2026-H1</div><div class="ai-time">18 Mar 16:30 Â· TXN-8819</div></div></div>
+  <div class="ai-item"><div class="ai-dot" style="background:#880000"></div><div><div class="ai-txt"><b>DEBIT -KSh 28,500</b> â Purchase SupplyMart Ltd Â· PC-2026-0011 Â· EX-2026-006</div><div class="ai-time">18 Mar 14:15 Â· TXN-8818</div></div></div>
 </div></div><div class="sect-page" id="super-policy">
 <div class="page-title">Policy Settings Monitor</div>
 <div class="page-sub">You receive instant SMS before any policy change takes effect</div>
@@ -1874,13 +1874,13 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
       <div class="pq-q">Does the current policy look correct to you?</div>
       <div class="pq-hint">If you received a policy change alert and the board did not sanction it, share your input immediately.</div>
       <button class="pq-btn" onclick="pqOpen('super-policy')">Give Your Input</button>
-      <div class="pq-done" id="pqd-super-policy">&#10003; Submitted — Admin will respond in your My Feedback tab</div>
+      <div class="pq-done" id="pqd-super-policy">&#10003; Submitted â Admin will respond in your My Feedback tab</div>
     </div>
   </div>
   <div class="pq-form" id="pqf-super-policy">
-    <textarea class="pq-ta" id="pqta-super-policy" placeholder="Be specific — the admin can only respond to what you write here&#8230;"></textarea>
+    <textarea class="pq-ta" id="pqta-super-policy" placeholder="Be specific â the admin can only respond to what you write here&#8230;"></textarea>
     <div class="pq-row">
-      <button class="pq-submit" onclick="pqSubmit('super-policy','Supervisory — Policy Change Alert')">Submit &#8594;</button>
+      <button class="pq-submit" onclick="pqSubmit('super-policy','Supervisory â Policy Change Alert')">Submit &#8594;</button>
       <button class="pq-cancel" onclick="pqClose('super-policy')">Cancel</button>
     </div>
   </div>
@@ -1894,11 +1894,11 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
   <div class="info-row"><div class="ir-key">Interest (all loans)</div><div class="ir-val"><span class="bdg bg-muted">OFF</span></div></div>
   <div class="info-row"><div class="ir-key">Late Fines</div><div class="ir-val"><span class="bdg bg-muted">OFF</span></div></div>
   <div class="info-row"><div class="ir-key">Savings Rate</div><div class="ir-val">4% p.a.</div></div>
-  <div class="info-row"><div class="ir-key">Application Fee</div><div class="ir-val">KSh 50 · Non-refundable</div></div>
+  <div class="info-row"><div class="ir-key">Application Fee</div><div class="ir-val">KSh 50 Â· Non-refundable</div></div>
   <div class="info-row"><div class="ir-key">M-Pesa Paybill</div><div class="ir-val" style="font-family:'DM Mono',monospace">400222</div></div>
   <div class="info-row"><div class="ir-key">Borrowing Limit</div><div class="ir-val">3&#215; savings or 1/3 net salary</div></div>
 </div></div><div class="sect-page" id="super-ledger"><div class="page-title">Immutable Ledger</div>
-<div class="page-sub">Full read-only · 8,821 entries · Cannot be edited by anyone</div>
+<div class="page-sub">Full read-only Â· 8,821 entries Â· Cannot be edited by anyone</div>
 <div class="pq" id="pqw-super-ledger">
   <div class="pq-head">
     <div class="pq-ico">&#128218;</div>
@@ -1906,11 +1906,11 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
       <div class="pq-q">Does the ledger look correct to you?</div>
       <div class="pq-hint">If a block looks wrong, a debit has no matching approval ref, or the hash chain appears broken, share your input.</div>
       <button class="pq-btn" onclick="pqOpen('super-ledger')">Give Your Input</button>
-      <div class="pq-done" id="pqd-super-ledger">&#10003; Submitted — Admin will respond in your My Feedback tab</div>
+      <div class="pq-done" id="pqd-super-ledger">&#10003; Submitted â Admin will respond in your My Feedback tab</div>
     </div>
   </div>
   <div class="pq-form" id="pqf-super-ledger">
-    <textarea class="pq-ta" id="pqta-super-ledger" placeholder="Be specific — the admin can only respond to what you write here&#8230;"></textarea>
+    <textarea class="pq-ta" id="pqta-super-ledger" placeholder="Be specific â the admin can only respond to what you write here&#8230;"></textarea>
     <div class="pq-row">
       <button class="pq-submit" onclick="pqSubmit('super-ledger','Supervisory Ledger Anomaly')">Submit &#8594;</button>
       <button class="pq-cancel" onclick="pqClose('super-ledger')">Cancel</button>
@@ -1922,22 +1922,22 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
     <div class="pq-resp-meta" id="pqrm-super-ledger"></div>
   </div>
 </div>
-<div style="margin-top:10px"><div class="le le-c"><div class="le-hash">HASH: a3f9c2d8e1b4&#8230; · Block #8821 &#128274;</div><div class="le-desc">CREDIT +KSh 4,250 — SC-2024-0041 James Mwangi</div><div class="le-meta">19 Mar 2026 10:12:33 · TXN-8821</div></div>
-<div class="le le-d"><div class="le-hash">HASH: d7e2b5a1c9f3&#8230; · Block #8820 &#128274;</div><div class="le-desc">DEBIT -KSh 80,000 — SC-2024-0089 Aisha Kamau · CC-2026-0020</div><div class="le-meta">19 Mar 2026 09:55:14 · TXN-8820</div></div>
-<div class="le le-s"><div class="le-hash">HASH: 9c1f4e7a2b8d&#8230; · Block #8819 &#128274;</div><div class="le-desc">SYSTEM — Payroll batch 498 members · KSh 7.7M</div><div class="le-meta">18 Mar 2026 16:30:00 · TXN-8819</div></div></div></div><div class="sect-page" id="super-audit"><div class="page-title">Audit Logs</div>
-<div class="page-sub">Every system action — permanent, read-only</div>
+<div style="margin-top:10px"><div class="le le-c"><div class="le-hash">HASH: a3f9c2d8e1b4&#8230; Â· Block #8821 &#128274;</div><div class="le-desc">CREDIT +KSh 4,250 â SC-2024-0041 James Mwangi</div><div class="le-meta">19 Mar 2026 10:12:33 Â· TXN-8821</div></div>
+<div class="le le-d"><div class="le-hash">HASH: d7e2b5a1c9f3&#8230; Â· Block #8820 &#128274;</div><div class="le-desc">DEBIT -KSh 80,000 â SC-2024-0089 Aisha Kamau Â· CC-2026-0020</div><div class="le-meta">19 Mar 2026 09:55:14 Â· TXN-8820</div></div>
+<div class="le le-s"><div class="le-hash">HASH: 9c1f4e7a2b8d&#8230; Â· Block #8819 &#128274;</div><div class="le-desc">SYSTEM â Payroll batch 498 members Â· KSh 7.7M</div><div class="le-meta">18 Mar 2026 16:30:00 Â· TXN-8819</div></div></div></div><div class="sect-page" id="super-audit"><div class="page-title">Audit Logs</div>
+<div class="page-sub">Every system action â permanent, read-only</div>
 <div class="pq" id="pqw-super-audit">
   <div class="pq-head">
     <div class="pq-ico">&#128269;</div>
     <div class="pq-body">
       <div class="pq-q">Does every audit entry here look correct to you?</div>
-      <div class="pq-hint">An action by the wrong user, at an unexpected time, or an operation not authorised — share your input.</div>
+      <div class="pq-hint">An action by the wrong user, at an unexpected time, or an operation not authorised â share your input.</div>
       <button class="pq-btn" onclick="pqOpen('super-audit')">Give Your Input</button>
-      <div class="pq-done" id="pqd-super-audit">&#10003; Submitted — Admin will respond in your My Feedback tab</div>
+      <div class="pq-done" id="pqd-super-audit">&#10003; Submitted â Admin will respond in your My Feedback tab</div>
     </div>
   </div>
   <div class="pq-form" id="pqf-super-audit">
-    <textarea class="pq-ta" id="pqta-super-audit" placeholder="Be specific — the admin can only respond to what you write here&#8230;"></textarea>
+    <textarea class="pq-ta" id="pqta-super-audit" placeholder="Be specific â the admin can only respond to what you write here&#8230;"></textarea>
     <div class="pq-row">
       <button class="pq-submit" onclick="pqSubmit('super-audit','Supervisory Audit Concern')">Submit &#8594;</button>
       <button class="pq-cancel" onclick="pqClose('super-audit')">Cancel</button>
@@ -1963,11 +1963,11 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
       <div class="pq-q">Do any financial figures raise an oversight concern?</div>
       <div class="pq-hint">Unexplained balance changes, figures that do not reconcile, or a line that needs investigation.</div>
       <button class="pq-btn" onclick="pqOpen('super-financials')">Give Your Input</button>
-      <div class="pq-done" id="pqd-super-financials">&#10003; Submitted — Admin will respond in your My Feedback tab</div>
+      <div class="pq-done" id="pqd-super-financials">&#10003; Submitted â Admin will respond in your My Feedback tab</div>
     </div>
   </div>
   <div class="pq-form" id="pqf-super-financials">
-    <textarea class="pq-ta" id="pqta-super-financials" placeholder="Be specific — the admin can only respond to what you write here&#8230;"></textarea>
+    <textarea class="pq-ta" id="pqta-super-financials" placeholder="Be specific â the admin can only respond to what you write here&#8230;"></textarea>
     <div class="pq-row">
       <button class="pq-submit" onclick="pqSubmit('super-financials','Supervisory Financial Concern')">Submit &#8594;</button>
       <button class="pq-cancel" onclick="pqClose('super-financials')">Cancel</button>
@@ -1990,12 +1990,12 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
 </div></div></div><div class="sect-page" id="super-loans">
 
 <div class="page-title">Loan Application Process</div>
-<div class="page-sub">All 4 phases · Guarantor list · Approve / Decline procedure</div>
+<div class="page-sub">All 4 phases Â· Guarantor list Â· Approve / Decline procedure</div>
 
 <div class="alert-info">This is the complete loan lifecycle. Credit Committee approves at Phase 3 after payslip verification. Admin disburses at Phase 4 only when both CC ref and Exec ref are confirmed. Every decision is logged permanently.</div>
 
 
-<!-- ══ LOAN DISBURSEMENT CALCULATOR ══ -->
+<!-- ââ LOAN DISBURSEMENT CALCULATOR ââ -->
 <div class="loan-calc-box" id="loan-calc-main">
   <div class="loan-calc-title">&#127981; Approximate Loan Disbursement Calculator</div>
   <div class="loan-calc-sub">Based on SACCO policy: lower of 3&times; savings balance or 1&frasl;3 net monthly salary &middot; Results are indicative only</div>
@@ -2062,7 +2062,7 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
   </div>
 </div>
 
-<!-- ══ QUICK LOOKUP: EXISTING APPLICANTS ══ -->
+<!-- ââ QUICK LOOKUP: EXISTING APPLICANTS ââ -->
 <div class="card" style="margin-top:14px">
   <div class="card-title">Quick Lookup &#8212; Current Applicants</div>
   <div style="font-size:12px;color:#555;margin-bottom:10px">Click a member to load their figures into the calculator above.</div>
@@ -2128,7 +2128,7 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
   </div>
 </div>
 
-<!-- APPLICATION: LA-2026-041 — IN PROGRESS -->
+<!-- APPLICATION: LA-2026-041 â IN PROGRESS -->
 <div style="border:2px solid #b06a00;border-radius:12px;margin-bottom:14px;overflow:hidden;">
   <div style="background:#fdf0d0;padding:12px 15px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;">
     <div>
@@ -2187,7 +2187,7 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
   <div style="border-top:1px solid #e8c97a;padding:12px 15px;background:#fff;">
     <div style="display:flex;align-items:center;gap:9px;margin-bottom:10px;">
       <div style="width:22px;height:22px;border-radius:50%;background:#fdf0d0;border:2px solid #b06a00;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#5a3200;flex-shrink:0">3</div>
-      <div style="font-size:13px;font-weight:700;color:#000">Credit Committee — Payslip Verification &amp; Decision <span class="bdg bg-teal" style="margin-left:8px">Supervisory Read-only</span></div>
+      <div style="font-size:13px;font-weight:700;color:#000">Credit Committee â Payslip Verification &amp; Decision <span class="bdg bg-teal" style="margin-left:8px">Supervisory Read-only</span></div>
       <span class="bdg bg-gold" style="margin-left:auto">&#9679; In Progress</span>
     </div>
     <div class="info-row"><div class="ir-key">Payslip Uploaded</div><div class="ir-val"><span class="bdg bg-green">&#10003; Uploaded 17 Mar</span></div></div>
@@ -2217,9 +2217,9 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
       <div style="font-size:10px;letter-spacing:1px;text-transform:uppercase;color:#555;font-weight:700;margin-bottom:7px">CC Votes</div>
       <div class="tw"><table>
         <tr><th>CC Member</th><th>Vote</th><th>Date</th><th>Notes</th></tr>
-        <tr><td>Member 1</td><td><span class="bdg bg-muted">&#9711; Pending</span></td><td>—</td><td>—</td></tr>
-        <tr><td>Member 2</td><td><span class="bdg bg-muted">&#9711; Pending</span></td><td>—</td><td>—</td></tr>
-        <tr><td>Member 3</td><td><span class="bdg bg-muted">&#9711; Pending</span></td><td>—</td><td>—</td></tr>
+        <tr><td>Member 1</td><td><span class="bdg bg-muted">&#9711; Pending</span></td><td>â</td><td>â</td></tr>
+        <tr><td>Member 2</td><td><span class="bdg bg-muted">&#9711; Pending</span></td><td>â</td><td>â</td></tr>
+        <tr><td>Member 3</td><td><span class="bdg bg-muted">&#9711; Pending</span></td><td>â</td><td>â</td></tr>
       </table></div>
     </div>
     <div style="background:#f0f0f0;border-radius:9px;padding:12px;margin-top:12px;">
@@ -2244,7 +2244,7 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
   </div>
 </div>
 
-<!-- APPLICATION: LA-2026-038 — APPROVED AND DISBURSED -->
+<!-- APPLICATION: LA-2026-038 â APPROVED AND DISBURSED -->
 <div style="border:2px solid #006e3a;border-radius:12px;margin-bottom:14px;overflow:hidden;">
   <div style="background:#d4f0e4;padding:12px 15px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;">
     <div>
@@ -2254,16 +2254,16 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
     <span class="bdg bg-green" style="font-size:11px">&#10003; Approved &amp; Disbursed</span>
   </div>
   <div style="padding:12px 15px;background:#fff;">
-    <div class="info-row"><div class="ir-key">Phase 1 — Fee</div><div class="ir-val"><span class="bdg bg-green">&#10003; KSh 50 received 16 Mar &middot; Code: LK9X3WQP</span></div></div>
-    <div class="info-row"><div class="ir-key">Phase 2 — Guarantors</div><div class="ir-val"><span class="bdg bg-green">&#10003; 2/2 accepted &middot; Brian Ochieng &amp; James Mwangi</span></div></div>
-    <div class="info-row"><div class="ir-key">Phase 3 — CC Decision</div><div class="ir-val"><span class="bdg bg-green">&#10003; Approved 3/3 &middot; CC-2026-0019 &middot; 18 Mar</span></div></div>
-    <div class="info-row"><div class="ir-key">Phase 4 — Exec Sign-off</div><div class="ir-val"><span class="bdg bg-purple">&#10003; EX-2026-008 &middot; 18 Mar 15:30</span></div></div>
+    <div class="info-row"><div class="ir-key">Phase 1 â Fee</div><div class="ir-val"><span class="bdg bg-green">&#10003; KSh 50 received 16 Mar &middot; Code: LK9X3WQP</span></div></div>
+    <div class="info-row"><div class="ir-key">Phase 2 â Guarantors</div><div class="ir-val"><span class="bdg bg-green">&#10003; 2/2 accepted &middot; Brian Ochieng &amp; James Mwangi</span></div></div>
+    <div class="info-row"><div class="ir-key">Phase 3 â CC Decision</div><div class="ir-val"><span class="bdg bg-green">&#10003; Approved 3/3 &middot; CC-2026-0019 &middot; 18 Mar</span></div></div>
+    <div class="info-row"><div class="ir-key">Phase 4 â Exec Sign-off</div><div class="ir-val"><span class="bdg bg-purple">&#10003; EX-2026-008 &middot; 18 Mar 15:30</span></div></div>
     <div class="info-row"><div class="ir-key">Disbursement</div><div class="ir-val"><span class="bdg bg-green">&#10003; KSh 60,000 to M-Pesa 0722 XXX XXX &middot; 19 Mar 09:55 &middot; TXN-8820</span></div></div>
     <div class="info-row"><div class="ir-key">Eligibility</div><div class="ir-val">1/3 salary &#10003; &middot; 3&times; savings &#10003; &middot; No exception needed</div></div>
   </div>
 </div>
 
-<!-- APPLICATION: LA-2026-035 — DECLINED -->
+<!-- APPLICATION: LA-2026-035 â DECLINED -->
 <div style="border:2px solid #cc0000;border-radius:12px;margin-bottom:14px;overflow:hidden;">
   <div style="background:#fde0e0;padding:12px 15px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;">
     <div>
@@ -2273,9 +2273,9 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
     <span class="bdg bg-red" style="font-size:11px">&#10007; Declined</span>
   </div>
   <div style="padding:12px 15px;background:#fff;">
-    <div class="info-row"><div class="ir-key">Phase 1 — Fee</div><div class="ir-val"><span class="bdg bg-green">&#10003; KSh 50 received &middot; Non-refundable</span></div></div>
-    <div class="info-row"><div class="ir-key">Phase 2 — Guarantors</div><div class="ir-val"><span class="bdg bg-green">&#10003; 2/2 accepted</span></div></div>
-    <div class="info-row"><div class="ir-key">Phase 3 — CC Decision</div><div class="ir-val"><span class="bdg bg-red">&#10007; Declined 2/3 votes &middot; 17 Mar</span></div></div>
+    <div class="info-row"><div class="ir-key">Phase 1 â Fee</div><div class="ir-val"><span class="bdg bg-green">&#10003; KSh 50 received &middot; Non-refundable</span></div></div>
+    <div class="info-row"><div class="ir-key">Phase 2 â Guarantors</div><div class="ir-val"><span class="bdg bg-green">&#10003; 2/2 accepted</span></div></div>
+    <div class="info-row"><div class="ir-key">Phase 3 â CC Decision</div><div class="ir-val"><span class="bdg bg-red">&#10007; Declined 2/3 votes &middot; 17 Mar</span></div></div>
     <div class="info-row"><div class="ir-key">Decline Reason</div><div class="ir-val" style="color:#880000">Payslip stamp missing &middot; Employer unverified &middot; Salary claim not confirmed</div></div>
     <div class="info-row"><div class="ir-key">Member Notified</div><div class="ir-val"><span class="bdg bg-green">&#10003; SMS sent 17 Mar 11:45</span></div></div>
     <div class="info-row"><div class="ir-key">KSh 50 Fee</div><div class="ir-val" style="color:#880000">Non-refundable &middot; Not returned</div></div>
@@ -2290,11 +2290,11 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
       <div style="font-family:'DM Mono',monospace;font-size:11px;color:#555;font-weight:700">LA-2026-037</div>
       <div style="font-size:15px;font-weight:700;color:#000">Grace Mutua &mdash; KSh 30,000 Emergency Loan</div>
     </div>
-    <span class="bdg bg-muted" style="font-size:11px">&#9675; Returned — Incomplete</span>
+    <span class="bdg bg-muted" style="font-size:11px">&#9675; Returned â Incomplete</span>
   </div>
   <div style="padding:12px 15px;background:#fff;">
-    <div class="info-row"><div class="ir-key">Phase 1 — Fee</div><div class="ir-val"><span class="bdg bg-green">&#10003; KSh 50 received &middot; Non-refundable</span></div></div>
-    <div class="info-row"><div class="ir-key">Phase 2 — Guarantors</div><div class="ir-val"><span class="bdg bg-red">&#10007; 0/1 &middot; Guarantor did not respond within 48hrs</span></div></div>
+    <div class="info-row"><div class="ir-key">Phase 1 â Fee</div><div class="ir-val"><span class="bdg bg-green">&#10003; KSh 50 received &middot; Non-refundable</span></div></div>
+    <div class="info-row"><div class="ir-key">Phase 2 â Guarantors</div><div class="ir-val"><span class="bdg bg-red">&#10007; 0/1 &middot; Guarantor did not respond within 48hrs</span></div></div>
     <div class="info-row"><div class="ir-key">Payslip</div><div class="ir-val"><span class="bdg bg-red">&#10007; Not uploaded &middot; SMS reminder sent</span></div></div>
     <div class="info-row"><div class="ir-key">Status</div><div class="ir-val">Returned to member. Must complete guarantor + payslip before CC review.</div></div>
   </div>
@@ -2382,12 +2382,12 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
 <div class="sect-page on" id="credit-pending">
 
 <div class="page-title">Full Loan Application Process</div>
-<div class="page-sub">All 4 phases · Guarantor list · Approve / Decline procedure</div>
+<div class="page-sub">All 4 phases Â· Guarantor list Â· Approve / Decline procedure</div>
 
 <div class="alert-info">This is the complete loan lifecycle. Credit Committee approves at Phase 3 after payslip verification. Admin disburses at Phase 4 only when both CC ref and Exec ref are confirmed. Every decision is logged permanently.</div>
 
 
-<!-- ══ LOAN DISBURSEMENT CALCULATOR ══ -->
+<!-- ââ LOAN DISBURSEMENT CALCULATOR ââ -->
 <div class="loan-calc-box" id="loan-calc-main">
   <div class="loan-calc-title">&#127981; Approximate Loan Disbursement Calculator</div>
   <div class="loan-calc-sub">Based on SACCO policy: lower of 3&times; savings balance or 1&frasl;3 net monthly salary &middot; Results are indicative only</div>
@@ -2454,7 +2454,7 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
   </div>
 </div>
 
-<!-- ══ QUICK LOOKUP: EXISTING APPLICANTS ══ -->
+<!-- ââ QUICK LOOKUP: EXISTING APPLICANTS ââ -->
 <div class="card" style="margin-top:14px">
   <div class="card-title">Quick Lookup &#8212; Current Applicants</div>
   <div style="font-size:12px;color:#555;margin-bottom:10px">Click a member to load their figures into the calculator above.</div>
@@ -2520,7 +2520,7 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
   </div>
 </div>
 
-<!-- APPLICATION: LA-2026-041 — IN PROGRESS -->
+<!-- APPLICATION: LA-2026-041 â IN PROGRESS -->
 <div style="border:2px solid #b06a00;border-radius:12px;margin-bottom:14px;overflow:hidden;">
   <div style="background:#fdf0d0;padding:12px 15px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;">
     <div>
@@ -2579,7 +2579,7 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
   <div style="border-top:1px solid #e8c97a;padding:12px 15px;background:#fff;">
     <div style="display:flex;align-items:center;gap:9px;margin-bottom:10px;">
       <div style="width:22px;height:22px;border-radius:50%;background:#fdf0d0;border:2px solid #b06a00;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#5a3200;flex-shrink:0">3</div>
-      <div style="font-size:13px;font-weight:700;color:#000">Credit Committee — Payslip Verification &amp; Decision</div>
+      <div style="font-size:13px;font-weight:700;color:#000">Credit Committee â Payslip Verification &amp; Decision</div>
       <span class="bdg bg-gold" style="margin-left:auto">&#9679; In Progress</span>
     </div>
     <div class="info-row"><div class="ir-key">Payslip Uploaded</div><div class="ir-val"><span class="bdg bg-green">&#10003; Uploaded 17 Mar</span></div></div>
@@ -2609,9 +2609,9 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
       <div style="font-size:10px;letter-spacing:1px;text-transform:uppercase;color:#555;font-weight:700;margin-bottom:7px">CC Votes</div>
       <div class="tw"><table>
         <tr><th>CC Member</th><th>Vote</th><th>Date</th><th>Notes</th></tr>
-        <tr><td>Member 1</td><td><span class="bdg bg-muted">&#9711; Pending</span></td><td>—</td><td>—</td></tr>
-        <tr><td>Member 2</td><td><span class="bdg bg-muted">&#9711; Pending</span></td><td>—</td><td>—</td></tr>
-        <tr><td>Member 3</td><td><span class="bdg bg-muted">&#9711; Pending</span></td><td>—</td><td>—</td></tr>
+        <tr><td>Member 1</td><td><span class="bdg bg-muted">&#9711; Pending</span></td><td>â</td><td>â</td></tr>
+        <tr><td>Member 2</td><td><span class="bdg bg-muted">&#9711; Pending</span></td><td>â</td><td>â</td></tr>
+        <tr><td>Member 3</td><td><span class="bdg bg-muted">&#9711; Pending</span></td><td>â</td><td>â</td></tr>
       </table></div>
     </div>
     <div style="background:#f0f0f0;border-radius:9px;padding:12px;margin-top:12px;">
@@ -2636,7 +2636,7 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
   </div>
 </div>
 
-<!-- APPLICATION: LA-2026-038 — APPROVED AND DISBURSED -->
+<!-- APPLICATION: LA-2026-038 â APPROVED AND DISBURSED -->
 <div style="border:2px solid #006e3a;border-radius:12px;margin-bottom:14px;overflow:hidden;">
   <div style="background:#d4f0e4;padding:12px 15px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;">
     <div>
@@ -2646,16 +2646,16 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
     <span class="bdg bg-green" style="font-size:11px">&#10003; Approved &amp; Disbursed</span>
   </div>
   <div style="padding:12px 15px;background:#fff;">
-    <div class="info-row"><div class="ir-key">Phase 1 — Fee</div><div class="ir-val"><span class="bdg bg-green">&#10003; KSh 50 received 16 Mar &middot; Code: LK9X3WQP</span></div></div>
-    <div class="info-row"><div class="ir-key">Phase 2 — Guarantors</div><div class="ir-val"><span class="bdg bg-green">&#10003; 2/2 accepted &middot; Brian Ochieng &amp; James Mwangi</span></div></div>
-    <div class="info-row"><div class="ir-key">Phase 3 — CC Decision</div><div class="ir-val"><span class="bdg bg-green">&#10003; Approved 3/3 &middot; CC-2026-0019 &middot; 18 Mar</span></div></div>
-    <div class="info-row"><div class="ir-key">Phase 4 — Exec Sign-off</div><div class="ir-val"><span class="bdg bg-purple">&#10003; EX-2026-008 &middot; 18 Mar 15:30</span></div></div>
+    <div class="info-row"><div class="ir-key">Phase 1 â Fee</div><div class="ir-val"><span class="bdg bg-green">&#10003; KSh 50 received 16 Mar &middot; Code: LK9X3WQP</span></div></div>
+    <div class="info-row"><div class="ir-key">Phase 2 â Guarantors</div><div class="ir-val"><span class="bdg bg-green">&#10003; 2/2 accepted &middot; Brian Ochieng &amp; James Mwangi</span></div></div>
+    <div class="info-row"><div class="ir-key">Phase 3 â CC Decision</div><div class="ir-val"><span class="bdg bg-green">&#10003; Approved 3/3 &middot; CC-2026-0019 &middot; 18 Mar</span></div></div>
+    <div class="info-row"><div class="ir-key">Phase 4 â Exec Sign-off</div><div class="ir-val"><span class="bdg bg-purple">&#10003; EX-2026-008 &middot; 18 Mar 15:30</span></div></div>
     <div class="info-row"><div class="ir-key">Disbursement</div><div class="ir-val"><span class="bdg bg-green">&#10003; KSh 60,000 to M-Pesa 0722 XXX XXX &middot; 19 Mar 09:55 &middot; TXN-8820</span></div></div>
     <div class="info-row"><div class="ir-key">Eligibility</div><div class="ir-val">1/3 salary &#10003; &middot; 3&times; savings &#10003; &middot; No exception needed</div></div>
   </div>
 </div>
 
-<!-- APPLICATION: LA-2026-035 — DECLINED -->
+<!-- APPLICATION: LA-2026-035 â DECLINED -->
 <div style="border:2px solid #cc0000;border-radius:12px;margin-bottom:14px;overflow:hidden;">
   <div style="background:#fde0e0;padding:12px 15px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;">
     <div>
@@ -2665,9 +2665,9 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
     <span class="bdg bg-red" style="font-size:11px">&#10007; Declined</span>
   </div>
   <div style="padding:12px 15px;background:#fff;">
-    <div class="info-row"><div class="ir-key">Phase 1 — Fee</div><div class="ir-val"><span class="bdg bg-green">&#10003; KSh 50 received &middot; Non-refundable</span></div></div>
-    <div class="info-row"><div class="ir-key">Phase 2 — Guarantors</div><div class="ir-val"><span class="bdg bg-green">&#10003; 2/2 accepted</span></div></div>
-    <div class="info-row"><div class="ir-key">Phase 3 — CC Decision</div><div class="ir-val"><span class="bdg bg-red">&#10007; Declined 2/3 votes &middot; 17 Mar</span></div></div>
+    <div class="info-row"><div class="ir-key">Phase 1 â Fee</div><div class="ir-val"><span class="bdg bg-green">&#10003; KSh 50 received &middot; Non-refundable</span></div></div>
+    <div class="info-row"><div class="ir-key">Phase 2 â Guarantors</div><div class="ir-val"><span class="bdg bg-green">&#10003; 2/2 accepted</span></div></div>
+    <div class="info-row"><div class="ir-key">Phase 3 â CC Decision</div><div class="ir-val"><span class="bdg bg-red">&#10007; Declined 2/3 votes &middot; 17 Mar</span></div></div>
     <div class="info-row"><div class="ir-key">Decline Reason</div><div class="ir-val" style="color:#880000">Payslip stamp missing &middot; Employer unverified &middot; Salary claim not confirmed</div></div>
     <div class="info-row"><div class="ir-key">Member Notified</div><div class="ir-val"><span class="bdg bg-green">&#10003; SMS sent 17 Mar 11:45</span></div></div>
     <div class="info-row"><div class="ir-key">KSh 50 Fee</div><div class="ir-val" style="color:#880000">Non-refundable &middot; Not returned</div></div>
@@ -2682,11 +2682,11 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
       <div style="font-family:'DM Mono',monospace;font-size:11px;color:#555;font-weight:700">LA-2026-037</div>
       <div style="font-size:15px;font-weight:700;color:#000">Grace Mutua &mdash; KSh 30,000 Emergency Loan</div>
     </div>
-    <span class="bdg bg-muted" style="font-size:11px">&#9675; Returned — Incomplete</span>
+    <span class="bdg bg-muted" style="font-size:11px">&#9675; Returned â Incomplete</span>
   </div>
   <div style="padding:12px 15px;background:#fff;">
-    <div class="info-row"><div class="ir-key">Phase 1 — Fee</div><div class="ir-val"><span class="bdg bg-green">&#10003; KSh 50 received &middot; Non-refundable</span></div></div>
-    <div class="info-row"><div class="ir-key">Phase 2 — Guarantors</div><div class="ir-val"><span class="bdg bg-red">&#10007; 0/1 &middot; Guarantor did not respond within 48hrs</span></div></div>
+    <div class="info-row"><div class="ir-key">Phase 1 â Fee</div><div class="ir-val"><span class="bdg bg-green">&#10003; KSh 50 received &middot; Non-refundable</span></div></div>
+    <div class="info-row"><div class="ir-key">Phase 2 â Guarantors</div><div class="ir-val"><span class="bdg bg-red">&#10007; 0/1 &middot; Guarantor did not respond within 48hrs</span></div></div>
     <div class="info-row"><div class="ir-key">Payslip</div><div class="ir-val"><span class="bdg bg-red">&#10007; Not uploaded &middot; SMS reminder sent</span></div></div>
     <div class="info-row"><div class="ir-key">Status</div><div class="ir-val">Returned to member. Must complete guarantor + payslip before CC review.</div></div>
   </div>
@@ -2694,7 +2694,7 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
 
 </div><div class="sect-page" id="credit-payslip">
 <div class="page-title">Payslip Verification Phase</div>
-<div class="page-sub">Confirm employer · Match salary · Verify 1/3 rule and 3&#215; savings rule · Each check creates an audit entry</div>
+<div class="page-sub">Confirm employer Â· Match salary Â· Verify 1/3 rule and 3&#215; savings rule Â· Each check creates an audit entry</div>
 <div class="alert-info">Verification checks: (1) Payslip is authentic and from a recognised employer (2) Gross salary matches member declaration (3) Loan repayment does not exceed 1/3 net salary (4) Loan does not exceed 3&#215; savings balance</div>
 <div class="pq" id="pqw-credit-payslip-suspicious">
   <div class="pq-head">
@@ -2703,13 +2703,13 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
       <div class="pq-q">Payslip looks suspicious, cannot be verified, or employer is unrecognised?</div>
       <div class="pq-hint">If a payslip appears forged, the employer cannot be confirmed, or the salary is implausible, share your input here before approving. Admin will contact the employer.</div>
       <button class="pq-btn" onclick="pqOpen('credit-payslip-suspicious')">Give Your Input</button>
-      <div class="pq-done" id="pqd-credit-payslip-suspicious">&#10003; Submitted — Admin will respond in your My Feedback tab</div>
+      <div class="pq-done" id="pqd-credit-payslip-suspicious">&#10003; Submitted â Admin will respond in your My Feedback tab</div>
     </div>
   </div>
   <div class="pq-form" id="pqf-credit-payslip-suspicious">
-    <textarea class="pq-ta" id="pqta-credit-payslip-suspicious" placeholder="Be specific — the admin can only respond to what you write here&#8230;"></textarea>
+    <textarea class="pq-ta" id="pqta-credit-payslip-suspicious" placeholder="Be specific â the admin can only respond to what you write here&#8230;"></textarea>
     <div class="pq-row">
-      <button class="pq-submit" onclick="pqSubmit('credit-payslip-suspicious','Credit Committee — Payslip Verification Issue')">Submit &#8594;</button>
+      <button class="pq-submit" onclick="pqSubmit('credit-payslip-suspicious','Credit Committee â Payslip Verification Issue')">Submit &#8594;</button>
       <button class="pq-cancel" onclick="pqClose('credit-payslip-suspicious')">Cancel</button>
     </div>
   </div>
@@ -2719,7 +2719,7 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
     <div class="pq-resp-meta" id="pqrm-credit-payslip-suspicious"></div>
   </div>
 </div>
-<div class="card" style="margin-top:10px"><div class="card-title">Verify — LA-2026-041 James Mwangi</div>
+<div class="card" style="margin-top:10px"><div class="card-title">Verify â LA-2026-041 James Mwangi</div>
   <div class="info-row"><div class="ir-key">Declared Employer</div><div class="ir-val">Nairobi County Government</div></div>
   <div class="info-row"><div class="ir-key">Declared Gross</div><div class="ir-val">KSh 85,000</div></div>
   <div class="info-row"><div class="ir-key">Payslip Shows Gross</div><div class="ir-val" style="color:#004422">KSh 85,000 &#10003; Matches</div></div>
@@ -2727,7 +2727,7 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
   <div class="info-row"><div class="ir-key">1/3 Net (max monthly)</div><div class="ir-val">KSh 20,800</div></div>
   <div class="info-row"><div class="ir-key">Loan Monthly Repayment</div><div class="ir-val">KSh 12,500 over 12 months</div></div>
   <div class="info-row"><div class="ir-key">1/3 Rule</div><div class="ir-val" style="color:#004422">KSh 12,500 &lt; KSh 20,800 &#10003; Passes</div></div>
-  <div class="info-row"><div class="ir-key">3&#215; Savings Rule</div><div class="ir-val" style="color:#880000">3 &#215; KSh 42,500 = KSh 127,500 — loan KSh 150,000 slightly exceeds &#9888;</div></div>
+  <div class="info-row"><div class="ir-key">3&#215; Savings Rule</div><div class="ir-val" style="color:#880000">3 &#215; KSh 42,500 = KSh 127,500 â loan KSh 150,000 slightly exceeds &#9888;</div></div>
   <div class="info-row"><div class="ir-key">Employer Stamp</div><div class="ir-val" style="color:#004422">Confirmed &#10003;</div></div>
   <div class="upload-zone" style="margin-top:10px" onclick="toast('Payslip document viewer opened.')"><div style="font-size:22px;margin-bottom:4px">&#128196;</div><div style="font-size:12px;color:#555;font-weight:600">View Uploaded Payslip</div></div>
   <div class="pq" id="pqw-credit-3x-rule">
@@ -2737,13 +2737,13 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
       <div class="pq-q">Question about the 3&#215; savings rule discrepancy for this loan?</div>
       <div class="pq-hint">The loan of KSh 150,000 slightly exceeds 3&#215; savings of KSh 127,500. Do you need a policy clarification or an exception authorised before proceeding?</div>
       <button class="pq-btn" onclick="pqOpen('credit-3x-rule')">Give Your Input</button>
-      <div class="pq-done" id="pqd-credit-3x-rule">&#10003; Submitted — Admin will respond in your My Feedback tab</div>
+      <div class="pq-done" id="pqd-credit-3x-rule">&#10003; Submitted â Admin will respond in your My Feedback tab</div>
     </div>
   </div>
   <div class="pq-form" id="pqf-credit-3x-rule">
-    <textarea class="pq-ta" id="pqta-credit-3x-rule" placeholder="Be specific — the admin can only respond to what you write here&#8230;"></textarea>
+    <textarea class="pq-ta" id="pqta-credit-3x-rule" placeholder="Be specific â the admin can only respond to what you write here&#8230;"></textarea>
     <div class="pq-row">
-      <button class="pq-submit" onclick="pqSubmit('credit-3x-rule','Credit Committee — 3&#215; Savings Rule Query LA-2026-041')">Submit &#8594;</button>
+      <button class="pq-submit" onclick="pqSubmit('credit-3x-rule','Credit Committee â 3&#215; Savings Rule Query LA-2026-041')">Submit &#8594;</button>
       <button class="pq-cancel" onclick="pqClose('credit-3x-rule')">Cancel</button>
     </div>
   </div>
@@ -2763,12 +2763,12 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
     <tr><th>App Ref</th><th>Member</th><th>Payslip</th><th>Employer</th><th>Salary</th><th>Status</th></tr>
     <tr><td style="font-family:'DM Mono',monospace;font-size:10px">LA-2026-041</td><td>James Mwangi</td><td><span class="bdg bg-green">Uploaded &#10003;</span></td><td>Nairobi County</td><td>KSh 85,000</td><td><span class="bdg bg-gold">Pending Verification</span></td></tr>
     <tr><td style="font-family:'DM Mono',monospace;font-size:10px">LA-2026-038</td><td>Ruth Owino</td><td><span class="bdg bg-green">Uploaded &#10003;</span></td><td>Equity Bank</td><td>KSh 72,000</td><td><span class="bdg bg-green">Verified &#10003;</span></td></tr>
-    <tr><td style="font-family:'DM Mono',monospace;font-size:10px">LA-2026-039</td><td>Peter Njoroge</td><td><span class="bdg bg-gold">&#8987; Requested</span></td><td>KRA</td><td>—</td><td><span class="bdg bg-gold">Awaiting</span></td></tr>
-    <tr><td style="font-family:'DM Mono',monospace;font-size:10px">LA-2026-037</td><td>Grace Mutua</td><td><span class="bdg bg-red">&#10007; Not uploaded</span></td><td>MOH</td><td>—</td><td><span class="bdg bg-red">Returned</span></td></tr>
+    <tr><td style="font-family:'DM Mono',monospace;font-size:10px">LA-2026-039</td><td>Peter Njoroge</td><td><span class="bdg bg-gold">&#8987; Requested</span></td><td>KRA</td><td>â</td><td><span class="bdg bg-gold">Awaiting</span></td></tr>
+    <tr><td style="font-family:'DM Mono',monospace;font-size:10px">LA-2026-037</td><td>Grace Mutua</td><td><span class="bdg bg-red">&#10007; Not uploaded</span></td><td>MOH</td><td>â</td><td><span class="bdg bg-red">Returned</span></td></tr>
   </table></div>
 </div></div><div class="sect-page" id="credit-approved">
 <div class="page-title">Approved This Month</div>
-<div class="page-sub">22 loans approved · KSh 3.4M total</div>
+<div class="page-sub">22 loans approved Â· KSh 3.4M total</div>
 <div class="pq" id="pqw-credit-approved">
   <div class="pq-head">
     <div class="pq-ico">&#10003;&#65039;</div>
@@ -2776,13 +2776,13 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
       <div class="pq-q">Was an approval issued in error or needs to be revisited?</div>
       <div class="pq-hint">If a CC ref was issued but supporting documents were later found insufficient, share your input here immediately.</div>
       <button class="pq-btn" onclick="pqOpen('credit-approved')">Give Your Input</button>
-      <div class="pq-done" id="pqd-credit-approved">&#10003; Submitted — Admin will respond in your My Feedback tab</div>
+      <div class="pq-done" id="pqd-credit-approved">&#10003; Submitted â Admin will respond in your My Feedback tab</div>
     </div>
   </div>
   <div class="pq-form" id="pqf-credit-approved">
-    <textarea class="pq-ta" id="pqta-credit-approved" placeholder="Be specific — the admin can only respond to what you write here&#8230;"></textarea>
+    <textarea class="pq-ta" id="pqta-credit-approved" placeholder="Be specific â the admin can only respond to what you write here&#8230;"></textarea>
     <div class="pq-row">
-      <button class="pq-submit" onclick="pqSubmit('credit-approved','Credit Committee — Approval Issue')">Submit &#8594;</button>
+      <button class="pq-submit" onclick="pqSubmit('credit-approved','Credit Committee â Approval Issue')">Submit &#8594;</button>
       <button class="pq-cancel" onclick="pqClose('credit-approved')">Cancel</button>
     </div>
   </div>
@@ -2800,7 +2800,7 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
   <tr><td colspan="6" style="text-align:center;color:#555;font-size:12px;padding:12px">... 19 more approvals this month</td></tr>
 </table></div></div><div class="sect-page" id="credit-declined">
 <div class="page-title">Declined Applications</div>
-<div class="page-sub">3 declined this month — member notified via SMS with reason</div>
+<div class="page-sub">3 declined this month â member notified via SMS with reason</div>
 <div class="pq" id="pqw-credit-declined">
   <div class="pq-head">
     <div class="pq-ico">&#10007;&#65039;</div>
@@ -2808,13 +2808,13 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
       <div class="pq-q">Was a decline made in error or should be reconsidered?</div>
       <div class="pq-hint">If new information changes the committee view, or a decline reason was incorrectly recorded, share your input here.</div>
       <button class="pq-btn" onclick="pqOpen('credit-declined')">Give Your Input</button>
-      <div class="pq-done" id="pqd-credit-declined">&#10003; Submitted — Admin will respond in your My Feedback tab</div>
+      <div class="pq-done" id="pqd-credit-declined">&#10003; Submitted â Admin will respond in your My Feedback tab</div>
     </div>
   </div>
   <div class="pq-form" id="pqf-credit-declined">
-    <textarea class="pq-ta" id="pqta-credit-declined" placeholder="Be specific — the admin can only respond to what you write here&#8230;"></textarea>
+    <textarea class="pq-ta" id="pqta-credit-declined" placeholder="Be specific â the admin can only respond to what you write here&#8230;"></textarea>
     <div class="pq-row">
-      <button class="pq-submit" onclick="pqSubmit('credit-declined','Credit Committee — Decline Reconsideration')">Submit &#8594;</button>
+      <button class="pq-submit" onclick="pqSubmit('credit-declined','Credit Committee â Decline Reconsideration')">Submit &#8594;</button>
       <button class="pq-cancel" onclick="pqClose('credit-declined')">Cancel</button>
     </div>
   </div>
@@ -2830,7 +2830,7 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
   <tr><td style="font-family:'DM Mono',monospace;font-size:10px">LA-2026-031</td><td>Mercy Otieno SC-0156</td><td>KSh 400,000</td><td>0/3</td><td>Exceeds 3&#215; savings</td><td><span class="bdg bg-green">&#10003; Sent</span></td></tr>
   <tr><td style="font-family:'DM Mono',monospace;font-size:10px">LA-2026-028</td><td>John Kamau SC-0500</td><td>KSh 100,000</td><td>1/3</td><td>Guarantor declined</td><td><span class="bdg bg-green">&#10003; Sent</span></td></tr>
 </table></div></div><div class="sect-page" id="credit-policy">
-<div class="page-title">Loan Policy — Current Settings</div>
+<div class="page-title">Loan Policy â Current Settings</div>
 <div class="page-sub">Any change requires Executive approval + instant SMS to Supervisory (3)</div>
 <div class="pq" id="pqw-credit-policy">
   <div class="pq-head">
@@ -2839,11 +2839,11 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
       <div class="pq-q">Is a policy setting unclear, wrong, or needs updating?</div>
       <div class="pq-hint">If a setting does not reflect the board resolution, or an existing rule is ambiguous, share your input here.</div>
       <button class="pq-btn" onclick="pqOpen('credit-policy')">Give Your Input</button>
-      <div class="pq-done" id="pqd-credit-policy">&#10003; Submitted — Admin will respond in your My Feedback tab</div>
+      <div class="pq-done" id="pqd-credit-policy">&#10003; Submitted â Admin will respond in your My Feedback tab</div>
     </div>
   </div>
   <div class="pq-form" id="pqf-credit-policy">
-    <textarea class="pq-ta" id="pqta-credit-policy" placeholder="Be specific — the admin can only respond to what you write here&#8230;"></textarea>
+    <textarea class="pq-ta" id="pqta-credit-policy" placeholder="Be specific â the admin can only respond to what you write here&#8230;"></textarea>
     <div class="pq-row">
       <button class="pq-submit" onclick="pqSubmit('credit-policy','Credit Committee Policy Query')">Submit &#8594;</button>
       <button class="pq-cancel" onclick="pqClose('credit-policy')">Cancel</button>
@@ -2858,10 +2858,10 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
 <div class="card" style="margin-top:10px">
   <div class="info-row"><div class="ir-key">All Loan Interest</div><div class="ir-val"><span class="bdg bg-muted">OFF</span></div></div>
   <div class="info-row"><div class="ir-key">Late Fines</div><div class="ir-val"><span class="bdg bg-muted">OFF</span></div></div>
-  <div class="info-row"><div class="ir-key">Application Fee</div><div class="ir-val">KSh 50 · Non-refundable always</div></div>
+  <div class="info-row"><div class="ir-key">Application Fee</div><div class="ir-val">KSh 50 Â· Non-refundable always</div></div>
   <div class="info-row"><div class="ir-key">Max Borrowing</div><div class="ir-val">Lower of 3&#215; savings or 1/3 net salary</div></div>
-  <div class="info-row"><div class="ir-key">Guarantors Required</div><div class="ir-val">Minimum 2 · SMS confirmation</div></div>
-  <div class="info-row"><div class="ir-key">Payslip Required</div><div class="ir-val">Yes · Employer stamp preferred</div></div>
+  <div class="info-row"><div class="ir-key">Guarantors Required</div><div class="ir-val">Minimum 2 Â· SMS confirmation</div></div>
+  <div class="info-row"><div class="ir-key">Payslip Required</div><div class="ir-val">Yes Â· Employer stamp preferred</div></div>
 </div></div><div class="sect-page" id="credit-myfeedback">
 
 <div style="background:#fff;border:1px solid #ccc;border-radius:10px;padding:14px 15px;margin-bottom:12px;">
@@ -2878,7 +2878,7 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
 <div style="background:#fff8e6;border:2px solid #b06a00;border-radius:9px;padding:10px 14px;margin-bottom:14px;font-size:12.5px;color:#4a2800;font-weight:600;display:flex;align-items:flex-start;gap:8px;"><span style="font-size:16px;flex-shrink:0">&#128274;</span><span>Your feedback and questions on this page go <b>directly and only to the System Admin</b>. Nothing is editable after you submit. The System Admin will respond in your <b>My Feedback</b> tab.</span></div>
 <div class="sect-page on" id="member-account">
 <div class="page-title">My Account</div>
-<div class="page-sub">James Mwangi · SC-2024-0041 · Finance Department</div>
+<div class="page-sub">James Mwangi Â· SC-2024-0041 Â· Finance Department</div>
 <div class="stats-row">
   <div class="stat"><div class="stat-label">My Savings</div><div class="stat-value green">KSh 42,500</div><div class="stat-delta">+KSh 4,250 this month</div></div>
   <div class="stat"><div class="stat-label">Share Capital</div><div class="stat-value">KSh 5,000</div></div>
@@ -2892,11 +2892,11 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
       <div class="pq-q">Is your savings balance, deduction amount, or share capital incorrect?</div>
       <div class="pq-hint">If a balance does not match what you expect, a payment was missed, or a deduction is wrong, share your input here. Admin will investigate and respond.</div>
       <button class="pq-btn" onclick="pqOpen('member-account')">Give Your Input</button>
-      <div class="pq-done" id="pqd-member-account">&#10003; Submitted — Admin will respond in your My Feedback tab</div>
+      <div class="pq-done" id="pqd-member-account">&#10003; Submitted â Admin will respond in your My Feedback tab</div>
     </div>
   </div>
   <div class="pq-form" id="pqf-member-account">
-    <textarea class="pq-ta" id="pqta-member-account" placeholder="Be specific — the admin can only respond to what you write here&#8230;"></textarea>
+    <textarea class="pq-ta" id="pqta-member-account" placeholder="Be specific â the admin can only respond to what you write here&#8230;"></textarea>
     <div class="pq-row">
       <button class="pq-submit" onclick="pqSubmit('member-account','Member Account Balance Issue')">Submit &#8594;</button>
       <button class="pq-cancel" onclick="pqClose('member-account')">Cancel</button>
@@ -2914,11 +2914,11 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
     <tr><td>28 Feb</td><td>Savings contribution</td><td style="color:#004422;font-weight:700">+KSh 4,250</td><td>KSh 42,500</td></tr>
     <tr><td>28 Feb</td><td>Loan repayment</td><td style="color:#880000;font-weight:700">-KSh 14,719</td><td>KSh 132,000 loan</td></tr>
     <tr><td>28 Jan</td><td>Savings contribution</td><td style="color:#004422;font-weight:700">+KSh 4,250</td><td>KSh 38,250</td></tr>
-    <tr><td>15 Dec</td><td>Loan disbursed to M-Pesa</td><td style="color:#004422;font-weight:700">+KSh 150,000</td><td>—</td></tr>
+    <tr><td>15 Dec</td><td>Loan disbursed to M-Pesa</td><td style="color:#004422;font-weight:700">+KSh 150,000</td><td>â</td></tr>
   </table></div>
 </div></div><div class="sect-page" id="member-loan">
 <div class="page-title">My Loan</div>
-<div class="page-sub">LN-2025-112 · Personal Loan · Disbursed 15 Dec 2025</div>
+<div class="page-sub">LN-2025-112 Â· Personal Loan Â· Disbursed 15 Dec 2025</div>
 <div class="pq" id="pqw-member-loan">
   <div class="pq-head">
     <div class="pq-ico">&#128179;</div>
@@ -2926,11 +2926,11 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
       <div class="pq-q">Question about your loan balance, a payment not reflected, or your repayment schedule?</div>
       <div class="pq-hint">If you made a payment that is not showing, your outstanding balance is wrong, or you need to discuss your schedule, share your input here.</div>
       <button class="pq-btn" onclick="pqOpen('member-loan')">Give Your Input</button>
-      <div class="pq-done" id="pqd-member-loan">&#10003; Submitted — Admin will respond in your My Feedback tab</div>
+      <div class="pq-done" id="pqd-member-loan">&#10003; Submitted â Admin will respond in your My Feedback tab</div>
     </div>
   </div>
   <div class="pq-form" id="pqf-member-loan">
-    <textarea class="pq-ta" id="pqta-member-loan" placeholder="Be specific — the admin can only respond to what you write here&#8230;"></textarea>
+    <textarea class="pq-ta" id="pqta-member-loan" placeholder="Be specific â the admin can only respond to what you write here&#8230;"></textarea>
     <div class="pq-row">
       <button class="pq-submit" onclick="pqSubmit('member-loan','Member Give Your Input LN-2025-112')">Submit &#8594;</button>
       <button class="pq-cancel" onclick="pqClose('member-loan')">Cancel</button>
@@ -2948,11 +2948,11 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
   <div class="info-row"><div class="ir-key">Outstanding</div><div class="ir-val" style="color:#880000">KSh 132,000</div></div>
   <div class="info-row"><div class="ir-key">Monthly Instalment</div><div class="ir-val" style="color:#7a4400">KSh 14,719</div></div>
   <div class="info-row"><div class="ir-key">Next Payment Due</div><div class="ir-val">28 Mar 2026</div></div>
-  <div class="info-row"><div class="ir-key">Interest</div><div class="ir-val"><span class="bdg bg-muted">OFF — No interest</span></div></div>
-  <div class="info-row"><div class="ir-key">Fine</div><div class="ir-val"><span class="bdg bg-muted">OFF — No fines</span></div></div>
+  <div class="info-row"><div class="ir-key">Interest</div><div class="ir-val"><span class="bdg bg-muted">OFF â No interest</span></div></div>
+  <div class="info-row"><div class="ir-key">Fine</div><div class="ir-val"><span class="bdg bg-muted">OFF â No fines</span></div></div>
   <div class="info-row"><div class="ir-key">Status</div><div class="ir-val"><span class="bdg bg-green">On Track</span></div></div>
   <div class="prog-bar" style="margin-top:8px"><div class="prog-fill" style="width:12%"></div></div>
-  <div style="font-size:11px;color:#555;margin-top:2px;font-weight:600">12% repaid · 11 months remaining</div>
+  <div style="font-size:11px;color:#555;margin-top:2px;font-weight:600">12% repaid Â· 11 months remaining</div>
 </div>
 <div class="mpesa-box">
   <div style="font-size:11px;color:#ccc;margin-bottom:3px;font-weight:600">Pay via M-Pesa</div>
@@ -2968,13 +2968,13 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
     <div class="pq-ico">&#10067;</div>
     <div class="pq-body">
       <div class="pq-q">Question about your loan eligibility before paying the KSh 50 fee?</div>
-      <div class="pq-hint">Ask here first — if you are not eligible, you will save the KSh 50 application fee. Explain your situation and admin will clarify.</div>
+      <div class="pq-hint">Ask here first â if you are not eligible, you will save the KSh 50 application fee. Explain your situation and admin will clarify.</div>
       <button class="pq-btn" onclick="pqOpen('member-eligibility')">Give Your Input</button>
-      <div class="pq-done" id="pqd-member-eligibility">&#10003; Submitted — Admin will respond in your My Feedback tab</div>
+      <div class="pq-done" id="pqd-member-eligibility">&#10003; Submitted â Admin will respond in your My Feedback tab</div>
     </div>
   </div>
   <div class="pq-form" id="pqf-member-eligibility">
-    <textarea class="pq-ta" id="pqta-member-eligibility" placeholder="Be specific — the admin can only respond to what you write here&#8230;"></textarea>
+    <textarea class="pq-ta" id="pqta-member-eligibility" placeholder="Be specific â the admin can only respond to what you write here&#8230;"></textarea>
     <div class="pq-row">
       <button class="pq-submit" onclick="pqSubmit('member-eligibility','Member Loan Eligibility Query')">Submit &#8594;</button>
       <button class="pq-cancel" onclick="pqClose('member-eligibility')">Cancel</button>
@@ -2990,7 +2990,7 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
   <div class="info-row"><div class="ir-key">Your Savings Balance</div><div class="ir-val" style="color:#004422">KSh 42,500</div></div>
   <div class="info-row"><div class="ir-key">Max Loan (3&#215; savings)</div><div class="ir-val">KSh 127,500</div></div>
   <div class="info-row"><div class="ir-key">Current Loan Outstanding</div><div class="ir-val" style="color:#880000">KSh 132,000</div></div>
-  <div class="info-row"><div class="ir-key">Available to Borrow</div><div class="ir-val" style="color:#880000">KSh 0 — active loan must clear first</div></div>
+  <div class="info-row"><div class="ir-key">Available to Borrow</div><div class="ir-val" style="color:#880000">KSh 0 â active loan must clear first</div></div>
 </div>
 <div class="card"><div class="card-title">Upload Your Payslip</div>
   <div class="alert-info" style="margin-bottom:10px">Upload your latest payslip now so the Credit Committee can verify it as part of your application. Must show employer stamp, your name, and gross salary.</div>
@@ -3001,11 +3001,11 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
       <div class="pq-q">Is your payslip in a format the Credit Committee will accept?</div>
       <div class="pq-hint">Digital payslips with employer stamp are preferred. If you only have a printed copy or are unsure what to upload, ask here before uploading.</div>
       <button class="pq-btn" onclick="pqOpen('member-payslip-format')">Give Your Input</button>
-      <div class="pq-done" id="pqd-member-payslip-format">&#10003; Submitted — Admin will respond in your My Feedback tab</div>
+      <div class="pq-done" id="pqd-member-payslip-format">&#10003; Submitted â Admin will respond in your My Feedback tab</div>
     </div>
   </div>
   <div class="pq-form" id="pqf-member-payslip-format">
-    <textarea class="pq-ta" id="pqta-member-payslip-format" placeholder="Be specific — the admin can only respond to what you write here&#8230;"></textarea>
+    <textarea class="pq-ta" id="pqta-member-payslip-format" placeholder="Be specific â the admin can only respond to what you write here&#8230;"></textarea>
     <div class="pq-row">
       <button class="pq-submit" onclick="pqSubmit('member-payslip-format','Member Payslip Format Query')">Submit &#8594;</button>
       <button class="pq-cancel" onclick="pqClose('member-payslip-format')">Cancel</button>
@@ -3020,18 +3020,18 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
   <div class="upload-zone" style="margin-top:10px" onclick="toast('Payslip upload opened. Select PDF, JPG or PNG. Max 10MB.')">
     <div style="font-size:30px;margin-bottom:6px">&#128228;</div>
     <div style="font-size:13px;font-weight:700;color:#000;margin-bottom:3px">Upload Your Payslip</div>
-    <div style="font-size:11px;color:#555">PDF · JPG · PNG · Must show employer stamp, name, gross salary</div>
+    <div style="font-size:11px;color:#555">PDF Â· JPG Â· PNG Â· Must show employer stamp, name, gross salary</div>
   </div>
   <button class="btn btn-gold" type="button" style="margin-top:10px" onclick="toast('Payslip uploaded. Credit Committee will review it as part of your application.')">Upload Payslip</button>
 </div>
 <div class="mpesa-box">
-  <div style="font-size:11px;color:#ccc;margin-bottom:3px;font-weight:600">Application Fee — Pay before submitting</div>
+  <div style="font-size:11px;color:#ccc;margin-bottom:3px;font-weight:600">Application Fee â Pay before submitting</div>
   <div class="mpesa-pb">400222</div>
   <div class="mpesa-sub">Account: <b style="color:#fff">602196#YOUR NAME/PR NO</b></div>
-  <div class="mpesa-sub">Amount: <b style="color:#f0a830">KSh 50 · Non-refundable</b></div>
+  <div class="mpesa-sub">Amount: <b style="color:#f0a830">KSh 50 Â· Non-refundable</b></div>
 </div></div><div class="sect-page" id="member-sms">
 <div class="page-title">SMS &amp; USSD Guide</div>
-<div class="page-sub">All commands work on any Safaricom phone — no internet needed</div>
+<div class="page-sub">All commands work on any Safaricom phone â no internet needed</div>
 <div class="pq" id="pqw-member-sms">
   <div class="pq-head">
     <div class="pq-ico">&#128241;</div>
@@ -3039,11 +3039,11 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
       <div class="pq-q">Not receiving SMS alerts or USSD is giving an error?</div>
       <div class="pq-hint">If loan, payment, or OTP SMS alerts are not coming through, or *483# is not working, share your input here.</div>
       <button class="pq-btn" onclick="pqOpen('member-sms')">Give Your Input</button>
-      <div class="pq-done" id="pqd-member-sms">&#10003; Submitted — Admin will respond in your My Feedback tab</div>
+      <div class="pq-done" id="pqd-member-sms">&#10003; Submitted â Admin will respond in your My Feedback tab</div>
     </div>
   </div>
   <div class="pq-form" id="pqf-member-sms">
-    <textarea class="pq-ta" id="pqta-member-sms" placeholder="Be specific — the admin can only respond to what you write here&#8230;"></textarea>
+    <textarea class="pq-ta" id="pqta-member-sms" placeholder="Be specific â the admin can only respond to what you write here&#8230;"></textarea>
     <div class="pq-row">
       <button class="pq-submit" onclick="pqSubmit('member-sms','Member SMS / USSD Issue')">Submit &#8594;</button>
       <button class="pq-cancel" onclick="pqClose('member-sms')">Cancel</button>
@@ -3056,8 +3056,8 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
   </div>
 </div>
 <div class="card" style="margin-top:10px">
-  <div class="info-row"><div class="ir-key">Check balance</div><div class="ir-val">Dial <b>*483#</b> · Option 1</div></div>
-  <div class="info-row"><div class="ir-key">Loan status</div><div class="ir-val">Dial <b>*483#</b> · Option 2</div></div>
+  <div class="info-row"><div class="ir-key">Check balance</div><div class="ir-val">Dial <b>*483#</b> Â· Option 1</div></div>
+  <div class="info-row"><div class="ir-key">Loan status</div><div class="ir-val">Dial <b>*483#</b> Â· Option 2</div></div>
   <div class="info-row"><div class="ir-key">Pay loan</div><div class="ir-val">M-Pesa Paybill <b>400222</b></div></div>
   <div class="info-row"><div class="ir-key">SMS balance</div><div class="ir-val">Text <b>BAL</b> to 21000</div></div>
   <div class="info-row"><div class="ir-key">Guarantor reply YES</div><div class="ir-val">Text <b>YES</b> to 21000</div></div>
@@ -3080,7 +3080,7 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
 <div style="background:#fff8e6;border:2px solid #b06a00;border-radius:9px;padding:10px 14px;margin-bottom:14px;font-size:12.5px;color:#4a2800;font-weight:600;display:flex;align-items:flex-start;gap:8px;"><span style="font-size:16px;flex-shrink:0">&#128274;</span><span>Your feedback and questions on this page go <b>directly and only to the System Admin</b>. Nothing is editable after you submit. The System Admin will respond in your <b>My Feedback</b> tab.</span></div>
 <div class="sect-page on" id="edu-overview">
 <div class="page-title">Education Committee</div>
-<div class="page-sub">Newly established · March 2026</div>
+<div class="page-sub">Newly established Â· March 2026</div>
 <div style="text-align:center;padding:45px 20px">
   <div style="font-size:52px;margin-bottom:12px">&#128218;</div>
   <div style="font-family:'DM Serif Display',serif;font-size:22px;color:#000;margin-bottom:8px">Education Committee</div>
@@ -3093,11 +3093,11 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
       <div class="pq-q">Ready to define this committee's mandate or terms of reference?</div>
       <div class="pq-hint">Submit the proposed mandate, member names, meeting frequency, and any setup requirements. Admin will record and configure everything.</div>
       <button class="pq-btn" onclick="pqOpen('edu-setup')">Give Your Input</button>
-      <div class="pq-done" id="pqd-edu-setup">&#10003; Submitted — Admin will respond in your My Feedback tab</div>
+      <div class="pq-done" id="pqd-edu-setup">&#10003; Submitted â Admin will respond in your My Feedback tab</div>
     </div>
   </div>
   <div class="pq-form" id="pqf-edu-setup">
-    <textarea class="pq-ta" id="pqta-edu-setup" placeholder="Be specific — the admin can only respond to what you write here&#8230;"></textarea>
+    <textarea class="pq-ta" id="pqta-edu-setup" placeholder="Be specific â the admin can only respond to what you write here&#8230;"></textarea>
     <div class="pq-row">
       <button class="pq-submit" onclick="pqSubmit('edu-setup','Education Committee Setup')">Submit &#8594;</button>
       <button class="pq-cancel" onclick="pqClose('edu-setup')">Cancel</button>
@@ -3154,7 +3154,7 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
         <option value="low">Low / Minor</option>
       </select>
       <button class="fp-submit" onclick="submitFb()">Submit Feedback &#8594;</button>
-      <div class="fp-note">Goes directly to the System Admin. Your input is not editable after submitting. Check the My Feedback tab — the System Admin will respond there.</div>
+      <div class="fp-note">Goes directly to the System Admin. Your input is not editable after submitting. Check the My Feedback tab â the System Admin will respond there.</div>
     </div>
   </div>
 </div>
@@ -3164,7 +3164,7 @@ var KEY='coopvault_fb_v1';
 var ROLE=null;
 var knownResp=0;
 
-// ── ROLE SELECT ──
+// ââ ROLE SELECT ââ
 function pickRole(role,el){
   ROLE=role;
   document.querySelectorAll('.role-card').forEach(function(c){c.classList.remove('sel');});
@@ -3183,7 +3183,7 @@ function goStep1(){
   document.querySelectorAll('.role-card').forEach(function(c){c.classList.remove('sel');});
 }
 
-// ── FACE SCAN ──
+// ââ FACE SCAN ââ
 function resetFace(){
   var r=document.getElementById('face-ring');
   var arc=document.getElementById('face-arc');
@@ -3236,7 +3236,7 @@ function switchRole(){
   document.querySelectorAll('.role-card').forEach(function(c){c.classList.remove('sel');});
 }
 
-// ── SECTION TABS ──
+// ââ SECTION TABS ââ
 function SS(role,sect,el){
   document.querySelectorAll('#view-'+role+' .sect-page').forEach(function(p){p.classList.remove('on');});
   var pg=document.getElementById(role+'-'+sect);
@@ -3247,7 +3247,7 @@ function SS(role,sect,el){
   if(sect==='myfeedback') renderMyfb(ROLE);
 }
 
-// ── COMMITTEE TAB SWITCHER ──
+// ââ COMMITTEE TAB SWITCHER ââ
 function showCmte(id,el){
   ['cc','pc','edu'].forEach(function(c){
     var el2=document.getElementById('cmte-'+c);
@@ -3257,7 +3257,7 @@ function showCmte(id,el){
   });
 }
 
-// ── BANK FORMS ──
+// ââ BANK FORMS ââ
 function showBankForm(type){
   document.getElementById('bank-wd').style.display=type==='wd'?'block':'none';
   document.getElementById('bank-dep').style.display=type==='dep'?'block':'none';
@@ -3279,7 +3279,7 @@ function doWithdrawal(){
   document.getElementById('bank-wd').style.display='none';
 }
 
-// ── PHASE QUESTION WIDGETS ──
+// ââ PHASE QUESTION WIDGETS ââ
 function pqOpen(id){
   var form=document.getElementById('pqf-'+id);
   if(form) form.classList.add('open');
@@ -3309,10 +3309,10 @@ function pqSubmit(id,context){
   var done=document.getElementById('pqd-'+id);
   if(done) done.style.display='block';
   renderMyfb(ROLE);
-  toast('\u2705 Submitted to the System Admin — response will appear in My Feedback tab');
+  toast('\u2705 Submitted to the System Admin â response will appear in My Feedback tab');
 }
 
-// ── LOAD PQ RESPONSES ──
+// ââ LOAD PQ RESPONSES ââ
 function loadPqResponses(){
   var all=load();
   var responded=all.filter(function(i){return i.response&&i.type==='phase-question';});
@@ -3328,9 +3328,9 @@ function loadPqResponses(){
   });
 }
 
-// ── GENERAL FEEDBACK PANEL ──
+// ââ GENERAL FEEDBACK PANEL ââ
 function openFbPanel(){
-  var ctx=ROLE?(ROLE.toUpperCase()+' — General Feedback'):'General Feedback';
+  var ctx=ROLE?(ROLE.toUpperCase()+' â General Feedback'):'General Feedback';
   var panel=document.getElementById('fb-panel');
   var ctx_el=document.getElementById('fp-ctx');
   if(ctx_el) ctx_el.textContent='Context: '+ctx;
@@ -3371,7 +3371,7 @@ function submitFb(){
   toast('\u2705 Feedback submitted! Check the My Feedback tab for the admin response.');
 }
 
-// ── MY FEEDBACK ──
+// ââ MY FEEDBACK ââ
 function renderMyfb(role){
   var el=document.getElementById('myfb-'+role);
   if(!el) return;
@@ -3400,12 +3400,12 @@ function renderMyfb(role){
   el.innerHTML=html;
 }
 
-// ── STORAGE ──
+// ââ STORAGE ââ
 function load(){try{return JSON.parse(localStorage.getItem(KEY)||'[]');}catch(e){return[];}}
 function save(a){try{localStorage.setItem(KEY,JSON.stringify(a));}catch(e){}}
 function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
 
-// ── AUTO-REFRESH for responses ──
+// ââ AUTO-REFRESH for responses ââ
 function checkResp(){
   var all=load();
   var count=all.filter(function(i){return i.response;}).length;
@@ -3423,7 +3423,7 @@ function toast(msg){
 }
 setInterval(checkResp,10000);
 
-// ══ PWA + OFFLINE ══
+// ââ PWA + OFFLINE ââ
 var deferredPrompt = null;
 
 // Splash screen
@@ -3535,7 +3535,7 @@ if('serviceWorker' in navigator && location.protocol !== 'file:'){
 }
 
 
-// ── LOAN CALCULATOR ──
+// ââ LOAN CALCULATOR ââ
 function fmt(n){return 'KSh '+Math.round(n).toLocaleString();}
 
 function calcLoan(){
@@ -3556,8 +3556,8 @@ function calcLoan(){
 
   var maxLoan = Math.min(rule3x, ruleSalary);
   var limitingRule = rule3x <= ruleSalary
-    ? '3× Savings Rule is the limiting factor'
-    : '1⁄3 Salary Rule is the limiting factor';
+    ? '3Ã Savings Rule is the limiting factor'
+    : '1â3 Salary Rule is the limiting factor';
 
   document.getElementById('calc-3x-result').textContent = fmt(rule3x);
   document.getElementById('calc-net-salary').textContent = fmt(net)+' / month';
@@ -3567,7 +3567,7 @@ function calcLoan(){
   document.getElementById('calc-limit-rule').textContent = limitingRule;
   document.getElementById('calc-max-loan').textContent = fmt(maxLoan);
   document.getElementById('calc-limiting-rule').textContent =
-    'Lower of: '+fmt(rule3x)+' (3× savings) vs '+fmt(ruleSalary)+' (salary rule)';
+    'Lower of: '+fmt(rule3x)+' (3Ã savings) vs '+fmt(ruleSalary)+' (salary rule)';
 
   // Repayment grid: show monthly repayment for 6, 12, 24 months
   var grid = document.getElementById('calc-repay-grid');
@@ -3579,7 +3579,7 @@ function calcLoan(){
     gridHtml += '<div class="calc-repay-cell">'
       +'<div class="calc-repay-months">'+p+' months</div>'
       +'<div class="calc-repay-amt">'+fmt(monthly)+'/mo</div>'
-      +'<div style="font-size:9px;margin-top:3px;color:'+(ok?'#6ee7b7':'#fca5a5')+'">'+(ok?'✓ OK':'⚠ Exceeds 1/3')+'</div>'
+      +'<div style="font-size:9px;margin-top:3px;color:'+(ok?'#6ee7b7':'#fca5a5')+'">'+(ok?'â OK':'â  Exceeds 1/3')+'</div>'
       +'</div>';
   });
   grid.innerHTML = gridHtml;
@@ -3600,7 +3600,7 @@ function loadApplicant(savings, gross, deductions, months, name){
   // Scroll calc into view
   var c = document.getElementById('loan-calc-main');
   if(c) c.scrollIntoView({behavior:'smooth',block:'start'});
-  toast('✅ Loaded: '+name);
+  toast('â Loaded: '+name);
 }
 
 
