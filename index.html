@@ -2,11 +2,6 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com; frame-ancestors 'none'; form-action 'self'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests;">
-  <meta http-equiv="X-Content-Type-Options" content="nosniff">
-  <meta http-equiv="X-Frame-Options" content="DENY">
-  <meta http-equiv="Referrer-Policy" content="no-referrer">
-  <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=()">
 
   <!-- PWA: installable on phone, works offline -->
   <meta name="theme-color" content="#0c1520">
@@ -42,7 +37,7 @@
 
 /* ── PWA INSTALL BANNER ── */
 #install-banner{
-  position:fixed;bottom:0;left:0;right:0;z-index:400;
+  position:fixed;bottom:0;left:0;right:0;z-index:500;
   background:#0c1520;border-top:3px solid #f0a830;
   padding:13px 16px;display:none;
   align-items:center;justify-content:space-between;gap:12px;
@@ -56,7 +51,7 @@
 
 /* ── OFFLINE INDICATOR ── */
 #offline-bar{
-  position:fixed;top:52px;left:0;right:0;z-index:90;
+  position:fixed;top:52px;left:0;right:0;z-index:99;
   background:#004422;color:#fff;
   font-size:11px;font-weight:700;text-align:center;
   padding:5px 14px;display:none;
@@ -79,150 +74,10 @@
 .splash-bar-bg{width:200px;height:3px;background:rgba(255,255,255,.1);border-radius:2px;}
 .splash-bar-fill{height:3px;background:#f0a830;border-radius:2px;width:0;transition:width .8s ease;}
 
-
-/* ── GUARANTOR REQUEST SYSTEM ── */
-.guar-section{background:#fff;border:1px solid #ccc;border-radius:10px;padding:15px;margin-bottom:12px;}
-.guar-title{font-size:13px;font-weight:700;color:#000;margin-bottom:3px;}
-.guar-sub{font-size:11px;color:#555;margin-bottom:12px;}
-.member-search-box{position:relative;margin-bottom:10px;}
-.member-search-box input{padding-left:32px;}
-.member-search-ico{position:absolute;left:10px;top:50%;transform:translateY(-50%);font-size:14px;pointer-events:none;}
-.member-list{display:flex;flex-direction:column;gap:7px;margin-bottom:12px;}
-.member-row{display:flex;align-items:center;justify-content:space-between;background:#f8f8f8;border:1px solid #ddd;border-radius:9px;padding:10px 13px;gap:8px;flex-wrap:wrap;}
-.member-row-info{flex:1;}
-.member-row-name{font-size:13px;font-weight:700;color:#000;}
-.member-row-meta{font-size:11px;color:#555;margin-top:1px;}
-.member-row-savings{font-size:12px;font-weight:700;color:#004422;margin-top:2px;}
-.mr-btn{padding:6px 13px;border-radius:7px;font-size:11px;font-weight:700;cursor:pointer;border:none;font-family:'DM Sans',sans-serif;touch-action:manipulation;white-space:nowrap;}
-.mr-btn-req{background:#8a5000;color:#fff;}
-.mr-btn-req:active{background:#6a3800;}
-.mr-btn-sent{background:#eee;color:#888;cursor:default;}
-.guar-req-card{background:#fdf8ee;border:2px solid rgba(138,80,0,.2);border-radius:10px;padding:12px 14px;margin-bottom:8px;}
-.grc-top{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:6px;margin-bottom:6px;}
-.grc-name{font-size:13px;font-weight:700;color:#000;}
-.grc-ref{font-size:10px;font-family:'DM Mono',monospace;color:#888;}
-.grc-loan{font-size:12px;color:#555;margin-bottom:8px;}
-.grc-btns{display:flex;gap:8px;margin-top:8px;}
-.grc-approve{background:rgba(18,168,110,.1);border:2px solid rgba(18,168,110,.3);color:#004422;font-weight:700;padding:7px 16px;border-radius:7px;font-size:12px;cursor:pointer;font-family:'DM Sans',sans-serif;touch-action:manipulation;}
-.grc-decline{background:rgba(212,64,64,.1);border:2px solid rgba(212,64,64,.3);color:#880000;font-weight:700;padding:7px 16px;border-radius:7px;font-size:12px;cursor:pointer;font-family:'DM Sans',sans-serif;touch-action:manipulation;}
-.guar-status-card{background:#f8f8f8;border:1px solid #ddd;border-radius:9px;padding:11px 13px;margin-bottom:7px;}
-.gsc-top{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:5px;margin-bottom:4px;}
-.gsc-name{font-size:13px;font-weight:700;color:#000;}
-.gsc-meta{font-size:11px;color:#555;}
-.guar-empty{text-align:center;padding:30px 20px;color:#888;font-size:13px;background:#f5f5f5;border-radius:10px;border:1px solid #ddd;}
-.guar-alert-strip{background:#d4f0e4;border:2px solid #006e3a;border-radius:9px;padding:10px 13px;margin-bottom:10px;font-size:12.5px;color:#004422;font-weight:600;display:none;}
-.guar-alert-strip.show{display:block;}
-
-
-/* ── OTP AUTH SCREEN ── */
-.otp-input-row{display:flex;gap:8px;justify-content:center;margin:14px 0;}
-.otp-digit{width:42px;height:52px;border-radius:9px;border:2px solid rgba(255,255,255,.2);background:rgba(255,255,255,.08);color:#fff;font-size:22px;font-weight:700;text-align:center;font-family:'DM Mono',monospace;outline:none;-webkit-appearance:none;caret-color:#f0a830;}
-.otp-digit:focus{border-color:#f0a830;background:rgba(240,168,48,.1);}
-.otp-resend{font-size:12px;color:rgba(255,255,255,.4);text-align:center;margin-top:8px;cursor:pointer;padding:6px;}
-.otp-resend span{color:#f0a830;font-weight:700;}
-.otp-countdown{font-size:11px;color:rgba(255,255,255,.35);text-align:center;margin-top:4px;}
-
-/* ── INACTIVITY LOCK OVERLAY ── */
-#lock-overlay{
-  position:fixed;inset:0;z-index:2000;
-  background:rgba(12,21,32,0.97);
-  display:none;flex-direction:column;
-  align-items:center;justify-content:center;
-  padding:28px;
-}
-#lock-overlay.show{display:flex;}
-.lock-ico{font-size:52px;margin-bottom:14px;}
-.lock-title{font-family:'DM Serif Display',serif;font-size:26px;color:#f0a830;margin-bottom:6px;text-align:center;}
-.lock-sub{font-size:13px;color:rgba(255,255,255,.45);text-align:center;margin-bottom:24px;line-height:1.6;}
-.lock-btn{background:#f0a830;color:#0c1520;border:none;border-radius:10px;padding:13px 32px;font-family:'DM Sans',sans-serif;font-size:15px;font-weight:700;cursor:pointer;touch-action:manipulation;}
-.lock-btn:active{background:#f5c842;}
-
-/* ── INACTIVITY COUNTDOWN BAR ── */
-#inactivity-bar{
-  position:fixed;bottom:0;left:0;right:0;z-index:1800;
-  height:3px;background:#f0a830;
-  transform-origin:left;
-  transition:transform 1s linear;
-  display:none;
-}
-#inactivity-bar.show{display:block;}
-
-/* progress bar on role screen steps */
-.rs-prog{display:flex;gap:5px;margin-bottom:22px;}
-.rs-seg{flex:1;height:3px;border-radius:2px;background:rgba(255,255,255,.1);}
-.rs-seg.on{background:#f0a830;}
-
-
-/* ── FEEDBACK PANEL INPUT OVERRIDE — ensures interactivity ── */
-#fb-panel input, #fb-panel textarea, #fb-panel select {
-  position: relative !important;
-  z-index: 3001 !important;
-  pointer-events: auto !important;
-  -webkit-user-select: text !important;
-  user-select: text !important;
-  touch-action: manipulation !important;
-  cursor: text !important;
-  opacity: 1 !important;
-  visibility: visible !important;
-}
-#fb-panel {
-  pointer-events: auto !important;
-}
-#fb-panel .fp-scroll {
-  pointer-events: auto !important;
-  position: relative !important;
-  z-index: 3000 !important;
-}
-
-
-/* ── LOCK OVERLAY ── */
-#lock-overlay{
-  position:fixed;inset:0;z-index:3000;
-  background:rgba(12,21,32,.97);
-  display:none;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  padding:28px 20px;
-}
-#lock-overlay.show{display:flex;}
-.lock-card{
-  width:100%;max-width:360px;
-  background:rgba(26,39,56,.95);
-  border:1px solid rgba(255,255,255,.1);
-  border-radius:18px;
-  padding:28px 24px;
-  text-align:center;
-}
-.lock-icon{font-size:48px;margin-bottom:12px;}
-.lock-title{font-family:'DM Serif Display',Georgia,serif;font-size:26px;color:#f0a830;margin-bottom:6px;}
-.lock-sub{font-size:12px;color:rgba(255,255,255,.45);margin-bottom:6px;line-height:1.6;}
-.lock-info{font-size:11px;color:#6ee7b7;margin-bottom:18px;min-height:16px;font-weight:600;}
-.lock-otp-row{display:flex;gap:8px;justify-content:center;margin-bottom:10px;}
-.lock-otp-box{
-  width:44px;height:52px;text-align:center;
-  background:rgba(255,255,255,.09);
-  border:1.5px solid rgba(255,255,255,.2);
-  border-radius:9px;color:#fff;
-  font-family:'DM Mono',monospace;
-  font-size:22px;font-weight:700;outline:none;
-  -webkit-appearance:none;
-}
-.lock-error{font-size:12px;color:#fca5a5;min-height:16px;margin-bottom:10px;}
-.lock-unlock-btn{
-  display:block;width:100%;
-  background:#f0a830;color:#0c1520;
-  border:none;border-radius:8px;padding:12px;
-  font-family:'DM Sans',sans-serif;font-size:14px;font-weight:700;
-  cursor:pointer;touch-action:manipulation;
-}
-.lock-switch{margin-top:14px;font-size:12px;color:rgba(255,255,255,.35);cursor:pointer;}
-.lock-switch span{color:#f0a830;font-weight:700;}
-
 </style>
-<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" media="all">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'" onerror="this.remove()">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 html,body{width:100%;min-height:100%;font-family:'DM Sans',sans-serif;font-size:14px;background:#0c1520;color:#fff;}
@@ -363,7 +218,7 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
 .pq-done{font-size:11px;color:#004422;font-weight:700;display:none;margin-top:3px;}
 .pq-form{display:none;margin-top:10px;border-top:1px solid rgba(138,80,0,.15);padding-top:9px;}
 .pq-form.open{display:block;}
-.pq-ta{width:100%;background:#fff;border:1px solid #ccc;border-radius:7px;padding:8px 10px;color:#000;font-family:'DM Sans',sans-serif;font-size:13px;outline:none;resize:none;min-height:65px;pointer-events:auto;-webkit-user-select:text;user-select:text;}
+.pq-ta{width:100%;background:#fff;border:1px solid #ccc;border-radius:7px;padding:8px 10px;color:#000;font-family:'DM Sans',sans-serif;font-size:13px;outline:none;resize:none;min-height:65px;pointer-events:auto;-webkit-user-select:text;user-select:text;touch-action:manipulation;will-change:contents;-webkit-appearance:none;}
 .pq-ta:focus{border-color:#8a5000;}
 .pq-ta::placeholder{color:#888;}
 .pq-row{display:flex;gap:7px;margin-top:7px;flex-wrap:wrap;}
@@ -376,25 +231,25 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
 .pq-resp-meta{font-size:10px;color:#333;margin-top:3px;font-weight:600;}
 
 /* FLOATING FEEDBACK BUTTON */
-#fb-float{position:fixed;bottom:18px;right:14px;z-index:3000;background:#8a5000;color:#fff;border:none;border-radius:24px;padding:10px 18px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:700;cursor:pointer;touch-action:manipulation;display:flex;align-items:center;gap:7px;box-shadow:0 4px 16px rgba(0,0,0,.25);}
+#fb-float{position:fixed;bottom:18px;right:14px;z-index:550;background:#8a5000;color:#fff;border:none;border-radius:24px;padding:10px 18px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:700;cursor:pointer;touch-action:manipulation;display:flex;align-items:center;gap:7px;box-shadow:0 4px 16px rgba(0,0,0,.25);}
 .fb-dot{width:8px;height:8px;background:#cc0000;border-radius:50%;display:none;}
 .fb-dot.on{display:block;}
 
 /* FEEDBACK PANEL */
-#fb-panel{position:fixed;bottom:0;left:0;right:0;z-index:3000;background:#111;border-top:3px solid #f0a830;transform:translateY(100%);transition:transform .3s ease;max-height:85vh;display:flex;flex-direction:column;}
+#fb-panel{position:fixed;bottom:0;left:0;right:0;z-index:2000;background:#111;border-top:3px solid #f0a830;transform:translateY(100%);transition:transform .3s ease;max-height:85vh;display:flex;flex-direction:column;}
 #fb-panel.open{transform:translateY(0);}
 .fph{display:flex;align-items:center;justify-content:space-between;padding:13px 16px;border-bottom:1px solid rgba(255,255,255,.1);flex-shrink:0;}
 .fph-title{font-size:14px;font-weight:700;color:#f0a830;}
 .fph-close{background:transparent;border:none;color:#fff;font-size:22px;cursor:pointer;padding:0 5px;line-height:1;touch-action:manipulation;}
-.fp-scroll{overflow-y:auto;flex:1;-webkit-overflow-scrolling:touch;position:relative;z-index:1000;}
+.fp-scroll{overflow-y:auto;flex:1;-webkit-overflow-scrolling:touch;position:relative;z-index:2000;}
 .fp-body{padding:16px;}
 .fp-ctx{background:rgba(255,255,255,.07);border-radius:6px;padding:7px 11px;font-size:11px;color:#ccc;margin-bottom:14px;}
 .fp-lbl{font-size:10px;letter-spacing:1px;text-transform:uppercase;color:#bbb;font-weight:700;margin-bottom:5px;margin-top:12px;}
-.fp-in{width:100%;background:#1e1e1e;border:1px solid #444;border-radius:7px;padding:10px 12px;color:#fff;font-family:'DM Sans',sans-serif;font-size:13px;outline:none;-webkit-appearance:none;pointer-events:auto;position:relative;z-index:3001;;-webkit-user-select:text;user-select:text;touch-action:manipulation;}.fp-in:focus{border-color:#f0a830;}
+.fp-in{width:100%;background:#1e1e1e;border:1px solid #444;border-radius:7px;padding:10px 12px;color:#fff;font-family:'DM Sans',sans-serif;font-size:13px;outline:none;-webkit-appearance:none;pointer-events:auto;position:relative;z-index:2001;-webkit-user-select:text;user-select:text;touch-action:manipulation;}.fp-in:focus{border-color:#f0a830;}
 .fp-in::placeholder{color:#666;}
-.fp-ta{width:100%;background:#1e1e1e;border:1px solid #444;border-radius:7px;padding:10px 12px;color:#fff;font-family:'DM Sans',sans-serif;font-size:13px;outline:none;resize:vertical;min-height:90px;pointer-events:auto;position:relative;z-index:3001;-webkit-appearance:none;;-webkit-user-select:text;user-select:text;touch-action:manipulation;}
+.fp-ta{width:100%;background:#1e1e1e;border:1px solid #444;border-radius:7px;padding:10px 12px;color:#fff;font-family:'DM Sans',sans-serif;font-size:13px;outline:none;resize:none;min-height:90px;pointer-events:auto;position:relative;z-index:2001;-webkit-user-select:text;user-select:text;touch-action:manipulation;will-change:contents;-webkit-appearance:none;}
 .fp-ta::placeholder{color:#666;}
-.fp-sel{width:100%;background:#1e1e1e;border:1px solid #444;border-radius:7px;padding:10px 12px;color:#fff;font-family:'DM Sans',sans-serif;font-size:13px;outline:none;-webkit-appearance:none;pointer-events:auto;position:relative;z-index:3001;}
+.fp-sel{width:100%;background:#1e1e1e;border:1px solid #444;border-radius:7px;padding:10px 12px;color:#fff;font-family:'DM Sans',sans-serif;font-size:13px;outline:none;-webkit-appearance:none;pointer-events:auto;position:relative;z-index:2001;}
 .fp-sel option{background:#1e1e1e;color:#fff;}
 .fp-submit{display:block;width:100%;background:#f0a830;color:#000;border:none;border-radius:8px;padding:13px;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:700;cursor:pointer;margin-top:14px;touch-action:manipulation;}
 .fp-note{text-align:center;font-size:11px;color:#555;margin-top:8px;}
@@ -450,11 +305,7 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
 .calc-repay-amt{font-size:15px;font-weight:700;color:#f0a830;}
 
 </style>
-<link rel="manifest" href="./manifest.json">
-  <meta name="author" content="CoopVault SACCO System">
-  <meta name="copyright" content="CoopVault SACCO">
-  <meta name="robots" content="noindex, nofollow">
-  <meta name="rating" content="general">
+<link rel="manifest" href="data:application/manifest+json;base64,ewogICJuYW1lIjogIkNvb3BWYXVsdCBTQUNDTyIsCiAgInNob3J0X25hbWUiOiAiQ29vcFZhdWx0IiwKICAiZGVzY3JpcHRpb24iOiAiQ29vcFZhdWx0IFNBQ0NPIFRlc3RpbmcgUG9ydGFsIOKAlCB3b3JrcyBvZmZsaW5lIiwKICAic3RhcnRfdXJsIjogIi4iLAogICJkaXNwbGF5IjogInN0YW5kYWxvbmUiLAogICJiYWNrZ3JvdW5kX2NvbG9yIjogIiMwYzE1MjAiLAogICJ0aGVtZV9jb2xvciI6ICIjMGMxNTIwIiwKICAib3JpZW50YXRpb24iOiAicG9ydHJhaXQtcHJpbWFyeSIsCiAgImljb25zIjogWwogICAgewogICAgICAic3JjIjogImRhdGE6aW1hZ2Uvc3ZnK3htbCwlM0NzdmcgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJyB2aWV3Qm94PScwIDAgMTkyIDE5MiclM0UlM0NyZWN0IHdpZHRoPScxOTInIGhlaWdodD0nMTkyJyBmaWxsPSclMjMwYzE1MjAnLyUzRSUzQ3RleHQgeD0nOTYnIHk9JzExNScgZm9udC1mYW1pbHk9J0dlb3JnaWEsc2VyaWYnIGZvbnQtc2l6ZT0nNzInIGZpbGw9JyUyM2YwYTgzMCcgdGV4dC1hbmNob3I9J21pZGRsZSclM0VDViUzQy90ZXh0JTNFJTNDL3N2ZyUzRSIsCiAgICAgICJzaXplcyI6ICIxOTJ4MTkyIiwKICAgICAgInR5cGUiOiAiaW1hZ2Uvc3ZnK3htbCIsCiAgICAgICJwdXJwb3NlIjogImFueSBtYXNrYWJsZSIKICAgIH0KICBdCn0=">
 </head>
 <body>
 
@@ -485,10 +336,9 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
     <div class="rs-prog">
       <div class="rs-seg on" id="seg1"></div>
       <div class="rs-seg" id="seg2"></div>
-      <div class="rs-seg" id="seg3"></div>
     </div>
     <div class="rs-step on" id="rs-step1">
-      <div class="rs-lbl">Step 1 of 3</div>
+      <div class="rs-lbl">Step 1 of 2</div>
       <div class="rs-title">Select Your Role</div>
       <div class="rs-desc">Choose your access level to load the appropriate dashboard.</div>
       <div class="role-grid">
@@ -502,53 +352,18 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
       </div>
     </div>
     <div class="rs-step" id="rs-step2">
-      <div class="rs-lbl">Step 2 of 3</div>
-      <div class="rs-title">Enter Your Number</div>
-      <div class="rs-desc">Enter the Safaricom number you gave the System Admin for authorisation.</div>
-      <label style="color:rgba(255,255,255,.55);font-size:10px;letter-spacing:1px;text-transform:uppercase;font-weight:700;margin-bottom:4px;display:block">Phone Number</label>
-      <div style="display:flex;gap:8px;margin-bottom:6px">
-        <div style="background:rgba(255,255,255,.09);border:1.5px solid rgba(255,255,255,.2);border-radius:7px;padding:10px 12px;color:#fff;font-size:13px;font-weight:700;white-space:nowrap;flex-shrink:0">+254</div>
-        <input type="tel" id="phone-input" placeholder="7XX XXX XXX" maxlength="10"
-          style="flex:1;background:rgba(255,255,255,.09);border:1.5px solid rgba(255,255,255,.2);border-radius:7px;padding:10px 12px;color:#fff;font-family:'DM Sans',sans-serif;font-size:15px;font-weight:700;outline:none;-webkit-appearance:none;letter-spacing:1px"
-          oninput="this.value=this.value.replace(/[^0-9]/g,'')"
-          onkeydown="if(event.key==='Enter')checkPhoneAccess()">
+      <div class="rs-lbl">Step 2 of 2</div>
+      <div class="rs-title">Confirm Your Identity</div>
+      <div class="rs-desc">Tap the face icon to authenticate with your device biometric.</div>
+      <div style="text-align:center;padding:8px 0 12px">
+        <div class="face-ring" id="face-ring" onclick="doFaceScan()">
+          <span id="face-emoji">&#128064;</span>
+          <div class="face-arc" id="face-arc"></div>
+        </div>
+        <div class="face-status" id="face-status">Tap to authenticate</div>
+        <div class="face-hint">Uses your device face ID or fingerprint</div>
       </div>
-      <div id="phone-error" style="font-size:12px;color:#fca5a5;min-height:32px;margin-bottom:8px;line-height:1.5"></div>
-      <button type="button" onclick="checkPhoneAccess()"
-        style="display:block;width:100%;background:#f0a830;color:#0c1520;border:none;border-radius:8px;padding:12px;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:700;cursor:pointer;margin-bottom:10px;touch-action:manipulation">
-        Check Access &#8594;
-      </button>
       <div class="rs-back" onclick="goStep1()">&#8592; Change Role</div>
-    </div>
-<div class="rs-step" id="rs-step3">
-      <div class="rs-lbl">Step 3 of 3</div>
-      <div class="rs-title">Enter Your PIN</div>
-      <div class="rs-desc" id="pin-desc">Enter the 4-digit PIN for your role.</div>
-      <div style="display:flex;gap:8px;justify-content:center;margin:16px 0">
-        <input type="tel" maxlength="1" id="otp1" oninput="otpMove(this,'otp2')" style="width:52px;height:60px;text-align:center;background:rgba(255,255,255,.09);border:1.5px solid rgba(255,255,255,.2);border-radius:9px;color:#fff;font-family:'DM Mono',monospace;font-size:24px;font-weight:700;outline:none;-webkit-appearance:none">
-        <input type="tel" maxlength="1" id="otp2" oninput="otpMove(this,'otp3')" style="width:52px;height:60px;text-align:center;background:rgba(255,255,255,.09);border:1.5px solid rgba(255,255,255,.2);border-radius:9px;color:#fff;font-family:'DM Mono',monospace;font-size:24px;font-weight:700;outline:none;-webkit-appearance:none">
-        <input type="tel" maxlength="1" id="otp3" oninput="otpMove(this,'otp4')" style="width:52px;height:60px;text-align:center;background:rgba(255,255,255,.09);border:1.5px solid rgba(255,255,255,.2);border-radius:9px;color:#fff;font-family:'DM Mono',monospace;font-size:24px;font-weight:700;outline:none;-webkit-appearance:none">
-        <input type="tel" maxlength="1" id="otp4" oninput="otpMove(this,null)" style="width:52px;height:60px;text-align:center;background:rgba(255,255,255,.09);border:1.5px solid rgba(255,255,255,.2);border-radius:9px;color:#fff;font-family:'DM Mono',monospace;font-size:24px;font-weight:700;outline:none;-webkit-appearance:none">
-      </div>
-      <div id="otp-error" style="text-align:center;font-size:12px;color:#fca5a5;min-height:18px;margin-bottom:8px"></div>
-      <button type="button" onclick="verifyRolePin()"
-        style="display:block;width:100%;background:#f0a830;color:#0c1520;border:none;border-radius:8px;padding:12px;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:700;cursor:pointer;margin-bottom:10px;touch-action:manipulation">
-        Enter Dashboard &#8594;
-      </button>
-      <div class="rs-back" onclick="goStep2Back()">&#8592; Change Number</div>
-    </div>:700;outline:none;-webkit-appearance:none">
-        <input type="tel" maxlength="1" class="otp-box" id="otp6" oninput="otpMove(this,null)" style="width:44px;height:52px;text-align:center;background:rgba(255,255,255,.09);border:1.5px solid rgba(255,255,255,.2);border-radius:9px;color:#fff;font-family:'DM Mono',monospace;font-size:22px;font-weight:700;outline:none;-webkit-appearance:none">
-      </div>
-      <div id="otp-error" style="text-align:center;font-size:12px;color:#fca5a5;min-height:18px;margin-bottom:8px"></div>
-      <button type="button" onclick="verifyOTP()"
-        style="display:block;width:100%;background:#f0a830;color:#0c1520;border:none;border-radius:8px;padding:12px;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:700;cursor:pointer;margin-bottom:10px;touch-action:manipulation">
-        Verify &amp; Enter
-      </button>
-      <div style="text-align:center;font-size:12px;color:rgba(255,255,255,.35)">
-        Didn't receive it? <span onclick="goStep2()" style="color:#f0a830;cursor:pointer;font-weight:700">Resend</span>
-      </div>
-      <div class="rs-back" onclick="goStep2Back()">&#8592; Change Number</div>
-    </div>
     </div>
   </div>
 </div>
@@ -579,8 +394,6 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
   <div class="pq-head">
     <div class="pq-ico">📊</div>
     <div class="pq-body">
-      <div class="pq-q">Do these overview figures look correct?</div>
-      <div class="pq-hint">If any number looks wrong — wrong member count, incorrect balances, stale data — share your input here.</div>
       <button class="pq-btn" onclick="pqOpen('exec-overview')">Give Your Input</button>
       <div class="pq-done" id="pqd-exec-overview">&#10003; Submitted — Admin will respond in your My Feedback tab</div>
     </div>
@@ -601,7 +414,7 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
 <div class="card" style="margin-top:10px"><div class="card-title">Pending Executive Actions</div>
   <div class="ai-item"><div class="ai-dot" style="background:#7a4400"></div><div><div class="ai-txt"><b>4 loans</b> awaiting Executive sign-off — CC refs confirmed</div><div class="ai-time">LA-2026-041 · LA-2026-038 · LA-2026-036 · LA-2026-033</div></div></div>
   <div class="ai-item"><div class="ai-dot" style="background:#880000"></div><div><div class="ai-txt"><b>David Kariuki SC-0077</b> — 30+ days overdue · KSh 95,000 · Legal threshold</div><div class="ai-time">Guarantors notified</div></div></div>
-  <div class="ai-item"><div class="ai-dot" style="background:#001a60"></div><div><div class="ai-txt"><b>Board Session #47</b> — 7 of 9 approved · Awaiting G. Mutua, S. Njeru</div><div class="ai-time">Reply APPROVE 47 to the SACCO SMS line (coming soon)</div></div></div>
+  <div class="ai-item"><div class="ai-dot" style="background:#001a60"></div><div><div class="ai-txt"><b>Board Session #47</b> — 7 of 9 approved · Awaiting G. Mutua, S. Njeru</div><div class="ai-time">Reply APPROVE 47 to 21000</div></div></div>
   <div class="ai-item"><div class="ai-dot" style="background:#300080"></div><div><div class="ai-txt"><b>Purchase PC-2026-012</b> — KSh 45,000 · Purchasing Cmte 3/3 ✅ · Needs Exec sign-off</div><div class="ai-time">TechMart Kenya</div></div></div>
 </div></div><div class="sect-page" id="exec-bank">
 <div class="page-title">Bank Dashboard</div>
@@ -714,7 +527,7 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
   </table></div>
 </div>
 <div class="card"><div class="card-title">9-of-9 Board Session #47</div>
-  <div class="alert-info">7 of 9 approved. Reply APPROVE 47 or DECLINE 47 to the SACCO SMS number (coming soon).</div>
+  <div class="alert-info">7 of 9 approved. Reply APPROVE 47 or DECLINE 47 to SMS 21000.</div>
   <div class="consent-grid">
     <div class="cm-card ok"><div class="cm-name">J. Mwangi</div><div class="cm-st" style="color:#004422">&#10003; Portal</div></div>
     <div class="cm-card ok"><div class="cm-name">A. Kamau</div><div class="cm-st" style="color:#004422">&#10003; Portal</div></div>
@@ -1366,7 +1179,7 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
     <div style="text-align:center;min-width:90px;flex-shrink:0">
       <div style="width:36px;height:36px;border-radius:50%;background:#fdf0d0;border:2px solid #b06a00;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;color:#5a3200;margin:0 auto 5px">2</div>
       <div style="font-size:11px;font-weight:700;color:#000">Guarantors Reply</div>
-      <div style="font-size:10px;color:#555">SMS YES/NO<br>SMS reply (coming soon)<br>Min 2 needed</div>
+      <div style="font-size:10px;color:#555">SMS YES/NO<br>USSD Option 4<br>Min 2 needed</div>
     </div>
     <div style="flex:1;height:2px;background:#ccc;min-width:12px"></div>
     <div style="text-align:center;min-width:90px;flex-shrink:0">
@@ -1422,7 +1235,7 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
         <td style="color:#004422;font-weight:700">KSh 36,000</td>
         <td><span class="bdg bg-green">No active loan</span></td>
         <td><span class="bdg bg-green">&#10003; Accepted</span></td>
-        <td>SMS YES to the SACCO SMS line (coming soon)</td>
+        <td>SMS YES to 21000</td>
         <td>17 Mar 14:22</td>
       </tr>
       <tr>
@@ -1555,17 +1368,7 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
   </div>
 </div>
 
-</div><div class="sect-page" id="admin-guarantors">
-
-<div class="page-title">Guarantor Activity Log</div>
-<div class="page-sub">All guarantor requests and responses across all loan applications</div>
-
-<div id="admin-guar-list" style="margin-top:10px">
-  <!-- Rendered by JS -->
-</div>
-
-</div>
-<div class="sect-page" id="admin-transactions">
+</div><div class="sect-page" id="admin-transactions">
 <div class="page-title">Transactions</div>
 <div class="page-sub">Post and view all SACCO transactions</div>
 <div class="pq" id="pqw-admin-txn-record">
@@ -1842,11 +1645,11 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
   <div class="card" style="text-align:center;margin-bottom:0;padding:12px"><div style="font-size:20px;margin-bottom:4px">&#128241;</div><b style="font-size:11px">SMS Activity</b></div>
   <div class="card" style="text-align:center;margin-bottom:0;padding:12px"><div style="font-size:20px;margin-bottom:4px">&#128203;</div><b style="font-size:11px">Member Statements</b></div>
 </div></div><div class="sect-page" id="admin-sms">
-<div class="page-title">SMS Centre</div>
-<div class="page-sub">Send alerts and view delivery reports</div>
+<div class="page-title">SMS / USSD Centre</div>
+<div class="page-sub">Send alerts, view delivery reports, manage auto-triggers</div>
 <div class="stats-row">
   <div class="stat"><div class="stat-label">SMS Today</div><div class="stat-value green">87</div><div class="stat-delta">99.1% delivered</div></div>
-  <div class="stat"><div class="stat-label">SMS Sessions</div><div class="stat-value blue">34</div></div>
+  <div class="stat"><div class="stat-label">USSD Sessions</div><div class="stat-value blue">34</div></div>
   <div class="stat"><div class="stat-label">WhatsApp</div><div class="stat-value">51</div></div>
 </div>
 <div class="pq" id="pqw-admin-sms">
@@ -1854,7 +1657,7 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
     <div class="pq-ico">&#128241;</div>
     <div class="pq-body">
       <div class="pq-q">Does the SMS and alert setup look correct to you?</div>
-      <div class="pq-hint">If SMS alerts are failing for a specific member, a batch was not sent, or USSD (coming soon) is giving errors, share your input here.</div>
+      <div class="pq-hint">If SMS alerts are failing for a specific member, a batch was not sent, or USSD is giving errors, share your input here.</div>
       <button class="pq-btn" onclick="pqOpen('admin-sms')">Give Your Input</button>
       <div class="pq-done" id="pqd-admin-sms">&#10003; Submitted — Admin will respond in your My Feedback tab</div>
     </div>
@@ -1887,7 +1690,7 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
   <div class="info-row"><div class="ir-key">Policy change</div><div class="ir-val"><span class="bdg bg-red">&#8594; Supervisory (3) instant</span></div></div>
   <div class="info-row"><div class="ir-key">Overdue Day 1, 7, 14</div><div class="ir-val"><span class="bdg bg-green">&#8594; Member + Guarantors</span></div></div>
   <div class="info-row"><div class="ir-key">OTP login</div><div class="ir-val"><span class="bdg bg-green">&#8594; Member only</span></div></div>
-  <div class="info-row"><div class="ir-key">M-Pesa Paybill</div><div class="ir-val" style="font-family:'DM Mono',monospace;font-weight:700">400222 · (USSD (coming soon) coming soon)</div></div>
+  <div class="info-row"><div class="ir-key">Paybill / USSD</div><div class="ir-val" style="font-family:'DM Mono',monospace;font-weight:700">400222 · *483#</div></div>
 </div></div><div class="sect-page" id="admin-myfeedback">
 
 <div style="background:#fff;border:1px solid #ccc;border-radius:10px;padding:14px 15px;margin-bottom:12px;">
@@ -1904,7 +1707,7 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
 <div style="background:#fff8e6;border:2px solid #b06a00;border-radius:9px;padding:10px 14px;margin-bottom:14px;font-size:12.5px;color:#4a2800;font-weight:600;display:flex;align-items:flex-start;gap:8px;"><span style="font-size:16px;flex-shrink:0">&#128274;</span><span>Your feedback and questions on this page go <b>directly and only to the System Admin</b>. Nothing is editable after you submit. The System Admin will respond in your <b>My Feedback</b> tab.</span></div>
 <div class="sect-page on" id="board-consent">
 <div class="page-title">9-of-9 Bank Activation</div>
-<div class="page-sub">All 9 board members must consent per session · Reply APPROVE/DECLINE XX to the SACCO SMS line (coming soon)</div>
+<div class="page-sub">All 9 board members must consent per session · Reply APPROVE/DECLINE XX to 21000</div>
 <div class="stats-row">
   <div class="stat"><div class="stat-label">Session</div><div class="stat-value">#47</div></div>
   <div class="stat"><div class="stat-label">Approved</div><div class="stat-value green">7 / 9</div></div>
@@ -1934,7 +1737,7 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
   </div>
 </div>
 <div class="card" style="margin-top:10px"><div class="card-title">Consent Status — Session #47</div>
-  <div class="alert-info">2 members pending. Reply <b>APPROVE 47</b> or <b>DECLINE 47</b> to the SACCO SMS number (coming soon). No internet needed.</div>
+  <div class="alert-info">2 members pending. Reply <b>APPROVE 47</b> or <b>DECLINE 47</b> to SMS 21000. No internet needed.</div>
   <div class="consent-grid">
     <div class="cm-card ok"><div class="cm-name">J. Mwangi</div><div class="cm-st" style="color:#004422">&#10003; Portal</div></div>
     <div class="cm-card ok"><div class="cm-name">A. Kamau</div><div class="cm-st" style="color:#004422">&#10003; Portal</div></div>
@@ -2007,7 +1810,7 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
 </div>
 <div class="card">
   <div class="card-title">Board Actions Pending</div>
-  <div class="ai-item"><div class="ai-dot" style="background:#001a60"></div><div><div class="ai-txt"><b>Session #47</b> &#8212; 7 of 9 board members consented. G. Mutua and S. Njeru pending. Reply APPROVE 47 to the SACCO SMS line (coming soon).</div><div class="ai-time">19 Mar 08:00</div></div></div>
+  <div class="ai-item"><div class="ai-dot" style="background:#001a60"></div><div><div class="ai-txt"><b>Session #47</b> &#8212; 7 of 9 board members consented. G. Mutua and S. Njeru pending. Reply APPROVE 47 to 21000.</div><div class="ai-time">19 Mar 08:00</div></div></div>
   <div class="ai-item"><div class="ai-dot" style="background:#7a4400"></div><div><div class="ai-txt"><b>Standing Approval STAND-2026-H1</b> &#8212; active Jan&#8211;Jun 2026. Renewal required by 30 Jun 2026.</div><div class="ai-time">Approved Dec 2025</div></div></div>
   <div class="ai-item"><div class="ai-dot" style="background:#300080"></div><div><div class="ai-txt"><b>Education Committee Allowance ALW-005</b> &#8212; KSh 9,000 pending board resolution.</div><div class="ai-time">Submitted 15 Mar</div></div></div>
 </div>
@@ -2061,17 +1864,7 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
   <div class="ai-item"><div class="ai-dot" style="background:#880000"></div><div><div class="ai-txt"><b>DEBIT -KSh 80,000</b> — Loan disbursement Aisha Kamau SC-0089 · CC-2026-0020</div><div class="ai-time">19 Mar 09:55 · TXN-8820 · SMS received 09:55:18</div></div></div>
   <div class="ai-item"><div class="ai-dot" style="background:#004422"></div><div><div class="ai-txt"><b>CREDIT +KSh 320,000</b> — Payroll batch 498 members · STAND-2026-H1</div><div class="ai-time">18 Mar 16:30 · TXN-8819</div></div></div>
   <div class="ai-item"><div class="ai-dot" style="background:#880000"></div><div><div class="ai-txt"><b>DEBIT -KSh 28,500</b> — Purchase SupplyMart Ltd · PC-2026-0011 · EX-2026-006</div><div class="ai-time">18 Mar 14:15 · TXN-8818</div></div></div>
-</div></div><div class="sect-page" id="super-guarantors">
-
-<div class="page-title">Guarantor Oversight</div>
-<div class="page-sub">Read-only view of all guarantor activity &mdash; alerts sent automatically on every response</div>
-
-<div id="super-guar-list" style="margin-top:10px">
-  <!-- Rendered by JS -->
-</div>
-
-</div>
-<div class="sect-page" id="super-policy">
+</div></div><div class="sect-page" id="super-policy">
 <div class="page-title">Policy Settings Monitor</div>
 <div class="page-sub">You receive instant SMS before any policy change takes effect</div>
 <div class="pq" id="pqw-super-policy">
@@ -2318,7 +2111,7 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
     <div style="text-align:center;min-width:90px;flex-shrink:0">
       <div style="width:36px;height:36px;border-radius:50%;background:#fdf0d0;border:2px solid #b06a00;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;color:#5a3200;margin:0 auto 5px">2</div>
       <div style="font-size:11px;font-weight:700;color:#000">Guarantors Reply</div>
-      <div style="font-size:10px;color:#555">SMS YES/NO<br>SMS reply (coming soon)<br>Min 2 needed</div>
+      <div style="font-size:10px;color:#555">SMS YES/NO<br>USSD Option 4<br>Min 2 needed</div>
     </div>
     <div style="flex:1;height:2px;background:#ccc;min-width:12px"></div>
     <div style="text-align:center;min-width:90px;flex-shrink:0">
@@ -2374,7 +2167,7 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
         <td style="color:#004422;font-weight:700">KSh 36,000</td>
         <td><span class="bdg bg-green">No active loan</span></td>
         <td><span class="bdg bg-green">&#10003; Accepted</span></td>
-        <td>SMS YES to the SACCO SMS line (coming soon)</td>
+        <td>SMS YES to 21000</td>
         <td>17 Mar 14:22</td>
       </tr>
       <tr>
@@ -2710,7 +2503,7 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
     <div style="text-align:center;min-width:90px;flex-shrink:0">
       <div style="width:36px;height:36px;border-radius:50%;background:#fdf0d0;border:2px solid #b06a00;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;color:#5a3200;margin:0 auto 5px">2</div>
       <div style="font-size:11px;font-weight:700;color:#000">Guarantors Reply</div>
-      <div style="font-size:10px;color:#555">SMS YES/NO<br>SMS reply (coming soon)<br>Min 2 needed</div>
+      <div style="font-size:10px;color:#555">SMS YES/NO<br>USSD Option 4<br>Min 2 needed</div>
     </div>
     <div style="flex:1;height:2px;background:#ccc;min-width:12px"></div>
     <div style="text-align:center;min-width:90px;flex-shrink:0">
@@ -2766,7 +2559,7 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
         <td style="color:#004422;font-weight:700">KSh 36,000</td>
         <td><span class="bdg bg-green">No active loan</span></td>
         <td><span class="bdg bg-green">&#10003; Accepted</span></td>
-        <td>SMS YES to the SACCO SMS line (coming soon)</td>
+        <td>SMS YES to 21000</td>
         <td>17 Mar 14:22</td>
       </tr>
       <tr>
@@ -2900,46 +2693,23 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
 </div>
 
 </div><div class="sect-page" id="credit-payslip">
-
-<div class="page-title">Payslip Verification &amp; Guarantor Review</div>
-<div class="page-sub">Phase 3 of 4 &mdash; Verify payslip, check eligibility, review guarantors, then vote</div>
-
-<div class="alert-info">Verification checks: (1) Payslip authentic and from recognised employer &nbsp;(2) Gross salary matches declaration &nbsp;(3) Repayment within 1/3 net salary &nbsp;(4) Loan within 3&times; savings &nbsp;(5) Both guarantors accepted</div>
-
-<!-- APPLICATION BEING REVIEWED -->
-<div style="background:#fdf0d0;border:2px solid #b06a00;border-radius:10px;padding:12px 14px;margin:12px 0;">
-  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#5a3200;font-weight:700">LA-2026-041</div>
-  <div style="font-size:15px;font-weight:700;color:#000">James Mwangi &mdash; KSh 150,000 Personal Loan</div>
-  <div style="font-size:12px;color:#555;margin-top:3px">SC-2024-0041 &middot; Finance Dept &middot; Nairobi County Government</div>
-</div>
-
-<!-- PAYSLIP VERIFICATION -->
-<div class="card">
-  <div class="card-title">&#128196; Payslip Verification</div>
-  <div class="info-row"><div class="ir-key">Declared Employer</div><div class="ir-val">Nairobi County Government</div></div>
-  <div class="info-row"><div class="ir-key">Payslip Shows Employer</div><div class="ir-val" style="color:#004422">Nairobi County Government &#10003; Matches</div></div>
-  <div class="info-row"><div class="ir-key">Declared Gross Salary</div><div class="ir-val">KSh 85,000</div></div>
-  <div class="info-row"><div class="ir-key">Payslip Shows Gross</div><div class="ir-val" style="color:#004422">KSh 85,000 &#10003; Matches</div></div>
-  <div class="info-row"><div class="ir-key">Employer Stamp</div><div class="ir-val" style="color:#004422">&#10003; Present and verified</div></div>
-  <div class="info-row"><div class="ir-key">Payslip Date</div><div class="ir-val">February 2026 &mdash; Current</div></div>
-  <div class="upload-zone" style="margin-top:10px" onclick="toast('Payslip viewer opened.')">
-    <div style="font-size:22px;margin-bottom:4px">&#128196;</div>
-    <div style="font-size:12px;color:#555;font-weight:600">View Uploaded Payslip</div>
-  </div>
-  <div class="pq" id="pqw-credit-payslip-suspicious">
+<div class="page-title">Payslip Verification Phase</div>
+<div class="page-sub">Confirm employer · Match salary · Verify 1/3 rule and 3&#215; savings rule · Each check creates an audit entry</div>
+<div class="alert-info">Verification checks: (1) Payslip is authentic and from a recognised employer (2) Gross salary matches member declaration (3) Loan repayment does not exceed 1/3 net salary (4) Loan does not exceed 3&#215; savings balance</div>
+<div class="pq" id="pqw-credit-payslip-suspicious">
   <div class="pq-head">
     <div class="pq-ico">&#128269;</div>
     <div class="pq-body">
-      <div class="pq-q">Payslip looks suspicious or cannot be verified?</div>
-      <div class="pq-hint">If the payslip appears forged, employer cannot be confirmed, or salary seems implausible, share your input here. Admin will contact the employer directly.</div>
+      <div class="pq-q">Payslip looks suspicious, cannot be verified, or employer is unrecognised?</div>
+      <div class="pq-hint">If a payslip appears forged, the employer cannot be confirmed, or the salary is implausible, share your input here before approving. Admin will contact the employer.</div>
       <button class="pq-btn" onclick="pqOpen('credit-payslip-suspicious')">Give Your Input</button>
-      <div class="pq-done" id="pqd-credit-payslip-suspicious">&#10003; Submitted — check My Feedback for the response</div>
+      <div class="pq-done" id="pqd-credit-payslip-suspicious">&#10003; Submitted — Admin will respond in your My Feedback tab</div>
     </div>
   </div>
   <div class="pq-form" id="pqf-credit-payslip-suspicious">
     <textarea class="pq-ta" id="pqta-credit-payslip-suspicious" placeholder="Be specific — the admin can only respond to what you write here&#8230;"></textarea>
     <div class="pq-row">
-      <button class="pq-submit" onclick="pqSubmit('credit-payslip-suspicious','Credit Committee &mdash; Payslip Verification Issue')">Submit &#8594;</button>
+      <button class="pq-submit" onclick="pqSubmit('credit-payslip-suspicious','Credit Committee — Payslip Verification Issue')">Submit &#8594;</button>
       <button class="pq-cancel" onclick="pqClose('credit-payslip-suspicious')">Cancel</button>
     </div>
   </div>
@@ -2949,37 +2719,31 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
     <div class="pq-resp-meta" id="pqrm-credit-payslip-suspicious"></div>
   </div>
 </div>
-  <div class="btn-row" style="margin-top:12px">
-    <button class="btn btn-green" type="button" onclick="toast('Payslip marked as verified. Audit entry created.')">&#10003; Mark Verified</button>
-    <button class="btn btn-red" type="button" onclick="toast('Payslip flagged. Member will be asked to resubmit a fresh payslip from employer.')">&#10007; Flag &mdash; Request Resubmission</button>
-  </div>
-</div>
-
-<!-- ELIGIBILITY CHECK -->
-<div class="card">
-  <div class="card-title">&#9878;&#65039; Eligibility Calculation</div>
-  <div class="info-row"><div class="ir-key">Net Monthly Salary</div><div class="ir-val">KSh 62,400 <span style="font-size:10px;color:#555">(after NHIF + NSSF + PAYE)</span></div></div>
-  <div class="info-row"><div class="ir-key">1/3 Net Salary Rule</div><div class="ir-val">KSh 62,400 &divide; 3 = <b>KSh 20,800 max monthly repayment</b></div></div>
-  <div class="info-row"><div class="ir-key">Loan Monthly Repayment</div><div class="ir-val" style="color:#004422">KSh 12,500 / month (over 12 months) &#10003; Under limit</div></div>
-  <div class="divider"></div>
-  <div class="info-row"><div class="ir-key">Savings Balance</div><div class="ir-val">KSh 42,500</div></div>
-  <div class="info-row"><div class="ir-key">3&times; Savings Rule</div><div class="ir-val">3 &times; KSh 42,500 = <b>KSh 127,500 max</b></div></div>
-  <div class="info-row"><div class="ir-key">Loan Amount Requested</div><div class="ir-val" style="color:#880000">KSh 150,000 &mdash; exceeds 3&times; savings by KSh 22,500 &#9888;</div></div>
-  <div class="alert-gold" style="margin-top:8px">3&times; savings rule slightly exceeded. CC must either: (a) approve with documented exception, or (b) counter-offer KSh 127,500, or (c) decline. Any exception must be recorded in the decision notes.</div>
+<div class="card" style="margin-top:10px"><div class="card-title">Verify — LA-2026-041 James Mwangi</div>
+  <div class="info-row"><div class="ir-key">Declared Employer</div><div class="ir-val">Nairobi County Government</div></div>
+  <div class="info-row"><div class="ir-key">Declared Gross</div><div class="ir-val">KSh 85,000</div></div>
+  <div class="info-row"><div class="ir-key">Payslip Shows Gross</div><div class="ir-val" style="color:#004422">KSh 85,000 &#10003; Matches</div></div>
+  <div class="info-row"><div class="ir-key">Net After Deductions</div><div class="ir-val">KSh 62,400</div></div>
+  <div class="info-row"><div class="ir-key">1/3 Net (max monthly)</div><div class="ir-val">KSh 20,800</div></div>
+  <div class="info-row"><div class="ir-key">Loan Monthly Repayment</div><div class="ir-val">KSh 12,500 over 12 months</div></div>
+  <div class="info-row"><div class="ir-key">1/3 Rule</div><div class="ir-val" style="color:#004422">KSh 12,500 &lt; KSh 20,800 &#10003; Passes</div></div>
+  <div class="info-row"><div class="ir-key">3&#215; Savings Rule</div><div class="ir-val" style="color:#880000">3 &#215; KSh 42,500 = KSh 127,500 — loan KSh 150,000 slightly exceeds &#9888;</div></div>
+  <div class="info-row"><div class="ir-key">Employer Stamp</div><div class="ir-val" style="color:#004422">Confirmed &#10003;</div></div>
+  <div class="upload-zone" style="margin-top:10px" onclick="toast('Payslip document viewer opened.')"><div style="font-size:22px;margin-bottom:4px">&#128196;</div><div style="font-size:12px;color:#555;font-weight:600">View Uploaded Payslip</div></div>
   <div class="pq" id="pqw-credit-3x-rule">
   <div class="pq-head">
     <div class="pq-ico">&#10067;</div>
     <div class="pq-body">
-      <div class="pq-q">Query about the 3&times; savings rule exception or counter-offer?</div>
-      <div class="pq-hint">If unsure whether to approve with exception or how to document it, share your input here.</div>
+      <div class="pq-q">Question about the 3&#215; savings rule discrepancy for this loan?</div>
+      <div class="pq-hint">The loan of KSh 150,000 slightly exceeds 3&#215; savings of KSh 127,500. Do you need a policy clarification or an exception authorised before proceeding?</div>
       <button class="pq-btn" onclick="pqOpen('credit-3x-rule')">Give Your Input</button>
-      <div class="pq-done" id="pqd-credit-3x-rule">&#10003; Submitted — check My Feedback for the response</div>
+      <div class="pq-done" id="pqd-credit-3x-rule">&#10003; Submitted — Admin will respond in your My Feedback tab</div>
     </div>
   </div>
   <div class="pq-form" id="pqf-credit-3x-rule">
     <textarea class="pq-ta" id="pqta-credit-3x-rule" placeholder="Be specific — the admin can only respond to what you write here&#8230;"></textarea>
     <div class="pq-row">
-      <button class="pq-submit" onclick="pqSubmit('credit-3x-rule','Credit Committee &mdash; 3&times; Savings Rule Query LA-2026-041')">Submit &#8594;</button>
+      <button class="pq-submit" onclick="pqSubmit('credit-3x-rule','Credit Committee — 3&#215; Savings Rule Query LA-2026-041')">Submit &#8594;</button>
       <button class="pq-cancel" onclick="pqClose('credit-3x-rule')">Cancel</button>
     </div>
   </div>
@@ -2989,121 +2753,20 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
     <div class="pq-resp-meta" id="pqrm-credit-3x-rule"></div>
   </div>
 </div>
-</div>
-
-<!-- GUARANTORS SECTION -->
-<div class="card">
-  <div class="card-title">&#128101; Guarantors &mdash; Review &amp; Status</div>
-  <div class="alert-info" style="margin-bottom:12px">Both guarantors must have replied YES before CC can approve. Each guarantor is <b>jointly liable</b> for the full loan amount if the member defaults.</div>
-
-  <!-- Guarantor 1 -->
-  <div style="border:2px solid #006e3a;border-radius:10px;padding:13px;margin-bottom:10px;background:#f0faf4;">
-    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
-      <div style="font-size:13px;font-weight:700;color:#000">&#128100; Guarantor 1</div>
-      <span class="bdg bg-green">&#10003; Accepted</span>
-    </div>
-    <div class="info-row"><div class="ir-key">Name</div><div class="ir-val">Aisha Kamau</div></div>
-    <div class="info-row"><div class="ir-key">Member ID</div><div class="ir-val" style="font-family:'DM Mono',monospace">SC-2024-0089</div></div>
-    <div class="info-row"><div class="ir-key">Savings Balance</div><div class="ir-val" style="color:#004422">KSh 36,000</div></div>
-    <div class="info-row"><div class="ir-key">Own Active Loan</div><div class="ir-val" style="color:#004422">None &#10003;</div></div>
-    <div class="info-row"><div class="ir-key">Reply Method</div><div class="ir-val">SMS YES to 21000</div></div>
-    <div class="info-row"><div class="ir-key">Reply Date &amp; Time</div><div class="ir-val">17 Mar 2026 &mdash; 14:22</div></div>
-    <div class="info-row"><div class="ir-key">Liability</div><div class="ir-val" style="color:#880000">Jointly liable for KSh 150,000 if member defaults</div></div>
-  </div>
-
-  <!-- Guarantor 2 -->
-  <div style="border:2px solid #006e3a;border-radius:10px;padding:13px;margin-bottom:10px;background:#f0faf4;">
-    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
-      <div style="font-size:13px;font-weight:700;color:#000">&#128100; Guarantor 2</div>
-      <span class="bdg bg-green">&#10003; Accepted</span>
-    </div>
-    <div class="info-row"><div class="ir-key">Name</div><div class="ir-val">Ruth Owino</div></div>
-    <div class="info-row"><div class="ir-key">Member ID</div><div class="ir-val" style="font-family:'DM Mono',monospace">SC-2024-0056</div></div>
-    <div class="info-row"><div class="ir-key">Savings Balance</div><div class="ir-val" style="color:#004422">KSh 57,000</div></div>
-    <div class="info-row"><div class="ir-key">Own Active Loan</div><div class="ir-val" style="color:#004422">None &#10003;</div></div>
-    <div class="info-row"><div class="ir-key">Reply Method</div><div class="ir-val">Portal</div></div>
-    <div class="info-row"><div class="ir-key">Reply Date &amp; Time</div><div class="ir-val">17 Mar 2026 &mdash; 16:05</div></div>
-    <div class="info-row"><div class="ir-key">Liability</div><div class="ir-val" style="color:#880000">Jointly liable for KSh 150,000 if member defaults</div></div>
-  </div>
-
-  <div class="alert-succ">Both guarantors accepted. Guarantor requirement satisfied &#10003;</div>
-  <div class="pq" id="pqw-credit-guarantor">
-  <div class="pq-head">
-    <div class="pq-ico">&#10067;</div>
-    <div class="pq-body">
-      <div class="pq-q">Question about a guarantor &mdash; eligibility, liability, or replacement?</div>
-      <div class="pq-hint">If a guarantor has declined, is not eligible, or you need clarification on the liability rules, share your input here.</div>
-      <button class="pq-btn" onclick="pqOpen('credit-guarantor')">Give Your Input</button>
-      <div class="pq-done" id="pqd-credit-guarantor">&#10003; Submitted — check My Feedback for the response</div>
-    </div>
-  </div>
-  <div class="pq-form" id="pqf-credit-guarantor">
-    <textarea class="pq-ta" id="pqta-credit-guarantor" placeholder="Be specific — the admin can only respond to what you write here&#8230;"></textarea>
-    <div class="pq-row">
-      <button class="pq-submit" onclick="pqSubmit('credit-guarantor','Credit Committee &mdash; Guarantor Query LA-2026-041')">Submit &#8594;</button>
-      <button class="pq-cancel" onclick="pqClose('credit-guarantor')">Cancel</button>
-    </div>
-  </div>
-  <div class="pq-resp" id="pqr-credit-guarantor">
-    <div class="pq-resp-lbl">&#128233; Admin Response</div>
-    <div class="pq-resp-txt" id="pqrt-credit-guarantor"></div>
-    <div class="pq-resp-meta" id="pqrm-credit-guarantor"></div>
-  </div>
-</div>
-</div>
-
-<!-- CC VOTE -->
-<div class="card">
-  <div class="card-title">&#9989; Credit Committee Vote</div>
-  <div class="alert-info" style="margin-bottom:12px">All 3 CC members must vote. Quorum required. Record your vote below.</div>
-  <div class="tw"><table>
-    <tr><th>CC Member</th><th>Vote</th><th>Date</th><th>Notes</th></tr>
-    <tr><td>Member 1</td><td><span class="bdg bg-muted">&#9711; Pending</span></td><td>&mdash;</td><td>&mdash;</td></tr>
-    <tr><td>Member 2</td><td><span class="bdg bg-muted">&#9711; Pending</span></td><td>&mdash;</td><td>&mdash;</td></tr>
-    <tr><td>Member 3</td><td><span class="bdg bg-muted">&#9711; Pending</span></td><td>&mdash;</td><td>&mdash;</td></tr>
-  </table></div>
-
-  <label style="margin-top:12px">Your Vote</label>
-  <select id="cc-vote">
-    <option value="">Select your decision</option>
-    <option value="approve">Approve &mdash; all rules satisfied</option>
-    <option value="approve-exception">Approve with exception &mdash; document reason</option>
-    <option value="counter">Counter-offer &mdash; approve lower amount (KSh 127,500)</option>
-    <option value="decline">Decline &mdash; state reason</option>
-    <option value="return">Return &mdash; incomplete documents</option>
-  </select>
-  <label>Decision Notes <span style="color:#555;font-weight:400;font-size:10px">(required for exception, counter-offer, or decline)</span></label>
-  <textarea rows="3" placeholder="Record your reasoning here. This becomes part of the permanent audit trail."></textarea>
   <div class="btn-row" style="margin-top:12px">
-    <button class="btn btn-green" type="button" onclick="toast('Vote recorded. CC ref will be generated when all 3 members have voted.')">Record My Vote</button>
-  </div>
-
-  <div style="background:#f0f0f0;border-radius:9px;padding:12px;margin-top:12px;">
-    <div style="font-size:12px;font-weight:700;color:#000;margin-bottom:7px">CC Decision Procedure</div>
-    <div style="font-size:12px;color:#333;line-height:1.9">
-      &#9312; All 3 CC members vote &mdash; majority required, unanimous preferred<br>
-      &#9313; <b>Approved:</b> Admin generates CC ref (CC-2026-XXXX) &rarr; sent to Executive for sign-off<br>
-      &#9314; <b>Approved with exception:</b> Exception reason documented in audit trail<br>
-      &#9315; <b>Counter-offer:</b> Member notified of revised amount via SMS &mdash; must accept or reapply<br>
-      &#9316; <b>Declined:</b> Reason recorded &rarr; Admin sends SMS to member with reason &rarr; KSh 50 fee not refunded<br>
-      &#9317; <b>Returned:</b> Member notified to complete missing documents &mdash; no new fee required
-    </div>
+    <button class="btn btn-green" type="button" onclick="toast('Payslip verified and logged. Audit entry created. LA-2026-041 marked as payslip verified.')">&#10003; Mark Payslip Verified</button>
+    <button class="btn btn-red" type="button" onclick="toast('Payslip flagged for re-submission. Member will be contacted for a fresh payslip from employer.')">&#10007; Flag for Re-submission</button>
   </div>
 </div>
-
-<!-- PAYSLIP VERIFICATION QUEUE -->
-<div class="card">
-  <div class="card-title">All Applications Awaiting Payslip Verification</div>
+<div class="card"><div class="card-title">Payslip Verification Queue</div>
   <div class="tw"><table>
-    <tr><th>App Ref</th><th>Member</th><th>Amount</th><th>Payslip</th><th>Guarantors</th><th>Status</th></tr>
-    <tr><td style="font-family:'DM Mono',monospace;font-size:10px">LA-2026-041</td><td>James Mwangi</td><td>KSh 150,000</td><td><span class="bdg bg-green">&#10003; Uploaded</span></td><td><span class="bdg bg-green">&#10003; 2/2</span></td><td><span class="bdg bg-gold">CC Voting</span></td></tr>
-    <tr><td style="font-family:'DM Mono',monospace;font-size:10px">LA-2026-038</td><td>Ruth Owino</td><td>KSh 60,000</td><td><span class="bdg bg-green">&#10003; Uploaded</span></td><td><span class="bdg bg-green">&#10003; 2/2</span></td><td><span class="bdg bg-green">&#10003; Verified</span></td></tr>
-    <tr><td style="font-family:'DM Mono',monospace;font-size:10px">LA-2026-039</td><td>Peter Njoroge</td><td>KSh 200,000</td><td><span class="bdg bg-gold">&#8987; Requested</span></td><td><span class="bdg bg-gold">1/2</span></td><td><span class="bdg bg-gold">Awaiting</span></td></tr>
-    <tr><td style="font-family:'DM Mono',monospace;font-size:10px">LA-2026-037</td><td>Grace Mutua</td><td>KSh 30,000</td><td><span class="bdg bg-red">&#10007; Not uploaded</span></td><td><span class="bdg bg-red">0/1</span></td><td><span class="bdg bg-red">Returned</span></td></tr>
+    <tr><th>App Ref</th><th>Member</th><th>Payslip</th><th>Employer</th><th>Salary</th><th>Status</th></tr>
+    <tr><td style="font-family:'DM Mono',monospace;font-size:10px">LA-2026-041</td><td>James Mwangi</td><td><span class="bdg bg-green">Uploaded &#10003;</span></td><td>Nairobi County</td><td>KSh 85,000</td><td><span class="bdg bg-gold">Pending Verification</span></td></tr>
+    <tr><td style="font-family:'DM Mono',monospace;font-size:10px">LA-2026-038</td><td>Ruth Owino</td><td><span class="bdg bg-green">Uploaded &#10003;</span></td><td>Equity Bank</td><td>KSh 72,000</td><td><span class="bdg bg-green">Verified &#10003;</span></td></tr>
+    <tr><td style="font-family:'DM Mono',monospace;font-size:10px">LA-2026-039</td><td>Peter Njoroge</td><td><span class="bdg bg-gold">&#8987; Requested</span></td><td>KRA</td><td>—</td><td><span class="bdg bg-gold">Awaiting</span></td></tr>
+    <tr><td style="font-family:'DM Mono',monospace;font-size:10px">LA-2026-037</td><td>Grace Mutua</td><td><span class="bdg bg-red">&#10007; Not uploaded</span></td><td>MOH</td><td>—</td><td><span class="bdg bg-red">Returned</span></td></tr>
   </table></div>
-</div>
-
-</div><div class="sect-page" id="credit-approved">
+</div></div><div class="sect-page" id="credit-approved">
 <div class="page-title">Approved This Month</div>
 <div class="page-sub">22 loans approved · KSh 3.4M total</div>
 <div class="pq" id="pqw-credit-approved">
@@ -3199,23 +2862,7 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
   <div class="info-row"><div class="ir-key">Max Borrowing</div><div class="ir-val">Lower of 3&#215; savings or 1/3 net salary</div></div>
   <div class="info-row"><div class="ir-key">Guarantors Required</div><div class="ir-val">Minimum 2 · SMS confirmation</div></div>
   <div class="info-row"><div class="ir-key">Payslip Required</div><div class="ir-val">Yes · Employer stamp preferred</div></div>
-</div></div><div class="sect-page" id="credit-guarantors">
-
-<div class="page-title">Guarantor Requests &mdash; All Active</div>
-<div class="page-sub">All guarantor requests across all applications &middot; Approve &amp; Decline decisions forwarded here automatically</div>
-
-<div class="stats-row">
-  <div class="stat"><div class="stat-label">Pending Responses</div><div class="stat-value gold" id="cc-guar-pending">0</div></div>
-  <div class="stat"><div class="stat-label">Accepted</div><div class="stat-value green" id="cc-guar-accepted">0</div></div>
-  <div class="stat"><div class="stat-label">Declined</div><div class="stat-value red" id="cc-guar-declined">0</div></div>
-</div>
-
-<div id="cc-guar-list" style="margin-top:10px">
-  <!-- Rendered by JS -->
-</div>
-
-</div>
-<div class="sect-page" id="credit-myfeedback">
+</div></div><div class="sect-page" id="credit-myfeedback">
 
 <div style="background:#fff;border:1px solid #ccc;border-radius:10px;padding:14px 15px;margin-bottom:12px;">
   <div style="font-family:'DM Serif Display',serif;font-size:18px;color:#000;margin-bottom:5px">My Feedback &amp; Questions</div>
@@ -3227,7 +2874,7 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
 <div id="myfb-credit"></div>
 
 </div></div>
-<div class="role-view" id="view-member"><div class="sect-tabs"><button type="button" class="sect-tab on" onclick="SS('member','account',this)">My Account</button><button type="button" class="sect-tab" onclick="SS('member','loan',this)">My Loan</button><button type="button" class="sect-tab" onclick="SS('member','apply',this)">Apply for Loan</button><button type="button" class="sect-tab" onclick="SS('member','sms',this)">SMS</button><button type="button" class="sect-tab" onclick="SS('member','myfeedback',this)">My Feedback</button></div>
+<div class="role-view" id="view-member"><div class="sect-tabs"><button type="button" class="sect-tab on" onclick="SS('member','account',this)">My Account</button><button type="button" class="sect-tab" onclick="SS('member','loan',this)">My Loan</button><button type="button" class="sect-tab" onclick="SS('member','apply',this)">Apply for Loan</button><button type="button" class="sect-tab" onclick="SS('member','sms',this)">SMS / USSD</button><button type="button" class="sect-tab" onclick="SS('member','myfeedback',this)">My Feedback</button></div>
 <div style="background:#fff8e6;border:2px solid #b06a00;border-radius:9px;padding:10px 14px;margin-bottom:14px;font-size:12.5px;color:#4a2800;font-weight:600;display:flex;align-items:flex-start;gap:8px;"><span style="font-size:16px;flex-shrink:0">&#128274;</span><span>Your feedback and questions on this page go <b>directly and only to the System Admin</b>. Nothing is editable after you submit. The System Admin will respond in your <b>My Feedback</b> tab.</span></div>
 <div class="sect-page on" id="member-account">
 <div class="page-title">My Account</div>
@@ -3313,52 +2960,17 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
   <div class="mpesa-sub">Account: <b style="color:#fff">602196#JAMES MWANGI/SC-2024-0041</b></div>
   <div class="mpesa-sub">Amount: <b style="color:#f0a830">KSh 14,719</b></div>
 </div></div><div class="sect-page" id="member-apply">
-
 <div class="page-title">Apply for a Loan</div>
-<div class="page-sub">4 steps to complete your application</div>
-
-<!-- STEP PROGRESS -->
-<div style="display:flex;align-items:center;gap:0;margin-bottom:16px;overflow-x:auto;padding-bottom:4px;">
-  <div style="text-align:center;min-width:70px;flex-shrink:0">
-    <div style="width:32px;height:32px;border-radius:50%;background:#d4f0e4;border:2px solid #006e3a;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#004422;margin:0 auto 4px">1</div>
-    <div style="font-size:10px;font-weight:700;color:#004422">Fee</div>
-    <div style="font-size:9px;color:#555">KSh 50</div>
-  </div>
-  <div style="flex:1;height:2px;background:#006e3a;min-width:10px"></div>
-  <div style="text-align:center;min-width:70px;flex-shrink:0">
-    <div style="width:32px;height:32px;border-radius:50%;background:#fdf0d0;border:2px solid #b06a00;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#5a3200;margin:0 auto 4px">2</div>
-    <div style="font-size:10px;font-weight:700;color:#5a3200">Payslip</div>
-    <div style="font-size:9px;color:#555">Upload</div>
-  </div>
-  <div style="flex:1;height:2px;background:#ccc;min-width:10px"></div>
-  <div style="text-align:center;min-width:70px;flex-shrink:0">
-    <div style="width:32px;height:32px;border-radius:50%;background:#eee;border:2px solid #aaa;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#555;margin:0 auto 4px">3</div>
-    <div style="font-size:10px;font-weight:700;color:#555">Guarantors</div>
-    <div style="font-size:9px;color:#555">Name 2+</div>
-  </div>
-  <div style="flex:1;height:2px;background:#ccc;min-width:10px"></div>
-  <div style="text-align:center;min-width:70px;flex-shrink:0">
-    <div style="width:32px;height:32px;border-radius:50%;background:#eee;border:2px solid #aaa;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#555;margin:0 auto 4px">4</div>
-    <div style="font-size:10px;font-weight:700;color:#555">Submit</div>
-    <div style="font-size:9px;color:#555">Wait CC</div>
-  </div>
-</div>
-
-<!-- ELIGIBILITY CHECK -->
-<div class="card">
-  <div class="card-title">Your Loan Eligibility</div>
-  <div class="info-row"><div class="ir-key">Your Savings Balance</div><div class="ir-val" style="color:#004422">KSh 42,500</div></div>
-  <div class="info-row"><div class="ir-key">Max Loan (3&times; savings)</div><div class="ir-val">KSh 127,500</div></div>
-  <div class="info-row"><div class="ir-key">Current Loan Outstanding</div><div class="ir-val" style="color:#880000">KSh 132,000</div></div>
-  <div class="info-row"><div class="ir-key">Available to Borrow</div><div class="ir-val" style="color:#880000">KSh 0 &mdash; active loan must clear first</div></div>
-  <div class="pq" id="pqw-member-eligibility">
+<div class="page-sub">KSh 50 non-refundable application fee required before submitting</div>
+<div class="alert-warn" style="margin-bottom:10px">You have an active loan of KSh 132,000. You must clear this or increase your savings to qualify for a new loan.</div>
+<div class="pq" id="pqw-member-eligibility">
   <div class="pq-head">
     <div class="pq-ico">&#10067;</div>
     <div class="pq-body">
-      <div class="pq-q">Question about your eligibility before paying the KSh 50 fee?</div>
-      <div class="pq-hint">Ask here first &mdash; if you are not eligible you will save the KSh 50. Explain your situation and admin will clarify.</div>
+      <div class="pq-q">Question about your loan eligibility before paying the KSh 50 fee?</div>
+      <div class="pq-hint">Ask here first — if you are not eligible, you will save the KSh 50 application fee. Explain your situation and admin will clarify.</div>
       <button class="pq-btn" onclick="pqOpen('member-eligibility')">Give Your Input</button>
-      <div class="pq-done" id="pqd-member-eligibility">&#10003; Submitted — check My Feedback for the response</div>
+      <div class="pq-done" id="pqd-member-eligibility">&#10003; Submitted — Admin will respond in your My Feedback tab</div>
     </div>
   </div>
   <div class="pq-form" id="pqf-member-eligibility">
@@ -3374,35 +2986,22 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
     <div class="pq-resp-meta" id="pqrm-member-eligibility"></div>
   </div>
 </div>
+<div class="card" style="margin-top:10px">
+  <div class="info-row"><div class="ir-key">Your Savings Balance</div><div class="ir-val" style="color:#004422">KSh 42,500</div></div>
+  <div class="info-row"><div class="ir-key">Max Loan (3&#215; savings)</div><div class="ir-val">KSh 127,500</div></div>
+  <div class="info-row"><div class="ir-key">Current Loan Outstanding</div><div class="ir-val" style="color:#880000">KSh 132,000</div></div>
+  <div class="info-row"><div class="ir-key">Available to Borrow</div><div class="ir-val" style="color:#880000">KSh 0 — active loan must clear first</div></div>
 </div>
-
-<!-- STEP 1: APPLICATION FEE -->
-<div class="card">
-  <div class="card-title" style="display:flex;align-items:center;gap:8px"><span style="width:24px;height:24px;border-radius:50%;background:#8a5000;color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0">1</span> Pay Application Fee &mdash; KSh 50</div>
-  <div class="alert-warn" style="margin-bottom:10px">This fee is <b>non-refundable</b>. Pay only after confirming you are eligible. Pay before submitting your application.</div>
-  <div class="mpesa-box">
-    <div style="font-size:11px;color:#ccc;margin-bottom:3px;font-weight:600">M-Pesa Paybill</div>
-    <div class="mpesa-pb">400222</div>
-    <div class="mpesa-sub">Account: <b style="color:#fff">602196#YOUR NAME/PR NO</b></div>
-    <div class="mpesa-sub">Amount: <b style="color:#f0a830">KSh 50</b></div>
-  </div>
-  <label>Enter M-Pesa Confirmation Code</label>
-  <input type="text" id="fee-code" placeholder="e.g. NG7X2YTP" style="text-transform:uppercase">
-  <div style="font-size:11px;color:#555;margin-top:5px">This code is recorded as proof of payment. Keep the M-Pesa SMS.</div>
-</div>
-
-<!-- STEP 2: PAYSLIP UPLOAD -->
-<div class="card">
-  <div class="card-title" style="display:flex;align-items:center;gap:8px"><span style="width:24px;height:24px;border-radius:50%;background:#8a5000;color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0">2</span> Upload Your Payslip</div>
-  <div class="alert-info" style="margin-bottom:10px">Upload your <b>latest payslip</b>. Must show: employer name, your name, gross salary, and employer stamp. The Credit Committee will verify it before approving your loan.</div>
+<div class="card"><div class="card-title">Upload Your Payslip</div>
+  <div class="alert-info" style="margin-bottom:10px">Upload your latest payslip now so the Credit Committee can verify it as part of your application. Must show employer stamp, your name, and gross salary.</div>
   <div class="pq" id="pqw-member-payslip-format">
   <div class="pq-head">
     <div class="pq-ico">&#128196;</div>
     <div class="pq-body">
-      <div class="pq-q">Not sure what format your payslip should be in?</div>
-      <div class="pq-hint">Digital payslip with employer stamp is best. If you only have a printed copy ask here before uploading.</div>
+      <div class="pq-q">Is your payslip in a format the Credit Committee will accept?</div>
+      <div class="pq-hint">Digital payslips with employer stamp are preferred. If you only have a printed copy or are unsure what to upload, ask here before uploading.</div>
       <button class="pq-btn" onclick="pqOpen('member-payslip-format')">Give Your Input</button>
-      <div class="pq-done" id="pqd-member-payslip-format">&#10003; Submitted — check My Feedback for the response</div>
+      <div class="pq-done" id="pqd-member-payslip-format">&#10003; Submitted — Admin will respond in your My Feedback tab</div>
     </div>
   </div>
   <div class="pq-form" id="pqf-member-payslip-format">
@@ -3418,131 +3017,27 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
     <div class="pq-resp-meta" id="pqrm-member-payslip-format"></div>
   </div>
 </div>
-  <div class="upload-zone" style="margin-top:10px" onclick="toast('File picker opened. Select your payslip PDF, JPG or PNG. Max 10MB.')">
+  <div class="upload-zone" style="margin-top:10px" onclick="toast('Payslip upload opened. Select PDF, JPG or PNG. Max 10MB.')">
     <div style="font-size:30px;margin-bottom:6px">&#128228;</div>
-    <div style="font-size:13px;font-weight:700;color:#000;margin-bottom:3px">Tap to Upload Payslip</div>
-    <div style="font-size:11px;color:#555">PDF &middot; JPG &middot; PNG &middot; Max 10MB</div>
+    <div style="font-size:13px;font-weight:700;color:#000;margin-bottom:3px">Upload Your Payslip</div>
+    <div style="font-size:11px;color:#555">PDF · JPG · PNG · Must show employer stamp, name, gross salary</div>
   </div>
-  <div class="alert-succ" style="display:none;margin-top:8px" id="payslip-uploaded">&#10003; Payslip uploaded successfully</div>
-  <button class="btn btn-gold" type="button" style="margin-top:10px" onclick="document.getElementById('payslip-uploaded').style.display='block';toast('Payslip uploaded. Credit Committee will verify it.')">Confirm Upload</button>
+  <button class="btn btn-gold" type="button" style="margin-top:10px" onclick="toast('Payslip uploaded. Credit Committee will review it as part of your application.')">Upload Payslip</button>
 </div>
-
-<!-- STEP 3: GUARANTORS -->
-<div class="card">
-  <div class="card-title" style="display:flex;align-items:center;gap:8px"><span style="width:24px;height:24px;border-radius:50%;background:#8a5000;color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0">3</span> Nominate Your Guarantors</div>
-  <div class="alert-info" style="margin-bottom:12px">
-    <b>Minimum 2 guarantors required.</b> Each guarantor will receive an SMS asking them to reply YES or NO to 21000. Rules:
-    <div style="margin-top:6px;font-size:11px;line-height:1.8">
-      &bull; Guarantor must be an active SACCO member<br>
-      &bull; Guarantor must not have an outstanding loan of their own that exceeds their savings<br>
-      &bull; Guarantor is <b>jointly liable</b> if you default &mdash; their savings can be used to recover the debt<br>
-      &bull; Guarantor must reply YES via SMS to 21000 within <b>48 hours</b><br>
-      &bull; If a guarantor does not reply within 48 hours, you must nominate a replacement
-    </div>
-  </div>
-
-  <!-- Guarantor 1 -->
-  <div style="background:#f8f8f8;border:1px solid #ddd;border-radius:10px;padding:13px;margin-bottom:10px;">
-    <div style="font-size:12px;font-weight:700;color:#8a5000;margin-bottom:8px;">&#128100; Guarantor 1 <span style="color:#cc0000">*</span></div>
-    <label>Full Name</label>
-    <input type="text" placeholder="Full name as registered in SACCO">
-    <label>Member ID</label>
-    <input type="text" placeholder="e.g. SC-2024-0089">
-    <label>Phone Number</label>
-    <input type="tel" placeholder="+254 7XX XXX XXX">
-    <div class="info-row" style="margin-top:8px"><div class="ir-key" style="font-size:11px">SMS will be sent to this number</div><div class="ir-val"><span class="bdg bg-gold">Pending reply</span></div></div>
-  </div>
-
-  <!-- Guarantor 2 -->
-  <div style="background:#f8f8f8;border:1px solid #ddd;border-radius:10px;padding:13px;margin-bottom:10px;">
-    <div style="font-size:12px;font-weight:700;color:#8a5000;margin-bottom:8px;">&#128100; Guarantor 2 <span style="color:#cc0000">*</span></div>
-    <label>Full Name</label>
-    <input type="text" placeholder="Full name as registered in SACCO">
-    <label>Member ID</label>
-    <input type="text" placeholder="e.g. SC-2024-0056">
-    <label>Phone Number</label>
-    <input type="tel" placeholder="+254 7XX XXX XXX">
-    <div class="info-row" style="margin-top:8px"><div class="ir-key" style="font-size:11px">SMS will be sent to this number</div><div class="ir-val"><span class="bdg bg-gold">Pending reply</span></div></div>
-  </div>
-
-  <!-- Optional Guarantor 3 -->
-  <div style="background:#f8f8f8;border:1px dashed #ccc;border-radius:10px;padding:13px;margin-bottom:10px;">
-    <div style="font-size:12px;font-weight:700;color:#555;margin-bottom:8px;">&#128100; Guarantor 3 <span style="font-size:10px;font-weight:400;color:#888">(optional)</span></div>
-    <label>Full Name</label>
-    <input type="text" placeholder="Optional third guarantor">
-    <label>Member ID</label>
-    <input type="text" placeholder="e.g. SC-2024-0041">
-    <label>Phone Number</label>
-    <input type="tel" placeholder="+254 7XX XXX XXX">
-  </div>
-
-  <div style="background:#fdf8ee;border:2px solid rgba(138,80,0,.2);border-radius:9px;padding:11px 13px;font-size:12px;color:#4a2800;">
-    <b>What happens after you nominate:</b><br>
-    1. Each guarantor gets an SMS: <i>"[Your Name] has nominated you as guarantor for a KSh [amount] SACCO loan. Reply YES to accept or NO to decline to 21000."</i><br>
-    2. You get an SMS confirming each guarantor's reply<br>
-    3. Once 2+ accept, your application moves to Credit Committee review
-  </div>
-
-  <div class="pq" id="pqw-member-guarantor">
-  <div class="pq-head">
-    <div class="pq-ico">&#10067;</div>
-    <div class="pq-body">
-      <div class="pq-q">Question about guarantors or having trouble finding eligible members?</div>
-      <div class="pq-hint">If you cannot find 2 eligible guarantors, or a guarantor is declining, or you are unsure who qualifies, ask here.</div>
-      <button class="pq-btn" onclick="pqOpen('member-guarantor')">Give Your Input</button>
-      <div class="pq-done" id="pqd-member-guarantor">&#10003; Submitted — check My Feedback for the response</div>
-    </div>
-  </div>
-  <div class="pq-form" id="pqf-member-guarantor">
-    <textarea class="pq-ta" id="pqta-member-guarantor" placeholder="Be specific — the admin can only respond to what you write here&#8230;"></textarea>
-    <div class="pq-row">
-      <button class="pq-submit" onclick="pqSubmit('member-guarantor','Member Guarantor Query')">Submit &#8594;</button>
-      <button class="pq-cancel" onclick="pqClose('member-guarantor')">Cancel</button>
-    </div>
-  </div>
-  <div class="pq-resp" id="pqr-member-guarantor">
-    <div class="pq-resp-lbl">&#128233; Admin Response</div>
-    <div class="pq-resp-txt" id="pqrt-member-guarantor"></div>
-    <div class="pq-resp-meta" id="pqrm-member-guarantor"></div>
-  </div>
-</div>
-</div>
-
-<!-- STEP 4: LOAN DETAILS + SUBMIT -->
-<div class="card">
-  <div class="card-title" style="display:flex;align-items:center;gap:8px"><span style="width:24px;height:24px;border-radius:50%;background:#8a5000;color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0">4</span> Loan Details</div>
-  <label>Loan Amount Requested (KSh)</label>
-  <input type="number" placeholder="e.g. 100000" id="loan-amount-req">
-  <label>Loan Type</label>
-  <select>
-    <option>Personal Loan</option>
-    <option>Emergency Loan</option>
-    <option>School Fees Loan</option>
-    <option>Development Loan</option>
-  </select>
-  <label>Repayment Period</label>
-  <select>
-    <option>6 months</option>
-    <option>12 months</option>
-    <option>18 months</option>
-    <option>24 months</option>
-    <option>36 months</option>
-  </select>
-  <label>Purpose of Loan</label>
-  <input type="text" placeholder="Brief description of what the loan is for">
-  <div class="alert-gold" style="margin-top:10px">Once submitted your application cannot be edited. Ensure all details are correct before submitting.</div>
-  <button class="btn btn-gold" type="button" style="margin-top:12px;width:100%" onclick="toast('Application submitted. Reference number generated. You will receive an SMS confirmation shortly. KSh 50 fee recorded.')">Submit Loan Application</button>
-</div>
-
-</div><div class="sect-page" id="member-sms">
-<div class="page-title">SMS Guide</div>
-<div class="page-sub">SMS alerts and M-Pesa payment guide</div>
+<div class="mpesa-box">
+  <div style="font-size:11px;color:#ccc;margin-bottom:3px;font-weight:600">Application Fee — Pay before submitting</div>
+  <div class="mpesa-pb">400222</div>
+  <div class="mpesa-sub">Account: <b style="color:#fff">602196#YOUR NAME/PR NO</b></div>
+  <div class="mpesa-sub">Amount: <b style="color:#f0a830">KSh 50 · Non-refundable</b></div>
+</div></div><div class="sect-page" id="member-sms">
+<div class="page-title">SMS &amp; USSD Guide</div>
+<div class="page-sub">All commands work on any Safaricom phone — no internet needed</div>
 <div class="pq" id="pqw-member-sms">
   <div class="pq-head">
     <div class="pq-ico">&#128241;</div>
     <div class="pq-body">
-      <div class="pq-q">Not receiving SMS alerts or USSD (coming soon) is giving an error?</div>
-      <div class="pq-hint">If loan, payment, or OTP SMS alerts are not coming through, or (USSD (coming soon) coming soon) is not working, share your input here.</div>
+      <div class="pq-q">Not receiving SMS alerts or USSD is giving an error?</div>
+      <div class="pq-hint">If loan, payment, or OTP SMS alerts are not coming through, or *483# is not working, share your input here.</div>
       <button class="pq-btn" onclick="pqOpen('member-sms')">Give Your Input</button>
       <div class="pq-done" id="pqd-member-sms">&#10003; Submitted — Admin will respond in your My Feedback tab</div>
     </div>
@@ -3550,7 +3045,7 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
   <div class="pq-form" id="pqf-member-sms">
     <textarea class="pq-ta" id="pqta-member-sms" placeholder="Be specific — the admin can only respond to what you write here&#8230;"></textarea>
     <div class="pq-row">
-      <button class="pq-submit" onclick="pqSubmit('member-sms','Member SMS Issue')">Submit &#8594;</button>
+      <button class="pq-submit" onclick="pqSubmit('member-sms','Member SMS / USSD Issue')">Submit &#8594;</button>
       <button class="pq-cancel" onclick="pqClose('member-sms')">Cancel</button>
     </div>
   </div>
@@ -3561,62 +3056,15 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
   </div>
 </div>
 <div class="card" style="margin-top:10px">
-  <div class="info-row"><div class="ir-key">Check balance</div><div class="ir-val">USSD (coming soon) (coming soon) · Option 1</div></div>
-  <div class="info-row"><div class="ir-key">Loan status</div><div class="ir-val">USSD (coming soon) (coming soon) · Option 2</div></div>
+  <div class="info-row"><div class="ir-key">Check balance</div><div class="ir-val">Dial <b>*483#</b> · Option 1</div></div>
+  <div class="info-row"><div class="ir-key">Loan status</div><div class="ir-val">Dial <b>*483#</b> · Option 2</div></div>
   <div class="info-row"><div class="ir-key">Pay loan</div><div class="ir-val">M-Pesa Paybill <b>400222</b></div></div>
-  <div class="info-row"><div class="ir-key">SMS balance</div><div class="ir-val">Text <b>BAL</b> to the SACCO SMS line (coming soon)</div></div>
-  <div class="info-row"><div class="ir-key">Guarantor reply YES</div><div class="ir-val">Text <b>YES</b> to the SACCO SMS line (coming soon)</div></div>
-  <div class="info-row"><div class="ir-key">Guarantor reply NO</div><div class="ir-val">Text <b>NO</b> to the SACCO SMS line (coming soon)</div></div>
-  <div class="info-row"><div class="ir-key">Help</div><div class="ir-val">Text <b>HELP</b> to the SACCO SMS line (coming soon)</div></div>
+  <div class="info-row"><div class="ir-key">SMS balance</div><div class="ir-val">Text <b>BAL</b> to 21000</div></div>
+  <div class="info-row"><div class="ir-key">Guarantor reply YES</div><div class="ir-val">Text <b>YES</b> to 21000</div></div>
+  <div class="info-row"><div class="ir-key">Guarantor reply NO</div><div class="ir-val">Text <b>NO</b> to 21000</div></div>
+  <div class="info-row"><div class="ir-key">Help</div><div class="ir-val">Text <b>HELP</b> to 21000</div></div>
   <div class="info-row"><div class="ir-key">Account format</div><div class="ir-val" style="font-family:'DM Mono',monospace;font-size:11px">602196#NAME/PR NO</div></div>
-</div></div><div class="sect-page" id="member-guarantors">
-
-<div class="page-title">Guarantor Requests</div>
-<div class="page-sub">Find guarantors for your loan application &middot; Min 2 required</div>
-
-<div class="guar-alert-strip" id="guar-sent-alert">&#10003; Request sent successfully — the member will receive an alert</div>
-
-<!-- MY GUARANTOR REQUESTS STATUS -->
-<div class="guar-section">
-  <div class="guar-title">My Active Requests</div>
-  <div class="guar-sub">Track who has accepted or declined your guarantor requests</div>
-  <div id="my-guar-requests-list"></div>
-</div>
-
-<!-- MEMBER SEARCH & REQUEST -->
-<div class="guar-section">
-  <div class="guar-title">Request a Guarantor</div>
-  <div class="guar-sub">Search members below. They must have no active loan and sufficient savings. Your request goes to them, Credit Committee, Admin, and Supervisory.</div>
-  
-  <div class="member-search-box">
-    <span class="member-search-ico">&#128269;</span>
-    <input type="text" id="guar-search" placeholder="Search by name or member ID..." oninput="filterMembers()" style="padding-left:32px">
-  </div>
-
-  <div class="member-list" id="member-list">
-    <!-- Members rendered by JS -->
-  </div>
-</div>
-
-<!-- MY LOAN APPLICATION LINK -->
-<div class="alert-info">
-  Once you have 2 guarantors who have accepted, go to the <b>Apply for Loan</b> tab to submit your application with the KSh 50 fee.
-</div>
-
-</div>
-<div class="sect-page" id="member-incoming">
-
-<div class="page-title">Incoming Guarantor Requests</div>
-<div class="page-sub">Members requesting you as their guarantor &middot; Your response is forwarded to Credit Committee, Admin and Supervisory</div>
-
-<div class="alert-gold">&#9888;&#65039; By accepting you are jointly liable if the member defaults on their loan. Check their savings and loan history carefully before accepting.</div>
-
-<div style="margin-top:12px" id="incoming-guar-list">
-  <!-- Rendered by JS -->
-</div>
-
-</div>
-<div class="sect-page" id="member-myfeedback">
+</div></div><div class="sect-page" id="member-myfeedback">
 
 <div style="background:#fff;border:1px solid #ccc;border-radius:10px;padding:14px 15px;margin-bottom:12px;">
   <div style="font-family:'DM Serif Display',serif;font-size:18px;color:#000;margin-bottom:5px">My Feedback &amp; Questions</div>
@@ -3674,18 +3122,6 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
 </div></div>
 </div>
 </div>
-
-<!-- INACTIVITY LOCK OVERLAY -->
-<div id="lock-overlay">
-  <div class="lock-ico">&#128274;</div>
-  <div class="lock-title">Session Locked</div>
-  <div class="lock-sub">Your session was locked after 40 seconds of inactivity.<br>Tap below to log back in.</div>
-  <button class="lock-btn" onclick="unlockSession()">Unlock &rarr;</button>
-</div>
-
-<!-- INACTIVITY COUNTDOWN BAR (bottom of screen) -->
-<div id="inactivity-bar"></div>
-
 <button id="fb-float" onclick="openFbPanel()">
   &#128172; Feedback
   <span class="fb-dot" id="fb-dot"></span>
@@ -3698,53 +3134,36 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
   <div class="fp-scroll">
     <div class="fp-body">
       <div class="fp-ctx" id="fp-ctx"></div>
-      <div class="fp-lbl">Feedback Type</div>
+
+      <div class="fp-lbl">Your Name / Role <span style="color:#555;font-weight:400">(optional but helpful)</span></div>
+      <input class="fp-in" type="text" id="fp-name" placeholder="e.g. James Mwangi — Credit Committee" autocomplete="off">
+
+      <div class="fp-lbl">Category <span style="color:#f0a830">*</span></div>
       <select class="fp-sel" id="fp-type">
-        <option value="general">General Feedback</option>
-        <option value="error">Error in Data</option>
-        <option value="concern">Concern / Issue</option>
-        <option value="suggestion">Suggestion</option>
-        <option value="question">Question</option>
-        <option value="urgent">Urgent / Important</option>
+        <option value="">— Select the category that fits best —</option>
+        <option value="data-error">&#128204; Data Error — Something shown is wrong</option>
+        <option value="missing-feature">&#128295; Missing Feature — Something expected is not there</option>
+        <option value="confusing">&#128173; Confusing / Unclear — Hard to understand or use</option>
+        <option value="process-gap">&#9881;&#65039; Process Gap — A workflow step is missing or broken</option>
+        <option value="suggestion">&#128161; Suggestion — An idea to improve the tool</option>
+        <option value="compliment">&#10024; Compliment — Something working really well</option>
+        <option value="urgent">&#128680; Urgent Issue — Blocks me from doing my role</option>
+        <option value="general">&#128172; General Comment — Anything else</option>
       </select>
-      <div class="fp-lbl">Your Name / Member ID <span style="color:#555;font-weight:400">(optional)</span></div>
-      <input class="fp-in" type="text" id="fp-name" placeholder="e.g. James Mwangi or SC-2024-0041" autocomplete="off">
-      <div class="fp-lbl">Your Feedback <span style="color:#f0a830">*</span></div>
-      <textarea class="fp-ta" id="fp-text" placeholder="Describe what you noticed, what is wrong, or what you suggest."></textarea>
-      <div class="fp-lbl">Priority</div>
-      <select class="fp-sel" id="fp-priority">
-        <option value="normal">Normal</option>
-        <option value="urgent">Urgent</option>
-        <option value="low">Low / Minor</option>
-      </select>
-      <button class="fp-submit" onclick="submitFb()">Submit Feedback &#8594;</button>
-      <div class="fp-note">Goes directly to the System Admin. Your input is not editable after submitting. Check the My Feedback tab — the System Admin will respond there.</div>
+      <div id="fp-cat-hint" style="font-size:11px;color:#888;min-height:16px;margin-bottom:10px;margin-top:-6px;padding:0 2px"></div>
+
+      <div class="fp-lbl">Describe the Issue or Feedback <span style="color:#f0a830">*</span></div>
+      <textarea class="fp-ta" id="fp-text" placeholder="Be as specific as possible. Which section, which tab, what you expected to see, what you actually saw."></textarea>
+
+      <div class="fp-lbl">Which Section / Tab</div>
+      <input class="fp-in" type="text" id="fp-section" placeholder="e.g. Admin — Loans tab — Disbursement queue" autocomplete="off">
+
+      <button class="fp-submit" type="button" onclick="submitFb()">Submit Feedback &#8594;</button>
+      <div class="fp-note">Your feedback goes directly to the System Admin. Nothing is editable after submitting. The admin will review and act on every submission.</div>
     </div>
   </div>
-</div>
+</div></div>
 <div class="toast" id="toast"></div>
-
-<!-- ══ LOCK OVERLAY ══ -->
-<div id="lock-overlay">
-  <div class="lock-card">
-    <div class="lock-icon">🔒</div>
-    <div class="lock-title">Session Locked</div>
-    <div class="lock-sub">Your session was locked after 40 seconds of inactivity.</div>
-    <div class="lock-info" id="lock-info">Enter your role PIN to continue.</div>
-    <div class="lock-otp-row">
-      <input type="tel" maxlength="1" class="lock-otp-box" id="lock-otp1" oninput="lockOtpMove(this,'lock-otp2')">
-      <input type="tel" maxlength="1" class="lock-otp-box" id="lock-otp2" oninput="lockOtpMove(this,'lock-otp3')">
-      <input type="tel" maxlength="1" class="lock-otp-box" id="lock-otp3" oninput="lockOtpMove(this,'lock-otp4')">
-      <input type="tel" maxlength="1" class="lock-otp-box" id="lock-otp4" oninput="lockOtpMove(this,null)">
-    </div>
-    <div class="lock-error" id="lock-error"></div>
-    <button class="lock-unlock-btn" onclick="unlockSession()">Unlock Session</button>
-    <div class="lock-switch" onclick="switchRole()">
-      Not you? <span>Switch Role</span>
-    </div>
-  </div>
-</div>
-
 <script>
 var KEY='coopvault_fb_v1';
 var ROLE=null;
@@ -3759,21 +3178,14 @@ function pickRole(role,el){
     document.getElementById('seg2').classList.add('on');
     document.getElementById('rs-step1').classList.remove('on');
     document.getElementById('rs-step2').classList.add('on');
-    setTimeout(function(){
-      var ph=document.getElementById('otp-phone');
-      if(ph) ph.focus();
-    },350);
+    resetFace();
   },200);
 }
 function goStep1(){
   document.getElementById('seg2').classList.remove('on');
-  document.getElementById('seg3') && document.getElementById('seg3').classList.remove('on');
   document.getElementById('rs-step2').classList.remove('on');
-  document.getElementById('rs-step3') && document.getElementById('rs-step3').classList.remove('on');
   document.getElementById('rs-step1').classList.add('on');
   document.querySelectorAll('.role-card').forEach(function(c){c.classList.remove('sel');});
-  ROLE=null;
-  if(otpTimerInterval) clearInterval(otpTimerInterval);
 }
 
 // ── FACE SCAN ──
@@ -3785,7 +3197,7 @@ function resetFace(){
   if(r) r.className='face-ring';
   if(arc) arc.style.display='none';
   if(st) st.textContent='Tap to authenticate';
-  if(em) em.textContent='👀';
+  if(em) em.textContent='\uD83D\uDC40';
 }
 function doFaceScan(){
   var r=document.getElementById('face-ring');
@@ -3794,12 +3206,12 @@ function doFaceScan(){
   var em=document.getElementById('face-emoji');
   if(r) r.className='face-ring scanning';
   if(arc) arc.style.display='block';
-  if(st) st.textContent='Scanning…';
-  if(em) em.textContent='🧠';
+  if(st) st.textContent='Scanning\u2026';
+  if(em) em.textContent='\uD83E\uDDE0';
   setTimeout(function(){
     if(r){r.className='face-ring success';}
     if(arc) arc.style.display='none';
-    if(em) em.textContent='✅';
+    if(em) em.textContent='\u2705';
     if(st) st.textContent='Identity confirmed';
     setTimeout(function(){launchRole(ROLE);},600);
   },1800);
@@ -3865,10 +3277,10 @@ function doWithdrawal(){
   var approved=['james mwangi','ruth owino','supplymart ltd','staff salaries'];
   var match=approved.some(function(n){return payee.toLowerCase().includes(n);});
   if(!match){
-    toast('❌ Payee name not on CC-approved list. Transaction blocked. Use the request widget below to add a payee.');
+    toast('\u274C Payee name not on CC-approved list. Transaction blocked. Use the request widget below to add a payee.');
     return;
   }
-  toast('✅ Payee validated. KSh '+parseFloat(amt).toLocaleString()+' withdrawal posted. Supervisory (3) alerted via SMS. Locked in ledger.');
+  toast('\u2705 Payee validated. KSh '+parseFloat(amt).toLocaleString()+' withdrawal posted. Supervisory (3) alerted via SMS. Locked in ledger.');
   document.getElementById('bank-wd').style.display='none';
 }
 
@@ -3878,35 +3290,42 @@ function pqOpen(id){
   if(form) form.classList.add('open');
   var ta=document.getElementById('pqta-'+id);
   if(ta) setTimeout(function(){ta.focus();},100);
-  // pause inactivity timer while typing in phase question
-  clearTimeout(inactivityTimer);
-  clearInterval(lockBarInterval);
 }
 function pqClose(id){
   var form=document.getElementById('pqf-'+id);
   if(form) form.classList.remove('open');
-  resetInactivityTimer();
 }
-function pqSubmit(id,context){
-  var ta=document.getElementById('pqta-'+id);
-  var text=ta?ta.value.trim():'';
-  if(!text){toast('Please describe your question or concern first');return;}
-  var now=new Date();
-  var ds=now.toLocaleDateString('en-GB',{day:'2-digit',month:'short',year:'numeric'})+' '+now.toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit'});
-  var item={
-    id:'PQ-'+Date.now(), pqId:id, role:ROLE, page:context,
-    type:'phase-question',
-    name:ROLE?(ROLE.toUpperCase()+' user'):'Tester',
-    text:text, priority:'normal', date:ds, status:'open',
-    response:null, responseDate:null, responseBy:null
+function pqSubmit(id, context){
+  var ta = document.getElementById('pqta-'+id);
+  var text = ta ? ta.value.trim() : '';
+  if(!text){ toast('Please describe your input first'); return; }
+  var now = new Date();
+  var ds = now.toLocaleDateString('en-GB',{day:'2-digit',month:'short',year:'numeric'})
+          +' '+now.toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit'});
+  var item = {
+    id: 'PQ-'+Date.now(),
+    pqId: id,
+    role: ROLE,
+    page: context,
+    section: context,
+    type: 'phase-question',
+    name: ROLE ? (ROLE.toUpperCase()+' user') : 'Tester',
+    text: text,
+    priority: 'normal',
+    date: ds,
+    status: 'open',
+    response: null,
+    responseDate: null,
+    responseBy: null
   };
-  var all=load(); all.push(item); save(all);
+  var all = load(); all.push(item); save(all);
+  sendToSheets(item);
   pqClose(id);
-  if(ta) ta.value='';
-  var done=document.getElementById('pqd-'+id);
-  if(done) done.style.display='block';
+  if(ta) ta.value = '';
+  var done = document.getElementById('pqd-'+id);
+  if(done) done.style.display = 'block';
   renderMyfb(ROLE);
-  toast('✅ Submitted to the System Admin — response will appear in My Feedback tab');
+  toast('✅ Submitted. The System Admin will review your input.');
 }
 
 // ── LOAD PQ RESPONSES ──
@@ -3920,7 +3339,7 @@ function loadPqResponses(){
       var txt=document.getElementById('pqrt-'+item.pqId);
       var meta=document.getElementById('pqrm-'+item.pqId);
       if(txt) txt.textContent=item.response;
-      if(meta) meta.textContent='— '+(item.responseBy||'Admin')+' · '+(item.responseDate||'')+' · Ref: '+item.id;
+      if(meta) meta.textContent='\u2014 '+(item.responseBy||'Admin')+' \u00b7 '+(item.responseDate||'')+' \u00b7 Ref: '+item.id;
     }
   });
 }
@@ -3932,84 +3351,96 @@ function openFbPanel(){
   var ctx_el=document.getElementById('fp-ctx');
   if(ctx_el) ctx_el.textContent='Context: '+ctx;
   panel.classList.add('open');
-  panel.style.zIndex='3000';
+  panel.style.zIndex='2000';
   panel.style.pointerEvents='all';
-  // close install banner if open
   var banner=document.getElementById('install-banner');
   if(banner) banner.classList.remove('show');
-  // close inactivity bar if visible
-  var ibar=document.getElementById('inactivity-bar');
-  if(ibar) ibar.style.display='none';
-  // pause inactivity timer while typing feedback
-  clearTimeout(inactivityTimer);
-  clearInterval(lockBarInterval);
   setTimeout(function(){
     var ta=document.getElementById('fp-text');
+    if(ta){ta.removeAttribute('disabled');ta.style.pointerEvents='auto';ta.focus();}
     var nm=document.getElementById('fp-name');
-    if(ta){ ta.removeAttribute('disabled'); ta.style.pointerEvents='auto'; ta.focus(); }
-    if(nm){ nm.removeAttribute('disabled'); nm.style.pointerEvents='auto'; }
+    if(nm){nm.removeAttribute('disabled');nm.style.pointerEvents='auto';}
   },350);
 }
 function closePanel(){
-  var panel=document.getElementById('fb-panel');
-  panel.classList.remove('open');
-  panel.style.zIndex='';
-  var ta=document.getElementById('fp-text');
-  var nm=document.getElementById('fp-name');
-  if(ta) ta.value='';
-  if(nm) nm.value='';
-  // restore inactivity bar
-  var ibar=document.getElementById('inactivity-bar');
-  if(ibar) ibar.style.display='';
-  // resume inactivity timer
-  resetInactivityTimer();
+  document.getElementById('fb-panel').classList.remove('open');
+  document.getElementById('fp-text').value='';
+  document.getElementById('fp-name').value='';
 }
 function submitFb(){
-  var text=document.getElementById('fp-text').value.trim();
-  if(!text){toast('Please write your feedback first');return;}
-  var now=new Date();
-  var ds=now.toLocaleDateString('en-GB',{day:'2-digit',month:'short',year:'numeric'})+' '+now.toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit'});
-  var item={
-    id:'FB-'+Date.now(), pqId:null, role:ROLE,
-    page:ROLE?(ROLE.toUpperCase()+' General'):'General',
-    type:document.getElementById('fp-type').value,
-    name:document.getElementById('fp-name').value.trim()||'Tester',
-    text:text, priority:document.getElementById('fp-priority').value,
-    date:ds, status:'open', response:null, responseDate:null, responseBy:null
+  var text = document.getElementById('fp-text').value.trim();
+  var type = document.getElementById('fp-type').value;
+  if(!type){ toast('Please select a category first'); return; }
+  if(!text){ toast('Please describe your feedback'); return; }
+  var now = new Date();
+  var ds = now.toLocaleDateString('en-GB',{day:'2-digit',month:'short',year:'numeric'})
+          +' '+now.toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit'});
+  var section = document.getElementById('fp-section');
+  var sectionVal = section ? section.value.trim() : '';
+  var item = {
+    id: 'FB-'+Date.now(),
+    pqId: null,
+    role: ROLE,
+    page: ROLE ? (ROLE.toUpperCase()+' — General') : 'General',
+    section: sectionVal || '',
+    type: type,
+    name: document.getElementById('fp-name').value.trim() || (ROLE ? ROLE.toUpperCase()+' user' : 'Tester'),
+    text: text,
+    priority: (type === 'urgent' || type === 'data-error') ? 'urgent' : 'normal',
+    date: ds,
+    status: 'open',
+    response: null,
+    responseDate: null,
+    responseBy: null
   };
-  var all=load(); all.push(item); save(all);
+  var all = load(); all.push(item); save(all);
+  sendToSheets(item);
   closePanel();
   renderMyfb(ROLE);
-  toast('✅ Feedback submitted! Check the My Feedback tab for the admin response.');
+  toast('✅ Feedback submitted. The System Admin will review and act on it.');
 }
 
 // ── MY FEEDBACK ──
 function renderMyfb(role){
-  var el=document.getElementById('myfb-'+role);
+  var el = document.getElementById('myfb-'+role);
   if(!el) return;
-  var all=load().filter(function(i){return i.role===role;});
+  var all = load().filter(function(i){ return i.role===role; });
   if(!all.length){
-    el.innerHTML='<div style="text-align:center;color:#888;padding:40px 20px;font-size:13px;background:#f5f5f5;border-radius:10px;border:1px solid #ddd;">No feedback or questions submitted yet.<br>Use the question widgets on each section or the Feedback button.</div>';
+    el.innerHTML = '<div style="text-align:center;color:#888;padding:40px 20px;font-size:13px;background:#f5f5f5;border-radius:10px;border:1px solid #ddd;">No feedback submitted yet.<br>Use the <b>Give Your Input</b> buttons on each section or the Feedback button.</div>';
     return;
   }
-  var html='';
+  var CAT = {
+    'data-error':     {label:'DATA ERROR',      color:'#cc0000',bg:'#fff0f0'},
+    'missing-feature':{label:'MISSING FEATURE', color:'#7a4400',bg:'#fff8ee'},
+    'confusing':      {label:'CONFUSING',        color:'#005580',bg:'#eef8ff'},
+    'process-gap':    {label:'PROCESS GAP',      color:'#4a0080',bg:'#f8eeff'},
+    'suggestion':     {label:'SUGGESTION',       color:'#006600',bg:'#f0fff0'},
+    'compliment':     {label:'COMPLIMENT',       color:'#806600',bg:'#fffbee'},
+    'urgent':         {label:'URGENT',           color:'#fff',   bg:'#cc0000'},
+    'general':        {label:'GENERAL',          color:'#333',   bg:'#f0f0f0'},
+    'phase-question': {label:'PHASE INPUT',      color:'#004499',bg:'#eef4ff'}
+  };
+  var out = '';
   all.slice().reverse().forEach(function(item){
-    var sc=item.status==='resolved'?'st-done':item.status==='in-progress'?'st-prog':'st-open';
-    var sl=item.status==='resolved'?'✅ Resolved':item.status==='in-progress'?'⏳ In Progress':'\U0001f7e1 Open';
-    var typeLabel=item.type==='phase-question'?'Phase Question':item.type;
-    html+='<div class="mf-card">';
-    html+='<div class="mf-meta">'+esc(item.date)+' &middot; '+esc(item.page)+' &middot; <i>'+esc(typeLabel)+'</i></div>';
-    html+='<div class="mf-ref">Ref: '+esc(item.id)+'</div>';
-    html+='<div class="mf-txt">'+esc(item.text)+'</div>';
-    html+='<span class="mf-st '+sc+'">'+sl+'</span>';
+    var cat = CAT[item.type] || CAT['general'];
+    var stColor = item.status==='resolved'?'#006600':item.status==='in-progress'?'#7a4400':'#cc0000';
+    var stLabel = item.status==='resolved'?'Resolved':item.status==='in-progress'?'In Progress':'Awaiting Review';
+    out += '<div style="background:#fff;border:1px solid #ddd;border-left:4px solid '+cat.bg+';border-radius:10px;padding:14px;margin-bottom:12px;">';
+    out += '<div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:6px;margin-bottom:8px">';
+    out += '<span style="background:'+cat.bg+';color:'+cat.color+';font-size:11px;font-weight:700;padding:3px 9px;border-radius:20px;text-transform:uppercase">'+cat.label+'</span>';
+    out += '<span style="font-size:11px;color:'+stColor+';font-weight:600">'+stLabel+'</span>';
+    out += '</div>';
+    out += '<div style="font-size:11px;color:#888;margin-bottom:6px">'+esc(item.date)+' &middot; '+esc(item.page||'')+(item.section?' &middot; '+esc(item.section):'')+'</div>';
+    out += '<div style="font-size:13px;color:#111;line-height:1.6;margin-bottom:6px">'+esc(item.text)+'</div>';
     if(item.response){
-      html+='<div class="mf-resp"><div class="mf-resp-lbl">\U0001f4e9 Admin Response</div>';
-      html+='<div class="mf-resp-txt">'+esc(item.response)+'</div>';
-      html+='<div class="mf-resp-meta">&mdash; '+esc(item.responseBy||'Admin')+' &middot; '+esc(item.responseDate||'')+'</div></div>';
+      out += '<div style="background:#f0faf4;border:1px solid #b0dfc0;border-radius:7px;padding:10px 12px;margin-top:8px">';
+      out += '<div style="font-size:10px;font-weight:700;color:#006600;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px">Admin Response</div>';
+      out += '<div style="font-size:13px;color:#004422">'+esc(item.response)+'</div>';
+      out += '</div>';
     }
-    html+='</div>';
+    out += '</div>';
   });
-  /* Safe: html is built from esc()-sanitised user data only */ el.innerHTML=html;
+  el.innerHTML = out;
 }
 
 // ── STORAGE ──
@@ -4033,339 +3464,7 @@ function toast(msg){
   t.textContent=msg;t.className='toast show';
   setTimeout(function(){t.className='toast';},3800);
 }
-
-// ══════════════════════════════════════════════════
-// OTP AUTHENTICATION
-// ══════════════════════════════════════════════════
-var generatedOTP = null;
-var otpTimerInterval = null;
-var otpPhone = null;
-
-
-
-
-
-
-
-
-
-
-
-// ══════════════════════════════════════════════════
-// INACTIVITY LOCK — 40 seconds
-// ══════════════════════════════════════════════════
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 setInterval(checkResp,10000);
-
-// ═══════════════════════════════════════════════════════
-// GUARANTOR REQUEST SYSTEM
-// KEY: coopvault_guar_v1
-// Shared across Member, Credit, Admin, Supervisory views
-// ═══════════════════════════════════════════════════════
-var GKEY = 'coopvault_guar_v1';
-
-// Sample member directory (in production this comes from the database)
-var MEMBERS_DIR = [
-  {id:'SC-2024-0089', name:'Aisha Kamau',    dept:'HR',      savings:36000, hasLoan:false,  gross:72000},
-  {id:'SC-2024-0056', name:'Ruth Owino',     dept:'Legal',   savings:57000, hasLoan:true,   gross:80000},
-  {id:'SC-2024-0113', name:'Brian Ochieng',  dept:'ICT',     savings:88000, hasLoan:true,   gross:95000},
-  {id:'SC-2024-0034', name:'Peter Njoroge',  dept:'Finance', savings:22000, hasLoan:false,  gross:65000},
-  {id:'SC-2024-0248', name:'Grace Mutua',    dept:'Admin',   savings:8500,  hasLoan:false,  gross:45000},
-  {id:'SC-2024-0155', name:'Samuel Ndura',   dept:'Sales',   savings:31000, hasLoan:false,  gross:58000},
-  {id:'SC-2024-0201', name:'Mary Wanjiku',   dept:'HR',      savings:44000, hasLoan:false,  gross:70000},
-  {id:'SC-2024-0312', name:'John Kamau',     dept:'ICT',     savings:19000, hasLoan:false,  gross:52000},
-  {id:'SC-2024-0078', name:'Mercy Otieno',   dept:'Finance', savings:67000, hasLoan:false,  gross:88000},
-  {id:'SC-2024-0099', name:'David Njoroge',  dept:'Legal',   savings:28000, hasLoan:false,  gross:61000},
-];
-
-// Current logged in member (in production this comes from auth)
-var CURRENT_MEMBER = {id:'SC-2024-0041', name:'James Mwangi', loanRef:'LA-2026-041', loanAmt:150000};
-
-function loadGuarantors(){ try{ return JSON.parse(localStorage.getItem(GKEY)||'[]'); }catch(e){ return []; } }
-function saveGuarantors(a){ try{ localStorage.setItem(GKEY, JSON.stringify(a)); }catch(e){} }
-
-// ── RENDER MEMBER LIST ──
-function renderMemberList(){
-  var list = document.getElementById('member-list');
-  if(!list) return;
-  var search = (document.getElementById('guar-search')||{value:''}).value.toLowerCase();
-  var existing = loadGuarantors().filter(function(g){ return g.requesterId === CURRENT_MEMBER.id; });
-  var sentTo = existing.map(function(g){ return g.guarantorId; });
-  
-  var filtered = MEMBERS_DIR.filter(function(m){
-    if(m.id === CURRENT_MEMBER.id) return false; // can't request yourself
-    if(search && !m.name.toLowerCase().includes(search) && !m.id.toLowerCase().includes(search)) return false;
-    return true;
-  });
-  
-  if(!filtered.length){
-    list.innerHTML = '<div class="guar-empty">No members found</div>';
-    return;
-  }
-  
-  list.innerHTML = filtered.map(function(m){
-    var alreadySent = sentTo.includes(m.id);
-    var eligible = !m.hasLoan && m.savings >= 10000;
-    return '<div class="member-row">' +
-      '<div class="member-row-info">' +
-        '<div class="member-row-name">' + esc(m.name) + '</div>' +
-        '<div class="member-row-meta">' + esc(m.id) + ' &middot; ' + esc(m.dept) + '</div>' +
-        '<div class="member-row-savings">Savings: KSh ' + m.savings.toLocaleString() +
-          (m.hasLoan ? ' &nbsp;<span class="bdg bg-red">Has active loan</span>' : ' &nbsp;<span class="bdg bg-green">Available</span>') + '</div>' +
-      '</div>' +
-      (alreadySent
-        ? '<button class="mr-btn mr-btn-sent" disabled>Sent &#10003;</button>'
-        : '<button class="mr-btn mr-btn-req" data-id="' + m.id + '" data-name="' + m.name + '" onclick="sendGuarRequestBtn(this)"' + (!eligible?' style="opacity:.5"':'') + '>Request</button>'
-      ) +
-    '</div>';
-  }).join('');
-}
-
-function filterMembers(){ renderMemberList(); }
-
-// ── SEND GUARANTOR REQUEST ──
-function sendGuarRequestBtn(btn){
-  var id = btn.getAttribute('data-id');
-  var name = btn.getAttribute('data-name');
-  sendGuarRequest(id, name);
-}
-
-function sendGuarRequest(guarId, guarName){
-  var now = new Date();
-  var ds = now.toLocaleDateString('en-GB',{day:'2-digit',month:'short',year:'numeric'}) + ' ' + now.toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit'});
-  var req = {
-    id: 'GR-' + Date.now(),
-    requesterId: CURRENT_MEMBER.id,
-    requesterName: CURRENT_MEMBER.name,
-    guarantorId: guarId,
-    guarantorName: guarName,
-    loanRef: CURRENT_MEMBER.loanRef,
-    loanAmt: CURRENT_MEMBER.loanAmt,
-    status: 'pending',
-    requestDate: ds,
-    responseDate: null,
-    responseNote: ''
-  };
-  var all = loadGuarantors();
-  all.push(req);
-  saveGuarantors(all);
-  
-  // Show alert
-  var alert = document.getElementById('guar-sent-alert');
-  if(alert){ alert.classList.add('show'); setTimeout(function(){ alert.classList.remove('show'); }, 4000); }
-  
-  renderMemberList();
-  renderMyGuarRequests();
-  renderIncoming();
-  renderCCGuarantors();
-  renderAdminGuarantors();
-  renderSuperGuarantors();
-  toast('&#10003; Guarantor request sent to ' + guarName + '. Credit Committee, Admin and Supervisory have been notified.');
-}
-
-// ── RENDER MY GUARANTOR REQUESTS (member view) ──
-function renderMyGuarRequests(){
-  var el = document.getElementById('my-guar-requests-list');
-  if(!el) return;
-  var all = loadGuarantors().filter(function(g){ return g.requesterId === CURRENT_MEMBER.id; });
-  if(!all.length){
-    el.innerHTML = '<div class="guar-empty">No guarantor requests sent yet.<br>Search below to request members.</div>';
-    return;
-  }
-  el.innerHTML = all.map(function(g){
-    var sc = g.status==='accepted'?'bg-green':g.status==='declined'?'bg-red':'bg-gold';
-    var sl = g.status==='accepted'?'&#10003; Accepted':g.status==='declined'?'&#10007; Declined':'&#9679; Pending';
-    return '<div class="guar-status-card">' +
-      '<div class="gsc-top">' +
-        '<div class="gsc-name">' + esc(g.guarantorName) + ' &middot; ' + esc(g.guarantorId) + '</div>' +
-        '<span class="bdg ' + sc + '">' + sl + '</span>' +
-      '</div>' +
-      '<div class="gsc-meta">Loan ref: ' + esc(g.loanRef) + ' &middot; Amount: KSh ' + g.loanAmt.toLocaleString() + ' &middot; Requested: ' + esc(g.requestDate) + '</div>' +
-      (g.responseNote ? '<div style="font-size:12px;color:#555;margin-top:4px;font-style:italic">Note: ' + esc(g.responseNote) + '</div>' : '') +
-    '</div>';
-  }).join('');
-}
-
-// ── RENDER INCOMING REQUESTS (guarantor view) ──
-function renderIncoming(){
-  var el = document.getElementById('incoming-guar-list');
-  if(!el) return;
-  // Show requests where current member is the guarantor
-  var all = loadGuarantors().filter(function(g){ return g.guarantorId === CURRENT_MEMBER.id && g.status === 'pending'; });
-  if(!all.length){
-    el.innerHTML = '<div class="guar-empty">No pending guarantor requests for you.</div>';
-    return;
-  }
-  el.innerHTML = all.map(function(g){
-    return '<div class="guar-req-card">' +
-      '<div class="grc-top">' +
-        '<div>' +
-          '<div class="grc-name">' + esc(g.requesterName) + ' &middot; ' + esc(g.requesterId) + '</div>' +
-          '<div class="grc-ref">Ref: ' + esc(g.id) + ' &middot; ' + esc(g.requestDate) + '</div>' +
-        '</div>' +
-        '<span class="bdg bg-gold">&#9679; Awaiting your response</span>' +
-      '</div>' +
-      '<div class="grc-loan">Loan application: <b>' + esc(g.loanRef) + '</b> &middot; Amount: <b>KSh ' + g.loanAmt.toLocaleString() + '</b></div>' +
-      '<div class="alert-gold" style="margin:6px 0;font-size:11.5px">&#9888; By accepting you become jointly liable if this member defaults. This decision is forwarded to Credit Committee, Admin and Supervisory.</div>' +
-      '<label style="margin-top:6px">Note to requester (optional)</label>' +
-      '<input type="text" id="gnote-' + g.id + '" placeholder="e.g. Happy to guarantee your loan">' +
-      '<div class="grc-btns">' +
-        '<button class="grc-approve" data-gid="' + g.id + '" data-dec="accepted" onclick="respondGuarBtn(this)">&#10003; Accept</button>' +
-        '<button class="grc-decline" data-gid="' + g.id + '" data-dec="declined" onclick="respondGuarBtn(this)">&#10007; Decline</button>' +
-      '</div>' +
-    '</div>';
-  }).join('');
-}
-
-// ── RESPOND TO GUARANTOR REQUEST ──
-function respondGuarBtn(btn){
-  var id = btn.getAttribute('data-gid');
-  var decision = btn.getAttribute('data-dec');
-  respondGuar(id, decision);
-}
-
-function respondGuar(id, decision){
-  var now = new Date();
-  var ds = now.toLocaleDateString('en-GB',{day:'2-digit',month:'short',year:'numeric'}) + ' ' + now.toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit'});
-  var noteEl = document.getElementById('gnote-' + id);
-  var note = noteEl ? noteEl.value.trim() : '';
-  
-  var all = loadGuarantors();
-  all = all.map(function(g){
-    if(g.id === id){
-      g.status = decision;
-      g.responseDate = ds;
-      g.responseNote = note;
-    }
-    return g;
-  });
-  saveGuarantors(all);
-  
-  renderIncoming();
-  renderMyGuarRequests();
-  renderCCGuarantors();
-  renderAdminGuarantors();
-  renderSuperGuarantors();
-  
-  var msg = decision === 'accepted'
-    ? '&#10003; You have accepted. Credit Committee, Admin and Supervisory notified.'
-    : '&#10007; You have declined. Credit Committee, Admin and Supervisory notified.';
-  toast(msg);
-}
-
-// ── RENDER FOR CREDIT COMMITTEE ──
-function renderCCGuarantors(){
-  var el = document.getElementById('cc-guar-list');
-  if(!el) return;
-  var all = loadGuarantors();
-  var pending = all.filter(function(g){ return g.status==='pending'; }).length;
-  var accepted = all.filter(function(g){ return g.status==='accepted'; }).length;
-  var declined = all.filter(function(g){ return g.status==='declined'; }).length;
-  var p = document.getElementById('cc-guar-pending');
-  var a = document.getElementById('cc-guar-accepted');
-  var d = document.getElementById('cc-guar-declined');
-  if(p) p.textContent = pending;
-  if(a) a.textContent = accepted;
-  if(d) d.textContent = declined;
-  
-  if(!all.length){
-    el.innerHTML = '<div class="guar-empty">No guarantor requests yet.</div>';
-    return;
-  }
-  el.innerHTML = all.slice().reverse().map(function(g){
-    var sc = g.status==='accepted'?'bg-green':g.status==='declined'?'bg-red':'bg-gold';
-    var sl = g.status==='accepted'?'&#10003; Accepted':g.status==='declined'?'&#10007; Declined':'&#9679; Pending';
-    return '<div class="guar-status-card">' +
-      '<div class="gsc-top">' +
-        '<div>' +
-          '<div class="gsc-name"><b>' + esc(g.requesterName) + '</b> requested <b>' + esc(g.guarantorName) + '</b></div>' +
-          '<div class="gsc-meta">Loan: ' + esc(g.loanRef) + ' &middot; KSh ' + g.loanAmt.toLocaleString() + ' &middot; ' + esc(g.requestDate) + '</div>' +
-        '</div>' +
-        '<span class="bdg ' + sc + '">' + sl + '</span>' +
-      '</div>' +
-      (g.responseDate ? '<div class="gsc-meta" style="margin-top:4px">Response: ' + esc(g.responseDate) + (g.responseNote?' &middot; "'+esc(g.responseNote)+'"':'') + '</div>' : '') +
-    '</div>';
-  }).join('');
-}
-
-// ── RENDER FOR ADMIN & SUPERVISORY ──
-function renderAdminGuarantors(){
-  var el = document.getElementById('admin-guar-list');
-  if(!el) return;
-  renderGuarListInto(el);
-}
-function renderSuperGuarantors(){
-  var el = document.getElementById('super-guar-list');
-  if(!el) return;
-  renderGuarListInto(el);
-}
-function renderGuarListInto(el){
-  var all = loadGuarantors();
-  if(!all.length){
-    el.innerHTML = '<div class="guar-empty">No guarantor activity yet.</div>';
-    return;
-  }
-  el.innerHTML = all.slice().reverse().map(function(g){
-    var sc = g.status==='accepted'?'bg-green':g.status==='declined'?'bg-red':'bg-gold';
-    var sl = g.status==='accepted'?'&#10003; Accepted':g.status==='declined'?'&#10007; Declined':'&#9679; Pending';
-    return '<div class="guar-status-card">' +
-      '<div class="gsc-top">' +
-        '<div>' +
-          '<div class="gsc-name"><b>' + esc(g.requesterName) + '</b> &#8594; <b>' + esc(g.guarantorName) + '</b></div>' +
-          '<div class="gsc-meta">Ref: ' + esc(g.id) + ' &middot; Loan: ' + esc(g.loanRef) + ' &middot; KSh ' + g.loanAmt.toLocaleString() + '</div>' +
-          '<div class="gsc-meta">Requested: ' + esc(g.requestDate) + (g.responseDate?' &middot; Responded: '+esc(g.responseDate):'') + '</div>' +
-        '</div>' +
-        '<span class="bdg ' + sc + '">' + sl + '</span>' +
-      '</div>' +
-      (g.responseNote ? '<div class="gsc-meta" style="margin-top:3px;font-style:italic">"' + esc(g.responseNote) + '"</div>' : '') +
-    '</div>';
-  }).join('');
-}
-
-// Initialise guarantor views on role launch
-var _origLaunchRole = launchRole;
-launchRole = function(role){
-  _origLaunchRole(role);
-  setTimeout(function(){
-    renderMemberList();
-    renderMyGuarRequests();
-    renderIncoming();
-    renderCCGuarantors();
-    renderAdminGuarantors();
-    renderSuperGuarantors();
-  }, 200);
-};
-
-// Also re-render when guarantor tabs are clicked
-var _origSS = SS;
-SS = function(role, sect, el){
-  _origSS(role, sect, el);
-  setTimeout(function(){
-    if(sect === 'guarantors' || sect === 'incoming'){
-      renderMemberList();
-      renderMyGuarRequests();
-      renderIncoming();
-      renderCCGuarantors();
-      renderAdminGuarantors();
-      renderSuperGuarantors();
-    }
-  }, 100);
-};
-
 
 // ══ PWA + OFFLINE ══
 var deferredPrompt = null;
@@ -4402,7 +3501,7 @@ document.getElementById('ib-install-btn') && document.getElementById('ib-install
     deferredPrompt.prompt();
     deferredPrompt.userChoice.then(function(result){
       deferredPrompt = null;
-      if(result.outcome === 'accepted') toast('✅ CoopVault installed to your home screen!');
+      if(result.outcome === 'accepted') toast('\u2705 CoopVault installed to your home screen!');
     });
   }
 });
@@ -4414,7 +3513,7 @@ function dismissInstall(){
 }
 
 window.addEventListener('appinstalled', function(){
-  toast('✅ CoopVault installed successfully!');
+  toast('\u2705 CoopVault installed successfully!');
   deferredPrompt = null;
 });
 
@@ -4423,25 +3522,59 @@ function updateOnlineStatus(){
   var bar = document.getElementById('offline-bar');
   if(!bar) return;
   if(navigator.onLine){
-    bar.textContent = '✅ Back online';
+    bar.textContent = '\u2705 Back online';
     bar.classList.remove('offline');
     bar.classList.add('show');
     setTimeout(function(){ bar.classList.remove('show'); }, 3000);
   } else {
-    bar.textContent = '\u{1F512} Working offline — all features available';
+    bar.textContent = '\u{1F512} Working offline \u2014 all features available';
     bar.classList.add('offline','show');
   }
 }
 window.addEventListener('online', updateOnlineStatus);
 window.addEventListener('offline', updateOnlineStatus);
 
-// Service worker: registered externally via sw.js when hosted on a server.
-// Not using blob-URL SW to avoid triggering antivirus heuristics.
-// The tool works fully offline via localStorage without a service worker.
+// Register service worker (only when served over http/https, not file://)
 if('serviceWorker' in navigator && location.protocol !== 'file:'){
-  navigator.serviceWorker.register('./sw.js').catch(function(){
-    // sw.js not present — tool still works fully, just no background caching
-  });
+  // Inline service worker via blob URL
+  var swCode = [
+    '"use strict";',
+    'var CACHE = "coopvault-v1";',
+    'var ASSETS = ["/"];',
+    'self.addEventListener("install", function(e){',
+    '  e.waitUntil(caches.open(CACHE).then(function(c){ return c.addAll(ASSETS); }));',
+    '  self.skipWaiting();',
+    '});',
+    'self.addEventListener("activate", function(e){',
+    '  e.waitUntil(caches.keys().then(function(keys){',
+    '    return Promise.all(keys.filter(function(k){ return k!==CACHE; }).map(function(k){ return caches.delete(k); }));',
+    '  }));',
+    '  self.clients.claim();',
+    '});',
+    'self.addEventListener("fetch", function(e){',
+    '  e.respondWith(caches.match(e.request).then(function(cached){',
+    '    if(cached) return cached;',
+    '    return fetch(e.request).then(function(resp){',
+    '      if(!resp || resp.status!==200 || resp.type!=="basic") return resp;',
+    '      var clone = resp.clone();',
+    '      caches.open(CACHE).then(function(c){ c.put(e.request, clone); });',
+    '      return resp;',
+    '    }).catch(function(){ return cached || new Response("Offline"); });',
+    '  }));',
+    '});'
+  ].join('\n');
+  
+  try {
+    var blob = new Blob([swCode], {type:'application/javascript'});
+    var swUrl = URL.createObjectURL(blob);
+    navigator.serviceWorker.register(swUrl).then(function(reg){
+      console.log('CoopVault SW registered');
+    }).catch(function(err){
+      console.log('SW registration skipped:', err.message);
+    });
+  } catch(e) {
+    console.log('SW blob error:', e.message);
+  }
 }
 
 
@@ -4514,310 +3647,31 @@ function loadApplicant(savings, gross, deductions, months, name){
 }
 
 
-// ══════════════════════════════════════════════════════
-// LOGIN FLOW — 3 steps: Role → Phone → OTP
-// ══════════════════════════════════════════════════════
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// ══════════════════════════════════════════════════════
-// INACTIVITY LOCK — 40 seconds
-// ══════════════════════════════════════════════════════
-
-
-
-
-
-
-
-
-
-
-
-
-// ══════════════════════════════════════════════════════════
-// SECURITY — 3 Layer Auth
-// Layer 1: Master access code (shared with all testers)
-// Layer 2: Role PIN (each role has own PIN)
-// Layer 3: Auto-lock after 40 seconds
-// ══════════════════════════════════════════════════════════
-
-
-
-
-
-
-
-
-
-
-
-// ── INACTIVITY LOCK ──
-
-
-
-
-
-
-
-
-
-
-
-
-// ══════════════════════════════════════════════════════════
-// AUTHORISED PHONE NUMBERS — WHITELIST
-// Add/remove testers here. You control who gets access.
-// Format: phone number (07XX or +2547XX), allowed roles
-// Use 'all' to allow access to all roles
-// ══════════════════════════════════════════════════════════
-// ══════════════════════════════════════════════════════════
-// AUTHORISED PHONE NUMBERS
-// ──────────────────────────────────────────────────────────
-// roles: ['all']  = can access every role (committee testing)
-// roles: ['member'] = locked to member only
-// roles: ['exec','board'] = can access exec and board only
-// locked: true = blocked from all access
-// ══════════════════════════════════════════════════════════
-var AUTHORISED = [
-  // ── SYSTEM ADMIN ──
-  { phone: '0725523776', name: 'System Admin',          roles: ['all'],   pin: '2580', active: true  },
-
-  // ── ADD YOUR TESTERS BELOW ──
-  // When someone sends you their number:
-  //   1. Add a new line here with their number, name, role, and a PIN you choose
-  //   2. Save this file and upload to GitHub
-  //   3. Tell them their PIN privately via WhatsApp or call — never in the same message as the URL
-  //   4. To block someone: change active: true  to  active: false
-  //
-  // Example entries — REPLACE these with real testers:
-  { phone: '0700000001', name: 'Executive Tester',      roles: ['exec'],   pin: '1001', active: false },
-  { phone: '0700000002', name: 'Admin Tester',          roles: ['admin'],  pin: '2002', active: false },
-  { phone: '0700000003', name: 'Board Tester',          roles: ['board'],  pin: '3003', active: false },
-  { phone: '0700000004', name: 'Supervisory Tester',    roles: ['super'],  pin: '4004', active: false },
-  { phone: '0700000005', name: 'Credit Cmte Tester',    roles: ['credit'], pin: '5005', active: false },
-  { phone: '0700000006', name: 'Member Tester 1',       roles: ['member'], pin: '6006', active: false },
-  { phone: '0700000007', name: 'Member Tester 2',       roles: ['member'], pin: '7007', active: false },
-  { phone: '0700000008', name: 'Edu Cmte Tester',       roles: ['edu'],    pin: '8008', active: false }
-];// ── TO LOCK A PERSON: change locked: false → locked: true ──
-// ── TO RESTRICT ROLES: change ['all'] → ['member'] etc    ──
-
-// Role PINs — each role still has its own PIN as second factor
-// Personal PINs are now in the AUTHORISED list above
-
-var LOCK_SECONDS = 40;
-var inactivityTimer = null;
-var SESSION_KEY = 'coopvault_sess_v1';
-var CURRENT_USER = null;
-
-// Normalise phone — strip spaces, dashes, handle +254 and 07XX formats
-function normalisePhone(ph){
-  ph = ph.replace(/[\s\-]/g,'').trim();
-  if(ph.startsWith('+254')) ph = '0' + ph.slice(4);
-  if(ph.startsWith('254') && ph.length === 12) ph = '0' + ph.slice(3);
-  return ph;
+// ── GOOGLE SHEETS FEEDBACK DELIVERY ──
+// Replace YOUR_APPS_SCRIPT_URL_HERE with your Apps Script URL
+// Every feedback submission goes to your Google Sheet in real time
+var SHEETS_URL = 'YOUR_APPS_SCRIPT_URL_HERE';
+function sendToSheets(item){
+  if(!SHEETS_URL||SHEETS_URL==='YOUR_APPS_SCRIPT_URL_HERE') return;
+  try{
+    fetch(SHEETS_URL,{
+      method:'POST',mode:'no-cors',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({
+        id:item.id, date:item.date, role:item.role||'',
+        page:item.page||'', type:item.type||'',
+        name:item.name||'', text:item.text||'',
+        priority:item.priority||'normal'
+      })
+    }).catch(function(){});
+  }catch(e){}
 }
 
-// Check if phone is authorised for a given role
-function checkAuthorised(phone, role){
-  var norm = normalisePhone(phone);
-  for(var i=0; i<AUTHORISED.length; i++){
-    var entry = AUTHORISED[i];
-    var entryPhone = normalisePhone(entry.phone);
-    if(entryPhone === norm){
-      // Found the number
-      if(!entry.active){
-        // Number was revoked by admin
-        CURRENT_USER = { blocked: true, revoked: true, name: entry.name };
-        return false;
-      }
-      if(entry.roles.indexOf('all') > -1 || entry.roles.indexOf(role) > -1){
-        CURRENT_USER = entry;
-        return true;
-      } else {
-        // Number registered but wrong role
-        CURRENT_USER = { blocked: true, name: entry.name, roles: entry.roles };
-        return false;
-      }
-    }
-  }
-  CURRENT_USER = null;
-  return false;
-}
-
-function goStep2(){
-  document.getElementById('seg2').classList.add('on');
-  document.getElementById('rs-step1').classList.remove('on');
-  document.getElementById('rs-step2').classList.add('on');
-  setTimeout(function(){
-    var inp = document.getElementById('phone-input');
-    if(inp) inp.focus();
-  }, 300);
-}
-
-function goStep2Back(){
-  document.getElementById('seg3').classList.remove('on');
-  document.getElementById('rs-step3').classList.remove('on');
-  document.getElementById('rs-step2').classList.add('on');
-  var err = document.getElementById('phone-error');
-  if(err) err.textContent = '';
-}
-
-function checkPhoneAccess(){
-  var inp = document.getElementById('phone-input');
-  var val = inp ? inp.value.trim() : '';
-  var err = document.getElementById('phone-error');
-
-  if(!val || val.replace(/[^0-9]/g,'').length < 9){
-    if(err){ err.style.color='#fca5a5'; err.textContent='Please enter your Safaricom number'; }
-    return;
-  }
-
-  var authorised = checkAuthorised(val, ROLE);
-
-  if(!authorised){
-    if(CURRENT_USER && CURRENT_USER.revoked){
-      if(err){ err.style.color='#fca5a5'; err.textContent='Your access has been revoked by the System Admin. Contact them to be re-authorised.'; }
-    } else if(CURRENT_USER && CURRENT_USER.blocked){
-      var roleNames = {exec:'Executive',admin:'Admin',board:'Board',super:'Supervisory',credit:'Credit Committee',member:'Member',edu:'Education Committee'};
-      var allowed = CURRENT_USER.roles.map(function(r){ return roleNames[r]||r; }).join(', ');
-      if(err){ err.style.color='#fca5a5'; err.textContent='You are authorised for: ' + allowed + '. Please go back and select the correct role.'; }
-    } else {
-      if(err){ err.style.color='#fca5a5'; err.textContent='This number is not authorised. Contact the System Admin to request access.'; }
-      if(inp){ inp.style.borderColor='#fca5a5'; }
-      setTimeout(function(){ if(inp) inp.style.borderColor='rgba(255,255,255,.2)'; }, 2000);
-    }
-    return;
-  }
-
-  // Authorised — show confirmation and move to PIN
-  if(err){ err.style.color='#6ee7b7'; err.textContent='✓ Authorised — ' + CURRENT_USER.name; }
-  setTimeout(function(){
-    document.getElementById('seg3').classList.add('on');
-    document.getElementById('rs-step2').classList.remove('on');
-    document.getElementById('rs-step3').classList.add('on');
-    var desc = document.getElementById('pin-desc');
-    var roleNames = {exec:'Executive',admin:'Admin',board:'Board Member',super:'Supervisory',credit:'Credit Committee',member:'Member',edu:'Education Committee'};
-    if(desc) desc.textContent = 'Welcome ' + CURRENT_USER.name + '. Enter the PIN the System Admin gave you.';
-    for(var i=1;i<=4;i++){ var b=document.getElementById('otp'+i); if(b){ b.value=''; b.style.borderColor='rgba(255,255,255,.2)'; } }
-    setTimeout(function(){ var b1=document.getElementById('otp1'); if(b1) b1.focus(); }, 300);
-  }, 800);
-}
-
-function verifyRolePin(){
-  var code = '';
-  for(var i=1;i<=4;i++){ var b=document.getElementById('otp'+i); if(b) code+=b.value; }
-  var err = document.getElementById('otp-error');
-  if(code.length < 4){ if(err) err.textContent='Enter all 4 digits'; return; }
-
-  // Use the personal PIN from this user's AUTHORISED entry
-  var correctPin = CURRENT_USER ? CURRENT_USER.pin : '0000';
-
-  if(code !== correctPin){
-    if(err) err.textContent='Incorrect PIN. Check the PIN the System Admin sent you.';
-    for(var j=1;j<=4;j++){ var bx=document.getElementById('otp'+j); if(bx){ bx.style.borderColor='#fca5a5'; bx.value=''; } }
-    setTimeout(function(){ document.getElementById('otp1').focus(); }, 100);
-    setTimeout(function(){
-      for(var k=1;k<=4;k++){ var bb=document.getElementById('otp'+k); if(bb) bb.style.borderColor='rgba(255,255,255,.2)'; }
-      if(err) err.textContent='';
-    }, 1500);
-    return;
-  }
-  if(err) err.textContent='';
-  launchRole(ROLE);
-  startInactivityTimer();
-}
-
-function otpMove(el, nextId){
-  el.style.borderColor = el.value ? '#f0a830' : 'rgba(255,255,255,.2)';
-  if(el.value && nextId){ var next=document.getElementById(nextId); if(next) next.focus(); }
-  var code='';
-  for(var i=1;i<=4;i++){ var b=document.getElementById('otp'+i); if(b) code+=b.value; }
-  if(code.length===4) verifyRolePin();
-}
-
-// ── INACTIVITY LOCK ──
-function startInactivityTimer(){
-  resetInactivityTimer();
-  ['touchstart','click','scroll','mousemove'].forEach(function(evt){
-    document.addEventListener(evt, resetInactivityTimer, {passive:true});
-  });
-  document.addEventListener('keydown', function(){
-    clearTimeout(inactivityTimer);
-    inactivityTimer = setTimeout(lockSession, LOCK_SECONDS*1000);
-  }, {passive:true});
-}
-
-function resetInactivityTimer(){
-  clearTimeout(inactivityTimer);
-  showLockBar();
-  inactivityTimer = setTimeout(lockSession, LOCK_SECONDS*1000);
-}
-
-function showLockBar(){
-  var bar = document.getElementById('inactivity-bar');
-  if(!bar) return;
-  bar.classList.add('show');
-  requestAnimationFrame(function(){
-    bar.style.transition='none';
-    bar.style.transform='scaleX(1)';
-    requestAnimationFrame(function(){
-      bar.style.transition='transform '+LOCK_SECONDS+'s linear';
-      bar.style.transform='scaleX(0)';
-    });
-  });
-}
-
-function lockSession(){
-  clearTimeout(inactivityTimer);
-  var lo = document.getElementById('lock-overlay');
-  if(lo) lo.classList.add('show');
-  var roleNames = {exec:'Executive',admin:'Admin',board:'Board Member',super:'Supervisory',credit:'Credit Committee',member:'Member',edu:'Education Committee'};
-  var li = document.getElementById('lock-info');
-  if(li) li.textContent = 'Session locked. Enter your ' + (roleNames[ROLE]||ROLE) + ' PIN to continue.';
-  for(var i=1;i<=4;i++){ var b=document.getElementById('lock-otp'+i); if(b){ b.value=''; b.style.borderColor='rgba(255,255,255,.2)'; } }
-  var lerr = document.getElementById('lock-error');
-  if(lerr) lerr.textContent = '';
-  setTimeout(function(){ var b1=document.getElementById('lock-otp1'); if(b1) b1.focus(); }, 300);
-}
-
-function unlockSession(){
-  var code = '';
-  for(var i=1;i<=4;i++){ var b=document.getElementById('lock-otp'+i); if(b) code+=b.value; }
-  var lerr = document.getElementById('lock-error');
-  if(code.length < 4){ if(lerr) lerr.textContent='Enter all 4 digits'; return; }
-  var correctPin = CURRENT_USER ? CURRENT_USER.pin : '0000';
-  if(code !== correctPin){
-    if(lerr) lerr.textContent='Incorrect PIN.';
-    for(var j=1;j<=4;j++){ var bx=document.getElementById('lock-otp'+j); if(bx){ bx.style.borderColor='#fca5a5'; bx.value=''; } }
-    setTimeout(function(){
-      document.getElementById('lock-otp1').focus();
-    }, 100);
-    return;
-  }
-  var lo = document.getElementById('lock-overlay');
-  if(lo) lo.classList.remove('show');
-  resetInactivityTimer();
-}
-
-function lockOtpMove(el, nextId){
-  el.style.borderColor = el.value ? '#f0a830' : 'rgba(255,255,255,.2)';
-  if(el.value && nextId){ var next=document.getElementById(nextId); if(next) next.focus(); }
-  var code='';
-  for(var i=1;i<=4;i++){ var b=document.getElementById('lock-otp'+i); if(b) code+=b.value; }
-  if(code.length===4) unlockSession();
-}
+var CAT_HINTS = {'data-error': 'Admin will correct the figure or record shown.','missing-feature': 'Admin will evaluate and add it to the build list.','confusing': 'Admin will rewrite or redesign that section.','process-gap': 'Admin will fix the workflow step.','suggestion': 'Admin will evaluate your idea and decide.','compliment': 'Admin will note what is working well.','urgent': 'Admin will prioritise this immediately.','general': 'Admin will read and decide on next steps.',};
+document.getElementById('fp-type').addEventListener('change', function(){
+  var hint = document.getElementById('fp-cat-hint');
+  if(hint) hint.textContent = CAT_HINTS[this.value] || '';
+});
 </script>
 </body>
 </html>
