@@ -3134,35 +3134,30 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
   <div class="fp-scroll">
     <div class="fp-body">
       <div class="fp-ctx" id="fp-ctx"></div>
-
-      <div class="fp-lbl">Your Name / Role <span style="color:#555;font-weight:400">(optional but helpful)</span></div>
-      <input class="fp-in" type="text" id="fp-name" placeholder="e.g. James Mwangi — Credit Committee" autocomplete="off">
-
-      <div class="fp-lbl">Category <span style="color:#f0a830">*</span></div>
+      <div class="fp-lbl">Feedback Type</div>
       <select class="fp-sel" id="fp-type">
-        <option value="">— Select the category that fits best —</option>
-        <option value="data-error">&#128204; Data Error — Something shown is wrong</option>
-        <option value="missing-feature">&#128295; Missing Feature — Something expected is not there</option>
-        <option value="confusing">&#128173; Confusing / Unclear — Hard to understand or use</option>
-        <option value="process-gap">&#9881;&#65039; Process Gap — A workflow step is missing or broken</option>
-        <option value="suggestion">&#128161; Suggestion — An idea to improve the tool</option>
-        <option value="compliment">&#10024; Compliment — Something working really well</option>
-        <option value="urgent">&#128680; Urgent Issue — Blocks me from doing my role</option>
-        <option value="general">&#128172; General Comment — Anything else</option>
+        <option value="general">General Feedback</option>
+        <option value="error">Error in Data</option>
+        <option value="concern">Concern / Issue</option>
+        <option value="suggestion">Suggestion</option>
+        <option value="question">Question</option>
+        <option value="urgent">Urgent / Important</option>
       </select>
-      <div id="fp-cat-hint" style="font-size:11px;color:#888;min-height:16px;margin-bottom:10px;margin-top:-6px;padding:0 2px"></div>
-
-      <div class="fp-lbl">Describe the Issue or Feedback <span style="color:#f0a830">*</span></div>
-      <textarea class="fp-ta" id="fp-text" placeholder="Be as specific as possible. Which section, which tab, what you expected to see, what you actually saw."></textarea>
-
-      <div class="fp-lbl">Which Section / Tab</div>
-      <input class="fp-in" type="text" id="fp-section" placeholder="e.g. Admin — Loans tab — Disbursement queue" autocomplete="off">
-
-      <button class="fp-submit" type="button" onclick="submitFb()">Submit Feedback &#8594;</button>
-      <div class="fp-note">Your feedback goes directly to the System Admin. Nothing is editable after submitting. The admin will review and act on every submission.</div>
+      <div class="fp-lbl">Your Name / Member ID <span style="color:#555;font-weight:400">(optional)</span></div>
+      <input class="fp-in" type="text" id="fp-name" placeholder="e.g. James Mwangi or SC-2024-0041" autocomplete="off">
+      <div class="fp-lbl">Your Feedback <span style="color:#f0a830">*</span></div>
+      <textarea class="fp-ta" id="fp-text" placeholder="Describe what you noticed, what is wrong, or what you suggest."></textarea>
+      <div class="fp-lbl">Priority</div>
+      <select class="fp-sel" id="fp-priority">
+        <option value="normal">Normal</option>
+        <option value="urgent">Urgent</option>
+        <option value="low">Low / Minor</option>
+      </select>
+      <button class="fp-submit" onclick="submitFb()">Submit Feedback &#8594;</button>
+      <div class="fp-note">Goes directly to the System Admin. Your input is not editable after submitting. Check the My Feedback tab — the System Admin will respond there.</div>
     </div>
   </div>
-</div></div>
+</div>
 <div class="toast" id="toast"></div>
 <script>
 var KEY='coopvault_fb_v1';
@@ -3295,37 +3290,26 @@ function pqClose(id){
   var form=document.getElementById('pqf-'+id);
   if(form) form.classList.remove('open');
 }
-function pqSubmit(id, context){
-  var ta = document.getElementById('pqta-'+id);
-  var text = ta ? ta.value.trim() : '';
-  if(!text){ toast('Please describe your input first'); return; }
-  var now = new Date();
-  var ds = now.toLocaleDateString('en-GB',{day:'2-digit',month:'short',year:'numeric'})
-          +' '+now.toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit'});
-  var item = {
-    id: 'PQ-'+Date.now(),
-    pqId: id,
-    role: ROLE,
-    page: context,
-    section: context,
-    type: 'phase-question',
-    name: ROLE ? (ROLE.toUpperCase()+' user') : 'Tester',
-    text: text,
-    priority: 'normal',
-    date: ds,
-    status: 'open',
-    response: null,
-    responseDate: null,
-    responseBy: null
+function pqSubmit(id,context){
+  var ta=document.getElementById('pqta-'+id);
+  var text=ta?ta.value.trim():'';
+  if(!text){toast('Please describe your question or concern first');return;}
+  var now=new Date();
+  var ds=now.toLocaleDateString('en-GB',{day:'2-digit',month:'short',year:'numeric'})+' '+now.toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit'});
+  var item={
+    id:'PQ-'+Date.now(), pqId:id, role:ROLE, page:context,
+    type:'phase-question',
+    name:ROLE?(ROLE.toUpperCase()+' user'):'Tester',
+    text:text, priority:'normal', date:ds, status:'open',
+    response:null, responseDate:null, responseBy:null
   };
-  var all = load(); all.push(item); save(all);
-  sendToSheets(item);
+  var all=load(); all.push(item); save(all);
   pqClose(id);
-  if(ta) ta.value = '';
-  var done = document.getElementById('pqd-'+id);
-  if(done) done.style.display = 'block';
+  if(ta) ta.value='';
+  var done=document.getElementById('pqd-'+id);
+  if(done) done.style.display='block';
   renderMyfb(ROLE);
-  toast('✅ Submitted. The System Admin will review your input.');
+  toast('\u2705 Submitted to the System Admin — response will appear in My Feedback tab');
 }
 
 // ── LOAD PQ RESPONSES ──
@@ -3357,8 +3341,8 @@ function openFbPanel(){
   if(banner) banner.classList.remove('show');
   setTimeout(function(){
     var ta=document.getElementById('fp-text');
-    if(ta){ta.removeAttribute('disabled');ta.style.pointerEvents='auto';ta.focus();}
     var nm=document.getElementById('fp-name');
+    if(ta){ta.removeAttribute('disabled');ta.style.pointerEvents='auto';ta.focus();}
     if(nm){nm.removeAttribute('disabled');nm.style.pointerEvents='auto';}
   },350);
 }
@@ -3368,79 +3352,52 @@ function closePanel(){
   document.getElementById('fp-name').value='';
 }
 function submitFb(){
-  var text = document.getElementById('fp-text').value.trim();
-  var type = document.getElementById('fp-type').value;
-  if(!type){ toast('Please select a category first'); return; }
-  if(!text){ toast('Please describe your feedback'); return; }
-  var now = new Date();
-  var ds = now.toLocaleDateString('en-GB',{day:'2-digit',month:'short',year:'numeric'})
-          +' '+now.toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit'});
-  var section = document.getElementById('fp-section');
-  var sectionVal = section ? section.value.trim() : '';
-  var item = {
-    id: 'FB-'+Date.now(),
-    pqId: null,
-    role: ROLE,
-    page: ROLE ? (ROLE.toUpperCase()+' — General') : 'General',
-    section: sectionVal || '',
-    type: type,
-    name: document.getElementById('fp-name').value.trim() || (ROLE ? ROLE.toUpperCase()+' user' : 'Tester'),
-    text: text,
-    priority: (type === 'urgent' || type === 'data-error') ? 'urgent' : 'normal',
-    date: ds,
-    status: 'open',
-    response: null,
-    responseDate: null,
-    responseBy: null
+  var text=document.getElementById('fp-text').value.trim();
+  if(!text){toast('Please write your feedback first');return;}
+  var now=new Date();
+  var ds=now.toLocaleDateString('en-GB',{day:'2-digit',month:'short',year:'numeric'})+' '+now.toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit'});
+  var item={
+    id:'FB-'+Date.now(), pqId:null, role:ROLE,
+    page:ROLE?(ROLE.toUpperCase()+' General'):'General',
+    type:document.getElementById('fp-type').value,
+    name:document.getElementById('fp-name').value.trim()||'Tester',
+    text:text, priority:document.getElementById('fp-priority').value,
+    date:ds, status:'open', response:null, responseDate:null, responseBy:null
   };
-  var all = load(); all.push(item); save(all);
+  var all=load(); all.push(item); save(all);
   sendToSheets(item);
   closePanel();
   renderMyfb(ROLE);
-  toast('✅ Feedback submitted. The System Admin will review and act on it.');
+  toast('\u2705 Feedback submitted! Check the My Feedback tab for the admin response.');
 }
 
 // ── MY FEEDBACK ──
 function renderMyfb(role){
-  var el = document.getElementById('myfb-'+role);
+  var el=document.getElementById('myfb-'+role);
   if(!el) return;
-  var all = load().filter(function(i){ return i.role===role; });
+  var all=load().filter(function(i){return i.role===role;});
   if(!all.length){
-    el.innerHTML = '<div style="text-align:center;color:#888;padding:40px 20px;font-size:13px;background:#f5f5f5;border-radius:10px;border:1px solid #ddd;">No feedback submitted yet.<br>Use the <b>Give Your Input</b> buttons on each section or the Feedback button.</div>';
+    el.innerHTML='<div style="text-align:center;color:#888;padding:40px 20px;font-size:13px;background:#f5f5f5;border-radius:10px;border:1px solid #ddd;">No feedback or questions submitted yet.<br>Use the question widgets on each section or the Feedback button.</div>';
     return;
   }
-  var CAT = {
-    'data-error':     {label:'DATA ERROR',      color:'#cc0000',bg:'#fff0f0'},
-    'missing-feature':{label:'MISSING FEATURE', color:'#7a4400',bg:'#fff8ee'},
-    'confusing':      {label:'CONFUSING',        color:'#005580',bg:'#eef8ff'},
-    'process-gap':    {label:'PROCESS GAP',      color:'#4a0080',bg:'#f8eeff'},
-    'suggestion':     {label:'SUGGESTION',       color:'#006600',bg:'#f0fff0'},
-    'compliment':     {label:'COMPLIMENT',       color:'#806600',bg:'#fffbee'},
-    'urgent':         {label:'URGENT',           color:'#fff',   bg:'#cc0000'},
-    'general':        {label:'GENERAL',          color:'#333',   bg:'#f0f0f0'},
-    'phase-question': {label:'PHASE INPUT',      color:'#004499',bg:'#eef4ff'}
-  };
-  var out = '';
+  var html='';
   all.slice().reverse().forEach(function(item){
-    var cat = CAT[item.type] || CAT['general'];
-    var stColor = item.status==='resolved'?'#006600':item.status==='in-progress'?'#7a4400':'#cc0000';
-    var stLabel = item.status==='resolved'?'Resolved':item.status==='in-progress'?'In Progress':'Awaiting Review';
-    out += '<div style="background:#fff;border:1px solid #ddd;border-left:4px solid '+cat.bg+';border-radius:10px;padding:14px;margin-bottom:12px;">';
-    out += '<div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:6px;margin-bottom:8px">';
-    out += '<span style="background:'+cat.bg+';color:'+cat.color+';font-size:11px;font-weight:700;padding:3px 9px;border-radius:20px;text-transform:uppercase">'+cat.label+'</span>';
-    out += '<span style="font-size:11px;color:'+stColor+';font-weight:600">'+stLabel+'</span>';
-    out += '</div>';
-    out += '<div style="font-size:11px;color:#888;margin-bottom:6px">'+esc(item.date)+' &middot; '+esc(item.page||'')+(item.section?' &middot; '+esc(item.section):'')+'</div>';
-    out += '<div style="font-size:13px;color:#111;line-height:1.6;margin-bottom:6px">'+esc(item.text)+'</div>';
+    var sc=item.status==='resolved'?'st-done':item.status==='in-progress'?'st-prog':'st-open';
+    var sl=item.status==='resolved'?'\u2705 Resolved':item.status==='in-progress'?'\u23f3 In Progress':'\U0001f7e1 Open';
+    var typeLabel=item.type==='phase-question'?'Phase Question':item.type;
+    html+='<div class="mf-card">';
+    html+='<div class="mf-meta">'+esc(item.date)+' &middot; '+esc(item.page)+' &middot; <i>'+esc(typeLabel)+'</i></div>';
+    html+='<div class="mf-ref">Ref: '+esc(item.id)+'</div>';
+    html+='<div class="mf-txt">'+esc(item.text)+'</div>';
+    html+='<span class="mf-st '+sc+'">'+sl+'</span>';
     if(item.response){
-      out += '<div style="background:#f0faf4;border:1px solid #b0dfc0;border-radius:7px;padding:10px 12px;margin-top:8px">';
-      out += '<div style="font-size:10px;font-weight:700;color:#006600;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px">Admin Response</div>';
-      out += '<div style="font-size:13px;color:#004422">'+esc(item.response)+'</div>';
-      out += '</div>';
+      html+='<div class="mf-resp"><div class="mf-resp-lbl">\U0001f4e9 Admin Response</div>';
+      html+='<div class="mf-resp-txt">'+esc(item.response)+'</div>';
+      html+='<div class="mf-resp-meta">&mdash; '+esc(item.responseBy||'Admin')+' &middot; '+esc(item.responseDate||'')+'</div></div>';
     }
-    out += '</div>';
+    html+='</div>';
   });
-  el.innerHTML = out;
+  el.innerHTML=html;
 }
 
 // ── STORAGE ──
@@ -3647,31 +3604,11 @@ function loadApplicant(savings, gross, deductions, months, name){
 }
 
 
-// ── GOOGLE SHEETS FEEDBACK DELIVERY ──
-// Replace YOUR_APPS_SCRIPT_URL_HERE with your Apps Script URL
-// Every feedback submission goes to your Google Sheet in real time
 var SHEETS_URL = 'YOUR_APPS_SCRIPT_URL_HERE';
 function sendToSheets(item){
   if(!SHEETS_URL||SHEETS_URL==='YOUR_APPS_SCRIPT_URL_HERE') return;
-  try{
-    fetch(SHEETS_URL,{
-      method:'POST',mode:'no-cors',
-      headers:{'Content-Type':'application/json'},
-      body:JSON.stringify({
-        id:item.id, date:item.date, role:item.role||'',
-        page:item.page||'', type:item.type||'',
-        name:item.name||'', text:item.text||'',
-        priority:item.priority||'normal'
-      })
-    }).catch(function(){});
-  }catch(e){}
+  try{fetch(SHEETS_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify(item)}).catch(function(){});}catch(e){}
 }
-
-var CAT_HINTS = {'data-error': 'Admin will correct the figure or record shown.','missing-feature': 'Admin will evaluate and add it to the build list.','confusing': 'Admin will rewrite or redesign that section.','process-gap': 'Admin will fix the workflow step.','suggestion': 'Admin will evaluate your idea and decide.','compliment': 'Admin will note what is working well.','urgent': 'Admin will prioritise this immediately.','general': 'Admin will read and decide on next steps.',};
-document.getElementById('fp-type').addEventListener('change', function(){
-  var hint = document.getElementById('fp-cat-hint');
-  if(hint) hint.textContent = CAT_HINTS[this.value] || '';
-});
 </script>
 </body>
 </html>
