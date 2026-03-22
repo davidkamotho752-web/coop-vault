@@ -250,7 +250,7 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
 .fp-lbl{font-size:10px;letter-spacing:1px;text-transform:uppercase;color:#bbb;font-weight:700;margin-bottom:5px;margin-top:12px;}
 .fp-in{width:100%;background:#1e1e1e;border:1px solid #444;border-radius:7px;padding:10px 12px;color:#fff;font-family:'DM Sans',sans-serif;font-size:13px;outline:none;-webkit-appearance:none;pointer-events:auto;position:relative;z-index:2001;-webkit-user-select:text;user-select:text;touch-action:manipulation;}.fp-in:focus{border-color:#f0a830;}
 .fp-in::placeholder{color:#666;}
-.fp-ta{width:100%;background:#1e1e1e;border:1px solid #444;border-radius:7px;padding:10px 12px;color:#fff;font-family:'DM Sans',sans-serif;font-size:13px;outline:none;resize:none;min-height:90px;pointer-events:auto;position:relative;z-index:2001;-webkit-user-select:text;user-select:text;touch-action:manipulation;will-change:contents;-webkit-appearance:none;}
+.fp-ta{width:100%;background:#1e1e1e;border:1px solid #444;border-radius:7px;padding:10px 12px;color:#fff;font-family:'DM Sans',sans-serif;font-size:13px;outline:none;resize:none;min-height:90px;pointer-events:auto;position:relative;z-index:2001;-webkit-user-select:text;user-select:text;touch-action:manipulation;-webkit-appearance:none;}
 .fp-ta::placeholder{color:#666;}
 .fp-sel{width:100%;background:#1e1e1e;border:1px solid #444;border-radius:7px;padding:10px 12px;color:#fff;font-family:'DM Sans',sans-serif;font-size:13px;outline:none;-webkit-appearance:none;pointer-events:auto;position:relative;z-index:2001;}
 .fp-sel option{background:#1e1e1e;color:#fff;}
@@ -3332,18 +3332,7 @@ function loadPqResponses(){
 }
 
 // ââ GENERAL FEEDBACK PANEL ââ
-function openFbPanel(){
-  var ctx=ROLE?(ROLE.toUpperCase()+' â General Feedback'):'General Feedback';
-  var panel=document.getElementById('fb-panel');
-  var ctx_el=document.getElementById('fp-ctx');
-  if(ctx_el) ctx_el.textContent='Context: '+ctx;
-  panel.classList.add('open');
-  panel.style.zIndex='2000';
-  panel.style.pointerEvents='all';
-  var banner=document.getElementById('install-banner');
-  if(banner) banner.classList.remove('show');
-  var ta=document.getElementById('fp-text');if(ta){ta.removeAttribute('disabled');ta.style.pointerEvents='auto';'}
-}
+function openFbPanel(){var ctx=ROLE?(ROLE.toUpperCase()+" — General Feedback"):"General Feedback";var panel=document.getElementById("fb-panel");var ce=document.getElementById("fp-ctx");if(ce) ce.textContent="Context: "+ctx;panel.classList.add("open");panel.style.zIndex="2000";panel.style.pointerEvents="all";var banner=document.getElementById("install-banner");if(banner) banner.style.display="none";var ta=document.getElementById("fp-text");var nm=document.getElementById("fp-name");if(ta){ta.removeAttribute("disabled");ta.style.pointerEvents="auto";}if(nm){nm.removeAttribute("disabled");nm.style.pointerEvents="auto";}}
 function closePanel(){
   document.getElementById('fb-panel').classList.remove('open');
   document.getElementById('fp-text').value='';
