@@ -14,9 +14,12 @@
   <!-- Inline SVG icon as data URI for home screen -->
   <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'%3E%3Crect width='192' height='192' fill='%230c1520'/%3E%3Crect x='0' y='186' width='192' height='6' fill='%23f0a830'/%3E%3Ctext x='96' y='110' font-family='Georgia,serif' font-size='52' fill='%23f0a830' text-anchor='middle'%3ECV%3C/text%3E%3Ctext x='96' y='155' font-family='Arial,sans-serif' font-size='18' fill='rgba(255,255,255,.5)' text-anchor='middle'%3ESACCO%3C/text%3E%3C/svg%3E">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230c1520'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='16' fill='%23f0a830' text-anchor='middle'%3ECV%3C/text%3E%3C/svg%3E">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, interactive-widget=resizes-content">
 <title>CoopVault SACCO</title>
-<style>*{touch-action:manipulation;-webkit-tap-highlight-color:transparent;}input,textarea,select,button{touch-action:manipulation;-webkit-user-select:text;user-select:text;}
+<style>
+* {-webkit-tap-highlight-color:transparent;}
+input,textarea,select,button,a{touch-action:manipulation;}
+*{touch-action:manipulation;-webkit-tap-highlight-color:transparent;}input,textarea,select,button{touch-action:manipulation;-webkit-user-select:text;user-select:text;}
 /* Offline-first fonts: system fonts load instantly, no network needed */
 /* When online, these are overridden by Google Fonts loaded below */
 @font-face {
@@ -236,7 +239,7 @@ input::placeholder,textarea::placeholder{color:#888;font-weight:400;}
 .fb-dot.on{display:block;}
 
 /* FEEDBACK PANEL */
-#fb-panel{position:fixed;bottom:0;left:0;right:0;z-index:2000;background:#111;border-top:3px solid #f0a830;transform:translateY(100%);transition:transform .3s ease;max-height:85vh;display:flex;flex-direction:column;}
+#fb-panel{position:fixed;bottom:0;left:0;right:0;z-index:2000;background:#111;border-top:3px solid #f0a830;transform:translateY(100%);transition:transform .3s ease;max-height:60vh;display:flex;flex-direction:column;}
 #fb-panel.open{transform:translateY(0);}
 .fph{display:flex;align-items:center;justify-content:space-between;padding:13px 16px;border-bottom:1px solid rgba(255,255,255,.1);flex-shrink:0;}
 .fph-title{font-size:14px;font-weight:700;color:#f0a830;}
